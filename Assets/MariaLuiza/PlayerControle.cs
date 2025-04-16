@@ -9,6 +9,11 @@ public class PlayerControle : MonoBehaviour
     private Vector2 velocidadeMovimento; // Velocidade convertida em vetor (X, Y)
     float multiplicadorVelocidade = 1f; // Multiplicador de velocidade para correr
     private bool estaCorrendo = false; // Flag para verificar se o personagem está correndo
+    private Vector2 ultimaDirecao; // Última direção do movimento do personagem
+
+    //interação com objetos
+    public LayerMask interacao; // Camada de interação
+    public GameObject objetoInteracao; // Objeto que será interagido
 
 
     void Start()
@@ -18,6 +23,9 @@ public class PlayerControle : MonoBehaviour
 
         // Pega o componente Rigidbody2D do objeto para controlar o movimento com física
         corpoRigidbody = GetComponent<Rigidbody2D>();
+
+        // Direção inicial do personagem
+        ultimaDirecao = Vector2.down; 
     }
 
     void Update()
@@ -47,6 +55,19 @@ public class PlayerControle : MonoBehaviour
             multiplicadorVelocidade = 1f;   // Soltou: volta ao normal
         }
         */
+
+        // Se pressionar a tecla E e o objeto não for nulo
+        if(Input.GetKeyDown(KeyCode.E) && objetoInteracao != null) 
+        {
+            if (objetoInteracao.tag == "door")
+            {
+                 // Passa a referência do jogador para o objeto porta
+                objetoInteracao.GetComponent<doorController>().tPlayer = this.transform;
+            }
+            
+            // Chama a função de interação do objeto
+            objetoInteracao.SendMessage("interacao", SendMessageOptions.DontRequireReceiver); 
+        }
     }
 
     void FixedUpdate()
@@ -61,5 +82,33 @@ public class PlayerControle : MonoBehaviour
 
         // Move o personagem 
         corpoRigidbody.MovePosition(novaPosicao);
+
+        // Atualiza a última direção do movimento
+        if (direcaoMovimento.sqrMagnitude > 0.1f) // Se o vetor de movimento não for nulo
+        {
+            ultimaDirecao = direcaoMovimento.normalized; // Atualiza a última direção
+        }
+
+        // Chama a função de interação a cada atualização de física
+        Interagir(); 
+
+        
+    }
+
+    void Interagir()
+    {
+        // lógica para interagir com objetos no jogo
+        RaycastHit2D hit = Physics2D.Raycast(corpoRigidbody.position, ultimaDirecao, 1.0f, interacao);
+        Debug.DrawRay(corpoRigidbody.position, ultimaDirecao * 1.0f, Color.blue); // Desenha um raio para depuração
+
+        // Verifica se o raio atingiu algum objeto
+        if (hit == true)
+        {
+            objetoInteracao = hit.collider.gameObject; // Armazena o objeto atingido
+        }
+        else
+        {
+            objetoInteracao = null; // Se não atingiu nada, define como nulo
+        }
     }
 }
