@@ -42,6 +42,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3761543027
+    locked: 0
+  - name: Ground
+    uniqueID: 1375939021
+    locked: 0
+  - name: Player
+    uniqueID: 3582780035
+    locked: 0
+  - name: FX
+    uniqueID: 2512039623
+    locked: 0
   - name: HUD
     uniqueID: 777387279
     locked: 0
