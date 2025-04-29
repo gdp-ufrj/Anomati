@@ -9,14 +9,41 @@ public class PlayerController : MonoBehaviour {
     private Vector2 movementVector;
     private bool isSprinting = false;
 
+    //interação com objetos
+    public LayerMask interacao; // Camada de interação
+    private GameObject objetoInteracao; // Objeto que será interagido
+
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        //Adição dos eventos de inputs:
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.SprintStart.performed += x => isSprinting = true;
         playerInputActions.Player.SprintFinish.performed += x => isSprinting = false;
+        playerInputActions.Player.Interact.performed += x => Interact();
 
         movementVector = Vector2.zero; //Inicializa o vetor de movimento como zero
+    }
+
+
+    private void Interact(){    //Método para a interação
+        // lógica para interagir com objetos no jogo
+        RaycastHit2D hit = Physics2D.Raycast(rb.position, movementVector.normalized, 1.0f, interacao);
+        //Debug.DrawRay(rb.position, movementVector.normalized * 1.0f, Color.blue); // Desenha um raio para depuração
+
+        // Verifica se o raio atingiu algum objeto
+        if (hit == true)
+            objetoInteracao = hit.collider.gameObject; // Armazena o objeto atingido
+        else
+            objetoInteracao = null; // Se não atingiu nada, define como nulo
+        
+        if (objetoInteracao.tag == "door"){
+            // Passa a referência do jogador para o objeto porta
+            objetoInteracao.GetComponent<doorController>().tPlayer = this.transform;
+        }
+
+        objetoInteracao.SendMessage("interacao", SendMessageOptions.DontRequireReceiver); 
     }
 
     private void OnEnable() {
