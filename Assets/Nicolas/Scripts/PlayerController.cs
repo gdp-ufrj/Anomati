@@ -32,18 +32,27 @@ public class PlayerController : MonoBehaviour {
         RaycastHit2D hit = Physics2D.Raycast(rb.position, movementVector.normalized, 1.0f, interacao);
         //Debug.DrawRay(rb.position, movementVector.normalized * 1.0f, Color.blue); // Desenha um raio para depuração
 
-        // Verifica se o raio atingiu algum objeto
-        if (hit == true)
-            objetoInteracao = hit.collider.gameObject; // Armazena o objeto atingido
-        else
-            objetoInteracao = null; // Se não atingiu nada, define como nulo
-        
-        if (objetoInteracao.tag == "door"){
-            // Passa a referência do jogador para o objeto porta
-            objetoInteracao.GetComponent<doorController>().tPlayer = this.transform;
-        }
+        // Verifica se o raycast acertou algo
+        if (hit.collider != null)
+        {
+            objetoInteracao = hit.collider.gameObject;
 
-        objetoInteracao.SendMessage("interacao", SendMessageOptions.DontRequireReceiver); 
+            if (objetoInteracao.CompareTag("door"))
+            {
+                doorController door = objetoInteracao.GetComponent<doorController>();
+                if (door != null)
+                {
+                    door.tPlayer = this.transform;
+                }
+            }
+
+            objetoInteracao.SendMessage("interacao", SendMessageOptions.DontRequireReceiver);
+            // Envia a mensagem de interação para o objeto atingido pelo raycast
+        }
+        else
+        {
+            objetoInteracao = null;
+        } 
     }
 
     private void OnEnable() {
@@ -65,11 +74,11 @@ public class PlayerController : MonoBehaviour {
             rb.MovePosition(rb.position + movementVector * sprintSpeed * Time.fixedDeltaTime);
     }
 
-    private void Move(){    //Este método vai controlar o movimento do jogador e a animação de acordo com o vetor de movimento
+    public void Move(){    //Este método vai controlar o movimento do jogador e a animação de acordo com o vetor de movimento
         movementVector = playerInputActions.Player.Movement.ReadValue<Vector2>();
         if (movementVector != Vector2.zero) {
             if (isSprinting) {
-                animator.SetBool("isRunning", true);
+                animator.SetBool("isRunning", true); 
                 animator.SetBool("isWalking", false);
             } 
             else {
@@ -82,7 +91,7 @@ public class PlayerController : MonoBehaviour {
         else {
             animator.SetBool("isWalking", false);
             animator.SetBool("isRunning", false);
-            animator.SetFloat("LastInputX", animator.GetFloat("InputX"));
+            animator.SetFloat("LastInputX", animator.GetFloat("InputX")); 
             animator.SetFloat("LastInputY", animator.GetFloat("InputY"));
         }
 
