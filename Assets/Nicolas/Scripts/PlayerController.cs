@@ -32,6 +32,9 @@ public class PlayerController : MonoBehaviour {
     }
 
     void FixedUpdate() {
+        
+        if (GerenciadorDeDialogos.GetInstancia().dialogoAtivo) return; // Se o diálogo estiver ativo, não move o jogador
+
         if (!isSprinting)    //Se não estiver correndo, use a velocidade de movimento normal
             rb.MovePosition(rb.position + movementVector * movementSpeed * Time.fixedDeltaTime);
         else
@@ -39,6 +42,9 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Move(){    //Este método vai controlar o movimento do jogador e a animação de acordo com o vetor de movimento
+       
+        if (GerenciadorDeDialogos.GetInstancia().dialogoAtivo) return; // Se o diálogo estiver ativo, não move o jogador
+
         movementVector = playerInputActions.Player.Movement.ReadValue<Vector2>();
         if (movementVector != Vector2.zero) {
             if (isSprinting) {

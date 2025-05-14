@@ -45,7 +45,7 @@ public class PlayerControle : MonoBehaviour
         }
         
         /*
-        // Alternativa para correr: se o jogador quiser correr pressionando Shiff
+        // Alternativa para correr: se o jogador quiser correr pressionando Shift
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
             multiplicadorVelocidade = 1.5f; // Está segurando: corre
@@ -72,6 +72,11 @@ public class PlayerControle : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(GerenciadorDeDialogos.GetInstancia().dialogoAtivo) // Se o diálogo estiver ativo, não processa o movimento
+        {
+            return; // Sai da função se o diálogo estiver ativo
+        }
+        
         // Calcula a nova velocidade do personagem com base na direção e velocidade
         // O vetor de movimento é multiplicado pela velocidade e pelo multiplicador de velocidade
         Vector2 deslocamento = direcaoMovimento * velocidade * multiplicadorVelocidade * Time.fixedDeltaTime;
@@ -92,7 +97,6 @@ public class PlayerControle : MonoBehaviour
         // Chama a função de interação a cada atualização de física
         Interagir(); 
 
-        
     }
 
     void Interagir()

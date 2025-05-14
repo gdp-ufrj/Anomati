@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - door
+  - NPC
   layers:
   - Default
   - TransparentFX
