@@ -1,6 +1,8 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
     [SerializeField] private float movementSpeed = 3f, sprintSpeed = 5f;
 
     private PlayerInputActions playerInputActions;
@@ -9,12 +11,14 @@ public class PlayerController : MonoBehaviour {
     private Vector2 movementVector;
     private bool isSprinting = false;
 
+    public bool canMove = true; // Flag para controlar se o jogador pode se mover ou não
+
     //interação com objetos
     public LayerMask interacao; // Camada de interação
     private GameObject objetoInteracao; // Objeto que será interagido
 
     private RaycastHit2D hit = new RaycastHit2D(); // Raycast para detectar objetos
-    
+
     [SerializeField] private GameObject txtInteracao; // Texto de interação
 
     private void Awake()
@@ -31,75 +35,104 @@ public class PlayerController : MonoBehaviour {
         movementVector = Vector2.zero; //Inicializa o vetor de movimento como zero
     }
 
-    private void Interact(){    //Método para a interação
+    private void Interact()
+    {    //Método para a interação
         // Verifica se o raycast acertou algo
-        if (hit.collider != null) {
-
+        if (hit.collider != null)
+        {
             objetoInteracao = hit.collider.gameObject;
 
             if (objetoInteracao.CompareTag("door"))
             {
                 doorController door = objetoInteracao.GetComponent<doorController>();
                 if (door != null)
-                {
                     door.tPlayer = this.transform;
-                }
             }
 
+            canMove = false;
+            txtInteracao.SetActive(false); // Desativa o texto de interação
             objetoInteracao.SendMessage("interacao", SendMessageOptions.DontRequireReceiver);   //Envia a mensagem de interação para o objeto atingido pelo raycast
         }
-        else {
+        else
+        {
             objetoInteracao = null;
-        } 
+        }
     }
 
-    private void OnEnable() {
+    private void OnEnable()
+    {
         playerInputActions.Enable();
     }
 
-    void OnDisable() {
+    void OnDisable()
+    {
         playerInputActions.Disable();
     }
 
-    private void Update() {
+    private void Update()
+    {
         Move(); // Chama o método de movimento a cada frame
     }
 
-    void FixedUpdate() {
-        hit = Physics2D.Raycast(rb.position, movementVector.normalized, 0.1f, interacao);
-        //Debug.DrawRay(rb.position, movementVector.normalized * 1.0f, Color.blue); // Desenha um raio para depuração
-        if (hit.collider != null)
-            txtInteracao.SetActive(true); // Ativa o texto de interação
-        else
-            txtInteracao.SetActive(false); // Desativa o texto de interação
+    void FixedUpdate()
+    {
+        if (canMove)
+        {   //Se o jogador puder se mover
+            hit = Physics2D.Raycast(rb.position, movementVector.normalized, 0.1f, interacao);
+            //Debug.DrawRay(rb.position, movementVector.normalized * 1.0f, Color.blue); // Desenha um raio para depuração
+            if (hit.collider != null)
+                txtInteracao.SetActive(true); // Ativa o texto de interação
+            else
+                txtInteracao.SetActive(false); // Desativa o texto de interação
 
-        if (!isSprinting)    //Se não estiver correndo, use a velocidade de movimento normal
-            rb.MovePosition(rb.position + movementVector * movementSpeed * Time.fixedDeltaTime);
-        else
-            rb.MovePosition(rb.position + movementVector * sprintSpeed * Time.fixedDeltaTime);
+            if (!isSprinting)    //Se não estiver correndo, use a velocidade de movimento normal
+                rb.MovePosition(rb.position + movementVector * movementSpeed * Time.fixedDeltaTime);
+            else
+                rb.MovePosition(rb.position + movementVector * sprintSpeed * Time.fixedDeltaTime);
+        }
     }
 
-    public void Move(){    //Este método vai controlar o movimento do jogador e a animação de acordo com o vetor de movimento
-        movementVector = playerInputActions.Player.Movement.ReadValue<Vector2>();
-        if (movementVector != Vector2.zero) {
-            if (isSprinting) {
-                animator.SetBool("isRunning", true); 
+    public void Move()
+    {    //Este método vai controlar o movimento do jogador e a animação de acordo com o vetor de movimento
+        if(canMove)
+            movementVector = playerInputActions.Player.Movement.ReadValue<Vector2>();
+        else
+            movementVector = Vector2.zero; // Para o movimento se não puder mover
+        if (movementVector != Vector2.zero)
+        {
+            if (isSprinting)
+            {
+                animator.SetBool("isRunning", true);
                 animator.SetBool("isWalking", false);
-            } 
-            else {
+            }
+            else
+            {
                 animator.SetBool("isRunning", false);
                 animator.SetBool("isWalking", true);
             }
             animator.SetFloat("InputX", movementVector.x);
             animator.SetFloat("InputY", movementVector.y);
         }
-        else {
+        else
+        {
             animator.SetBool("isWalking", false);
             animator.SetBool("isRunning", false);
-            animator.SetFloat("LastInputX", animator.GetFloat("InputX")); 
+            animator.SetFloat("LastInputX", animator.GetFloat("InputX"));
             animator.SetFloat("LastInputY", animator.GetFloat("InputY"));
         }
 
         //Debug.Log(movementVector); // Debug para verificar o vetor de movimento
+    }
+    
+    public void SetIdleDirection()
+    {
+        animator.SetFloat("InputX", 0);
+        animator.SetFloat("InputY", -1);
+
+        animator.SetFloat("LastInputX", 0);
+        animator.SetFloat("LastInputY", -1);
+
+        animator.SetBool("isWalking", false);
+        animator.SetBool("isRunning", false);
     }
 }

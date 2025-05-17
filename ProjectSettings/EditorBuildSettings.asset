@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Nicolas/Scenes/Menu.unity
+    guid: 63c0ff5f06c75ad4ca820d15037facb7
+  - enabled: 1
+    path: Assets/Nicolas/Scenes/Present.unity
+    guid: c5dd25e1f719e4d40a4aba6d347232c9
+  - enabled: 1
+    path: Assets/Nicolas/Scenes/Past.unity
+    guid: 983980a87b1ee63419924fb0d7d3a9fd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

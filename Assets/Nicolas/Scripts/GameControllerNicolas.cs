@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameControllerNicolas : MonoBehaviour {
     private static GameControllerNicolas instance;
@@ -14,10 +15,17 @@ public class GameControllerNicolas : MonoBehaviour {
             Destroy(gameObject);    
     }
 
-    void Start() {
+    void Start()
+    {
+        string currentScene = SceneManager.GetActiveScene().name; //Armazena o nome da cena atual
+
         if (Globals.firstScene)
             Globals.firstScene = false;
         else
+        {
             SceneTransitionController.GetInstance().FadeOut();
+        }
+        
+        Globals.currentScene = currentScene; //Armazena o nome da cena atual
     }
 }

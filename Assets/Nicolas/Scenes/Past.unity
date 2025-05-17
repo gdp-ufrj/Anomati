@@ -169,7 +169,6 @@ MonoBehaviour:
   tPlayer: {fileID: 2018500683}
   destino: {fileID: 1528797035}
   destinationBounds: {fileID: 731491753}
-  idleDirection: {x: 0, y: -1}
 --- !u!61 &278440142
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -476,7 +475,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 134887ce150fc114f85e4e1230f3bdbf, type: 3}
-  m_Color: {r: 0.6084906, g: 0.7107681, b: 0.8113208, a: 1}
+  m_Color: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -729,7 +728,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.4
+  orthographic size: 5.399
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -885,7 +884,7 @@ MonoBehaviour:
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
   TargetOffset: {x: 0, y: 0, z: 0}
-  Damping: {x: 0.1, y: 0.1, z: 0.1}
+  Damping: {x: 0.1, y: 0.1, z: 0}
   Lookahead:
     Enabled: 0
     Time: 0
@@ -916,7 +915,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 60
-    OrthographicSize: 5.4
+    OrthographicSize: 5.399
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -962,7 +961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BoundingShape2D: {fileID: 731491753}
-  Damping: 0.5
+  Damping: 0
   SlowingDistance: 5
   OversizeWindow:
     Enabled: 0
@@ -1019,7 +1018,6 @@ MonoBehaviour:
   tPlayer: {fileID: 2018500683}
   destino: {fileID: 1593351017}
   destinationBounds: {fileID: 731491753}
-  idleDirection: {x: 0, y: -1}
 --- !u!61 &1162027643
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1199,7 +1197,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 246e580ad59195d44ac2bb13d8d3fe08, type: 3}
-  m_Color: {r: 0.7264151, g: 0.60648805, b: 0.60648805, a: 1}
+  m_Color: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1714,7 +1712,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 19.205, y: 43.21055}
+  m_Size: {x: 19.2, y: 43.21055}
   m_EdgeRadius: 0
 --- !u!212 &1726847387
 SpriteRenderer:
@@ -1761,7 +1759,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e6927402520c75345bf1d6eab55c9b1b, type: 3}
-  m_Color: {r: 0.6981132, g: 0.6718425, b: 0.55651474, a: 1}
+  m_Color: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1988,7 +1986,6 @@ MonoBehaviour:
   tPlayer: {fileID: 2018500683}
   destino: {fileID: 523462216}
   destinationBounds: {fileID: 1183170550}
-  idleDirection: {x: 0, y: -1}
 --- !u!1 &2010145090
 GameObject:
   m_ObjectHideFlags: 0
@@ -2228,6 +2225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 4
   sprintSpeed: 6
+  canMove: 1
   interacao:
     serializedVersion: 2
     m_Bits: 64
@@ -2367,7 +2365,6 @@ MonoBehaviour:
   tPlayer: {fileID: 2018500683}
   destino: {fileID: 347759733}
   destinationBounds: {fileID: 1726847386}
-  idleDirection: {x: 0, y: -1}
 --- !u!61 &2036104947
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2536,8 +2533,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4291633979546015590, guid: 29294015edcd7cd4faae88d2c6c8ea34, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2867496853032442768}
   m_SourcePrefab: {fileID: 100100000, guid: 29294015edcd7cd4faae88d2c6c8ea34, type: 3}
+--- !u!1 &2867496853032442767 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4291633979546015590, guid: 29294015edcd7cd4faae88d2c6c8ea34, type: 3}
+  m_PrefabInstance: {fileID: 2867496853032442766}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2867496853032442768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2867496853032442767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2eb0f2fba916064da66633480fe9fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5229049405325163936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2566,6 +2583,10 @@ PrefabInstance:
       propertyPath: cinemachineCamera
       value: 
       objectReference: {fileID: 1140712933}
+    - target: {fileID: 8068474431237666091, guid: c68b1ffdd32ce9749bfb4953ad74c0ed, type: 3}
+      propertyPath: clock
+      value: 
+      objectReference: {fileID: 2867496853032442767}
     - target: {fileID: 8068474431237666091, guid: c68b1ffdd32ce9749bfb4953ad74c0ed, type: 3}
       propertyPath: bgTransition
       value: 

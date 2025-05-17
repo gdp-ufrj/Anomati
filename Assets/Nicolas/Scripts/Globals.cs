@@ -2,8 +2,9 @@
 
 using UnityEngine;
 
-public class Globals : MonoBehaviour {
+public class Globals : MonoBehaviour
+{
     public static bool firstScene = true;   // Variável para verificar se é a primeira cena que está sendo carregada (útil para o fade da transição)
-    public static string currentScene = "Present", lastScene = "Present";
+    public static string currentScene = "", sceneToBeLoaded = "";  //Variáveis para armazenar a cena atual e a próxima cena a ser carregada
+    public static Vector3 lastPlayerPosition; // Variável para armazenar a última posição do jogador
 }
-

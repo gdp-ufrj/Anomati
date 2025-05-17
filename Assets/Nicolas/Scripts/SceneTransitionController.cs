@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SceneTransitionController : MonoBehaviour
 {   //É uma classe singleton, ou seja, só pode existir uma instância dela nas cenas
     private static SceneTransitionController instance;
-    public GameObject bgTransition;  //Referência à imagem de transição de cena
+    public GameObject bgTransition, clock;  //Referência às imagens de transição de cena
 
     public static SceneTransitionController GetInstance()
     {
@@ -18,16 +19,29 @@ public class SceneTransitionController : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void FadeOut()
+    public void FadeOut(string clockAnimation="")
     {
-        Debug.Log("FadeOut");
-        bgTransition.SetActive(true);
-        bgTransition.GetComponent<Animator>().Play("FadeOut");
+        Color colorBg = bgTransition.GetComponent<Image>().color;
+        colorBg.a = 1;
+        bgTransition.GetComponent<Image>().color = colorBg;
+        if (clockAnimation != "")
+        {
+            clock.SetActive(true); //Ativa o relógio
+            clock.GetComponent<Animator>().Play(clockAnimation); //Executa a animação do relógio
+        }
+        else
+            bgTransition.GetComponent<Animator>().Play("FadeOut");
     }
-    
-    public void FadeIn(){
-        bgTransition.SetActive(true);
+
+    public void FadeIn()
+    {
+        bgTransition.transform.parent.gameObject.SetActive(true); //Ativa o canvas de transição
         bgTransition.GetComponent<Animator>().Play("FadeIn");
     }
-    
+
+    public void LoadScene(string sceneName)
+    {
+        Globals.sceneToBeLoaded = sceneName;
+        FadeIn();    //A cena será carregada pelo evento de animação que ocorrerá após o fade in
+    }
 }
