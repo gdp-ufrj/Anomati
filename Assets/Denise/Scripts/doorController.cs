@@ -8,7 +8,9 @@ public class doorController : MonoBehaviour
 
     public Transform tPlayer; // Transform do player
     public Transform destino; // Ponto de destino para onde a porta levará o jogador
-    private bool     isTransicionando; // Flag para verificar se a transição está em andamento
+    [SerializeField] private Collider2D destinationBounds; //Referência ao objeto que define os limites de destino
+
+    private bool isTransicionando; // Flag para verificar se a transição está em andamento
 
     public Vector2 idleDirection; // Direção padrão é para baixo (idle para baixo)
 
@@ -36,10 +38,11 @@ public class doorController : MonoBehaviour
         isTransicionando = true; // Define a flag de transição como verdadeira
         _fadeController.fadeIn(); // Inicia o fade in
         yield return new WaitWhile(() => _fadeController.fumeImage.color.a < 0.9f); // Espera até que o fade in esteja completo
+        yield return new WaitForSeconds(0.2f); // Espera mais um pouco
 
         _playerController.enabled = false; // Desabilita o controlador do jogador para evitar movimento durante a transição
-
         tPlayer.position = destino.position; // Teleporta o jogador para o ponto de destino
+        CameraController.GetInstance().SetNewBounds(destinationBounds); //Atualiza os limites da câmera para o novo destino
 
         // Aplica a direção de idle
         Animator playerAnimator = tPlayer.GetComponent<Animator>();

@@ -13,7 +13,12 @@ public class PlayerController : MonoBehaviour {
     public LayerMask interacao; // Camada de interação
     private GameObject objetoInteracao; // Objeto que será interagido
 
-    private void Awake() {
+    private RaycastHit2D hit = new RaycastHit2D(); // Raycast para detectar objetos
+    
+    [SerializeField] private GameObject txtInteracao; // Texto de interação
+
+    private void Awake()
+    {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
@@ -26,15 +31,10 @@ public class PlayerController : MonoBehaviour {
         movementVector = Vector2.zero; //Inicializa o vetor de movimento como zero
     }
 
-
     private void Interact(){    //Método para a interação
-        // lógica para interagir com objetos no jogo
-        RaycastHit2D hit = Physics2D.Raycast(rb.position, movementVector.normalized, 1.0f, interacao);
-        //Debug.DrawRay(rb.position, movementVector.normalized * 1.0f, Color.blue); // Desenha um raio para depuração
-
         // Verifica se o raycast acertou algo
-        if (hit.collider != null)
-        {
+        if (hit.collider != null) {
+
             objetoInteracao = hit.collider.gameObject;
 
             if (objetoInteracao.CompareTag("door"))
@@ -46,11 +46,9 @@ public class PlayerController : MonoBehaviour {
                 }
             }
 
-            objetoInteracao.SendMessage("interacao", SendMessageOptions.DontRequireReceiver);
-            // Envia a mensagem de interação para o objeto atingido pelo raycast
+            objetoInteracao.SendMessage("interacao", SendMessageOptions.DontRequireReceiver);   //Envia a mensagem de interação para o objeto atingido pelo raycast
         }
-        else
-        {
+        else {
             objetoInteracao = null;
         } 
     }
@@ -68,6 +66,13 @@ public class PlayerController : MonoBehaviour {
     }
 
     void FixedUpdate() {
+        hit = Physics2D.Raycast(rb.position, movementVector.normalized, 0.1f, interacao);
+        //Debug.DrawRay(rb.position, movementVector.normalized * 1.0f, Color.blue); // Desenha um raio para depuração
+        if (hit.collider != null)
+            txtInteracao.SetActive(true); // Ativa o texto de interação
+        else
+            txtInteracao.SetActive(false); // Desativa o texto de interação
+
         if (!isSprinting)    //Se não estiver correndo, use a velocidade de movimento normal
             rb.MovePosition(rb.position + movementVector * movementSpeed * Time.fixedDeltaTime);
         else
