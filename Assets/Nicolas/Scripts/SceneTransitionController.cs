@@ -21,9 +21,6 @@ public class SceneTransitionController : MonoBehaviour
 
     public void FadeOut(string clockAnimation="")
     {
-        Color colorBg = bgTransition.GetComponent<Image>().color;
-        colorBg.a = 1;
-        bgTransition.GetComponent<Image>().color = colorBg;
         if (clockAnimation != "")
         {
             clock.SetActive(true); //Ativa o relógio
@@ -35,6 +32,9 @@ public class SceneTransitionController : MonoBehaviour
 
     public void FadeIn()
     {
+        if(clock)
+            clock.SetActive(false); //Desativa o relógio
+        bgTransition.SetActive(true); //Ativa o canvas de transição
         bgTransition.transform.parent.gameObject.SetActive(true); //Ativa o canvas de transição
         bgTransition.GetComponent<Animator>().Play("FadeIn");
     }

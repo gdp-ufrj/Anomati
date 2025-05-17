@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,7 +10,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementVector;
     private bool isSprinting = false;
 
-    public bool canMove = true; // Flag para controlar se o jogador pode se mover ou não
+    public bool canMove = false;   //Flag para controlar se o jogador pode se mover ou não  (será setado como verdadeiro quando o fade out terminar)
 
     //interação com objetos
     public LayerMask interacao; // Camada de interação
@@ -25,12 +24,14 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        canMove = false; // Inicializa a flag de movimento como falsa
 
         //Adição dos eventos de inputs:
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.SprintStart.performed += x => isSprinting = true;
         playerInputActions.Player.SprintFinish.performed += x => isSprinting = false;
         playerInputActions.Player.Interact.performed += x => Interact();
+        playerInputActions.Player.TimeTravel.performed += x => TimeTravel();
 
         movementVector = Vector2.zero; //Inicializa o vetor de movimento como zero
     }
@@ -54,8 +55,16 @@ public class PlayerController : MonoBehaviour
             objetoInteracao.SendMessage("interacao", SendMessageOptions.DontRequireReceiver);   //Envia a mensagem de interação para o objeto atingido pelo raycast
         }
         else
-        {
             objetoInteracao = null;
+    }
+
+    private void TimeTravel()
+    {
+        if (canMove)
+        {
+            //Debug.Log("Time Travel");
+            canMove = false; // Desabilita o movimento do jogador
+            GameControllerNicolas.GetInstance().TimeTravel(); //Chama o método de viagem no tempo do controlador de jogo
         }
     }
 
@@ -76,20 +85,17 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (canMove)
-        {   //Se o jogador puder se mover
-            hit = Physics2D.Raycast(rb.position, movementVector.normalized, 0.1f, interacao);
-            //Debug.DrawRay(rb.position, movementVector.normalized * 1.0f, Color.blue); // Desenha um raio para depuração
-            if (hit.collider != null)
-                txtInteracao.SetActive(true); // Ativa o texto de interação
-            else
-                txtInteracao.SetActive(false); // Desativa o texto de interação
+        hit = Physics2D.Raycast(rb.position, movementVector.normalized, 0.1f, interacao);
+        //Debug.DrawRay(rb.position, movementVector.normalized * 1.0f, Color.blue); // Desenha um raio para depuração
+        if (hit.collider != null)
+            txtInteracao.SetActive(true); // Ativa o texto de interação
+        else
+            txtInteracao.SetActive(false); // Desativa o texto de interação
 
-            if (!isSprinting)    //Se não estiver correndo, use a velocidade de movimento normal
-                rb.MovePosition(rb.position + movementVector * movementSpeed * Time.fixedDeltaTime);
-            else
-                rb.MovePosition(rb.position + movementVector * sprintSpeed * Time.fixedDeltaTime);
-        }
+        if (!isSprinting)    //Se não estiver correndo, use a velocidade de movimento normal
+            rb.MovePosition(rb.position + movementVector * movementSpeed * Time.fixedDeltaTime);
+        else
+            rb.MovePosition(rb.position + movementVector * sprintSpeed * Time.fixedDeltaTime);
     }
 
     public void Move()
@@ -120,7 +126,6 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("LastInputX", animator.GetFloat("InputX"));
             animator.SetFloat("LastInputY", animator.GetFloat("InputY"));
         }
-
         //Debug.Log(movementVector); // Debug para verificar o vetor de movimento
     }
     

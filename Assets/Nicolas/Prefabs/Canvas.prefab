@@ -327,6 +327,7 @@ GameObject:
   - component: {fileID: 6941960678928517694}
   - component: {fileID: 4830503391654893873}
   - component: {fileID: 6406525153608719150}
+  - component: {fileID: 4345238222036450806}
   m_Layer: 5
   m_Name: txtClock
   m_TagString: Untagged
@@ -474,6 +475,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4345238222036450806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4291633979546015590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2eb0f2fba916064da66633480fe9fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4910019590069409957
 GameObject:
   m_ObjectHideFlags: 0
