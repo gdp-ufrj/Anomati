@@ -4,7 +4,9 @@ using UnityEngine.SceneManagement;
 public class GameControllerNicolas : MonoBehaviour
 {
     [SerializeField] private GameObject player; //Referência ao jogador
+    [SerializeField] private GameObject pauseMenu;  //Referência ao menu de pausa
     private static GameControllerNicolas instance;
+    [HideInInspector] public bool gamePaused = false;   //Flag para controlar se o jogo está pausado ou não
 
     public static GameControllerNicolas GetInstance()
     {
@@ -28,7 +30,7 @@ public class GameControllerNicolas : MonoBehaviour
             Globals.firstScene = false;
             SceneTransitionController.GetInstance().bgTransition.transform.parent.gameObject.SetActive(false); //Desativa o canvas de transição
             Debug.Log("Primeira cena carregada");
-            if(player)
+            if (player)
                 player.GetComponent<PlayerController>().canMove = true; //Habilita o movimento do jogador
         }
         else
@@ -55,7 +57,7 @@ public class GameControllerNicolas : MonoBehaviour
         else if (SceneManager.GetActiveScene().name.Contains("Present"))
             SceneTransitionController.GetInstance().LoadScene("Past");  //Carrega a cena do passado
     }
-    
+
     public void FadeOut()    //Controla o fade-out da cena com ou sem a animação do relógio
     {
         if (SceneManager.GetActiveScene().name.Contains("Past"))
@@ -74,5 +76,24 @@ public class GameControllerNicolas : MonoBehaviour
         }
         else
             SceneTransitionController.GetInstance().FadeOut();
+    }
+
+    public void PauseGame()
+    {
+        if (!gamePaused)
+        {
+            if (player.GetComponent<PlayerController>().canMove)
+            {
+                player.GetComponent<PlayerController>().canMove = false;  //Desabilita o movimento do jogador
+                gamePaused = true;
+                pauseMenu.SetActive(true);  //Ativa o menu de pausa
+            }
+        }
+        else
+        {
+            pauseMenu.SetActive(false);  //Desativa o menu de pausa
+            gamePaused = false;
+            player.GetComponent<PlayerController>().canMove = true;  //Habilita o movimento do jogador
+        }
     }
 }

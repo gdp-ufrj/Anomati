@@ -8,4 +8,10 @@ public class Globals : MonoBehaviour
     public static string currentScene = "", sceneToBeLoaded = "";  //Variáveis para armazenar a cena atual e a próxima cena a ser carregada
     public static Vector2 lastPlayerPosition; //Variável para armazenar a última posição do jogador
     public static string lastCameraBounds = ""; //Variável para armazenar o nome dos limites da câmera
+
+    public static void ResetGlobalVariables()
+    {
+        lastPlayerPosition = Vector2.zero;  //Reseta a variável para armazenar a última posição do jogador
+        lastCameraBounds = "";  //Reseta a variável para armazenar o nome dos limites da câmera
+    }
 }

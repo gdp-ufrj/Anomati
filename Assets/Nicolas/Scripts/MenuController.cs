@@ -1,3 +1,4 @@
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class MenuController : MonoBehaviour
@@ -21,6 +22,12 @@ public class MenuController : MonoBehaviour
     {
         menuConfiguracoes.SetActive(false); //Desativa o painel de configurações
         menuPrincipal.SetActive(true); //Ativa o painel do menu principal
+    }
+
+    public void ReturnToMainMenu()
+    {
+        Globals.ResetGlobalVariables();
+        SceneTransitionController.GetInstance().LoadScene("Menu"); //Carrega a cena do menu principal
     }
     
     public void QuitGame()

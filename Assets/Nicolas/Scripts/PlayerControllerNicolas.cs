@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
         playerInputActions.Player.SprintFinish.performed += x => isSprinting = false;
         playerInputActions.Player.Interact.performed += x => Interact();
         playerInputActions.Player.TimeTravel.performed += x => TimeTravel();
+        playerInputActions.Player.Pause.performed += x => GameControllerNicolas.GetInstance().PauseGame();
 
         movementVector = Vector2.zero; //Inicializa o vetor de movimento como zero
     }
