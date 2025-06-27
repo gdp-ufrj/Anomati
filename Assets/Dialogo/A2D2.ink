@@ -1,37 +1,27 @@
 // [Ao norte da tela, um espectro negro se aproxima do personagem, de maneira lenta e gradual, e, ao finalmente ficar em sua frente, se revela como uma menina]
 
-MENINA CURIOSA: Oi moço… Quem é você? Eu nunca te vi aqui antes.
--> Escolhas
+Oi moço… Quem é você? Eu nunca te vi aqui antes. #speaker:Elisa #portrait:elisa #layout:right
+-> main
 
-== Escolhas ==
-* [Sou Lúgubre] -> Good
-+ [Vaza] -> Neutral
-+ [Repita, por favor] -> Repeat
+== main ==
++ [Sou Lúgubre.]
+    …Eu me chamo Lúgubre, agora me deixe em paz. #speaker:Lugebre #portrait:lugebre #layout:left
+    Lúgubre? E isso é nome? #speaker:Elisa #portrait:elisa #layout:right
+    …É. #speaker:Lugebre #portrait:lugebre #layout:left
+    Se você diz. Meu nome é Elisa, aliás! #speaker:Elisa #portrait:elisa #layout:right
+    Que roupa é essa? Você não sente calor, não? Mal dá pra ver você. #speaker:Elisa #portrait:elisa #layout:right
+    … #speaker:Lugebre #portrait:lugebre #layout:left
+    Você parece meio triste. Lágrimas não combinam com esta cidade, sabia? #speaker:Elisa #portrait:elisa #layout:right
+    O que disse, menina? #speaker:Lugebre #portrait:lugebre #layout:left
+    Que lágrimas não combinam com essa cidade! É um velho ditado de Anomati. #speaker:Elisa #portrait:elisa #layout:right
+    -> DONE
 
-== Good ==
-LÚGUBRE: …Eu me chamo lúgubre, agora me deixe em paz.
-MENINA CURIOSA: Lúgubre? E isso é nome?
-LÚGUBRE: …É
-ELISA: Se você diz. Meu nome é Elisa, aliás!
-ELISA: Que roupa é essa? Você não sente calor, não? Mal dá para ver você.
-LÚGUBRE: …
-ELISA: Você parece meio triste. Lágrimas não combinam com esta cidade, sabia?
-LÚGUBRE: O que disse, menina?
-ELISA: Que lágrimas não combinam com essa cidade! É um velho ditado de Anomati.
++ [Vaza]
+    Cuide da sua vida, menina. #speaker:Lugebre #portrait:lugebre #layout:left
+    Vou perguntar até você me falar seu nome! #speaker:Elisa #portrait:elisa #layout:right
+    -> main
 
--> DONE
-
-== Neutral ==
-LÚGUBRE: Cuide de sua vida, menina
-MENINA CURIOSA: Vou perguntar até você me falar seu nome!
--> Escolhas
-
-== Repeat ==
-LÚGUBRE: Fala alto que eu sou velho
-MENINA CURIOSA: Eu perguntei quem é você!
--> Escolhas
-
-
-
-
--> END
++ [Repita, por favor]
+    Fala alto que eu sou velho. #speaker:Lugebre #portrait:lugebre #layout:left
+    Eu perguntei quem é você! #speaker:Elisa #portrait:elisa #layout:right
+    -> main

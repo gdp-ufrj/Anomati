@@ -5,12 +5,17 @@ using System.ComponentModel;
 using Ink.Runtime;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems; 
+using UnityEngine.EventSystems;
+using FMODUnity;
 
 public class GerenciadorDeDialogos : MonoBehaviour
 {
+    [Header("Parametros de Diálogo")]
+    [SerializeField] private float tempoEscrever = 2f; // Tempo entre cada letra do diálogo
+
     [Header("Diálogo UI")]
     [SerializeField] private GameObject painelDialogo;
+    [SerializeField] private GameObject IconeContinuar; // Referência ao ícone de continuar
     [SerializeField] private TextMeshProUGUI textoDialogo;
     [SerializeField] private TextMeshProUGUI nomeFalante; // Referência ao GameObject do nome do falante
     [SerializeField] private Animator portraitAnimator; // Referência ao Animator do retrato
@@ -20,8 +25,27 @@ public class GerenciadorDeDialogos : MonoBehaviour
     [SerializeField] private GameObject[] opcoes;
     private TextMeshProUGUI[] textoOpcoes;
 
+    [Header("Audio")]
+    [SerializeField] private EventReference audioEscrita; // Referência ao evento de áudio de escrita
+    [Range(1, 5)]
+    [SerializeField] private int FrequenciaAudio = 4; // Frequência de reprodução do áudio de escrita
+    [Range(-3, 3)]
+    [SerializeField] private float minPitch = 0.5f; // Pitch mínimo do áudio de escrita
+    [Range(-3, 3)]
+    [SerializeField] private float maxPitch = 2f; // Pitch máximo do áudio de escrita
+    //[SerializeField] private AudioClip audioSomEscrendo; // Referência ao áudio de continuar
+    //[SerializeField] private AudioClip paraAudio; // Referência ao áudio de parar
+    //[SerializeField] private DialogueAudioInfoSO defaultAudioInfo;
+    //[SerializeField] private DialogueAudioInfoSO[] audioInfos;
+    //[SerializeField] private bool makePredictable;
+    //private DialogueAudioInfoSO currentAudioInfo;
+    //private Dictionary<string, DialogueAudioInfoSO> audioInfoDictionary;
+    //private AudioSource audioSource; // Referência ao AudioSource para tocar os sons
+
     private Story historiaAtual;
     public bool dialogoAtivo {get; private set;}
+    private bool dialogoFinalizado = false; // Indica se o diálogo foi finalizado
+    private Coroutine coroutineMostrarLinha; // Referência à coroutine que mostra a linha do diálogo
     private static GerenciadorDeDialogos instancia; 
 
     private const string SPEAKER_TAG = "speaker"; // Tag para o falante
@@ -35,6 +59,8 @@ public class GerenciadorDeDialogos : MonoBehaviour
             Debug.LogWarning("Há mais de um Grenciador de diálogo na cena");
         }
         instancia = this; 
+
+        //audioSource = this.gameObject.AddComponent<AudioSource>(); // Adiciona um AudioSource ao GameObject do gerenciador de diálogos
     }
 
     public static GerenciadorDeDialogos GetInstancia()
@@ -58,15 +84,16 @@ public class GerenciadorDeDialogos : MonoBehaviour
         }
     }
 
+    /*
     private void Update()
     {
-        
-        if (!dialogoAtivo)
+        if (!dialogoAtivo) {
             return;
-
+        }
+        //if (historiaAtual.currentChoices.Count > 0)
         if (historiaAtual.currentChoices.Count > 0)
         {
-             //Caso usar o ImputSystem do Unity:
+            //Caso usar o ImputSystem do Unity:
             //if (InputManager.GetInstance().GetSubmitPressed())
             //Modificar futuramente para usar a mesma tecla de ação do jogador
             // Pressionar espaço seleciona a opção em foco
@@ -93,7 +120,24 @@ public class GerenciadorDeDialogos : MonoBehaviour
             }
         }
     }
-    public  void EntrarModoDialogo(TextAsset inkJSON)
+    */
+    
+    private void Update()
+    {
+        if (!dialogoAtivo)
+        {
+            return;
+        }
+
+        if (dialogoFinalizado 
+            && historiaAtual.currentChoices.Count == 0 
+            && Input.GetKeyDown(KeyCode.Space))
+        {
+            ContinuarHistoria();
+        }
+    } 
+     
+    public void EntrarModoDialogo(TextAsset inkJSON)
     {
         historiaAtual = new Story(inkJSON.text);
         dialogoAtivo = true;
@@ -117,15 +161,73 @@ public class GerenciadorDeDialogos : MonoBehaviour
     {
         if(historiaAtual.canContinue)
         {
-            textoDialogo.text = historiaAtual.Continue();
-
-            MostrarOpcoes(); // Chama o método para mostrar as opções
+            if (coroutineMostrarLinha != null)
+            {
+                StopCoroutine(coroutineMostrarLinha); // Para a coroutine anterior, se houver
+            }
+            coroutineMostrarLinha = StartCoroutine(MostrarLinha(historiaAtual.Continue())); // Inicia a coroutine para mostrar a linha do diálogo
 
             UsarTags(historiaAtual.currentTags); // Chama o método para usar as tags
         }
         else
         {
             SairModoDialogo();
+        }
+    }
+
+    private IEnumerator MostrarLinha(string linha)
+    {
+        // Limpa o texto do diálogo
+        textoDialogo.text = linha; 
+        textoDialogo.maxVisibleCharacters = 0;
+        // Desativa o ícone de continuar
+        IconeContinuar.SetActive(false);
+        EsconderOpcoes(); // Chama o método para esconder as opções
+
+        // Reseta o estado de diálogo finalizado
+        dialogoFinalizado = false; 
+
+        //Evita capturar o espaço do frame anterior
+        yield return new WaitForSeconds(0.01f);
+
+        int contador = 0;
+
+        foreach (char letra in linha.ToCharArray())
+        {
+            if (Input.GetKeyDown(KeyCode.Space)) // Se a tecla espaço for pressionada
+            {
+                textoDialogo.maxVisibleCharacters = linha.Length; // Mostra todo o texto de uma vez
+                break; // Sai da coroutine
+            }
+
+            textoDialogo.maxVisibleCharacters++; // Adiciona cada letra ao texto do diálogo
+            if (!audioEscrita.IsNull && contador % FrequenciaAudio == 0)
+            {
+                var instancia = RuntimeManager.CreateInstance(audioEscrita);
+                float pitchValue = UnityEngine.Random.Range(minPitch, maxPitch);
+                Debug.Log($"Pitch usado: {pitchValue}");
+                instancia.setParameterByName("pitchControl", pitchValue);
+                instancia.start();
+                instancia.release();
+            }
+            contador++;
+            yield return new WaitForSeconds(tempoEscrever); // Espera um pouco antes de adicionar a próxima letra
+        }
+    
+        IconeContinuar.SetActive(true); // Ativa o ícone de continuar
+        MostrarOpcoes(); // Chama o método para mostrar as opções
+        dialogoFinalizado = true; // Define o estado de diálogo finalizado como verdadeiro
+    }
+
+    private void TocarSomEscrita()
+    {
+       
+    }
+    private void EsconderOpcoes()
+    {
+        foreach (GameObject opcaoBotao in opcoes) // Para cada opção no array de opções
+        {
+            opcaoBotao.SetActive(false); // Desativa a opção
         }
     }
 
@@ -191,8 +293,10 @@ public class GerenciadorDeDialogos : MonoBehaviour
     }
     public void EscolherOpcao(int escolhaIndex)
     {
+        if (dialogoFinalizado) { 
+
         historiaAtual.ChooseChoiceIndex(escolhaIndex);
         ContinuarHistoria();
+        }
     }
-
 }

@@ -283,15 +283,15 @@ RectTransform:
   m_GameObject: {fileID: 49777849}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1487839755}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 83, y: 44}
-  m_SizeDelta: {x: 166.0679, y: 326.5984}
+  m_AnchoredPosition: {x: 655, y: 90}
+  m_SizeDelta: {x: 192.22, y: 241.7657}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &49777851
 MonoBehaviour:
@@ -384,6 +384,7 @@ Transform:
   m_Children:
   - {fileID: 208684792}
   - {fileID: 2012387481}
+  - {fileID: 1292432338}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &115318397
@@ -1768,12 +1769,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1292432335}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 931.6929, y: 253.94023, z: -1.2604183}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 117.91559, y: -205.34386, z: -7.886925}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 66122779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1292432339
 MonoBehaviour:
@@ -2792,7 +2793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4786d40b4514ee045a64f8ba3c2c3887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 4900000, guid: 3811687fb8b44674e9784b2ddae148a5, type: 3}
+  inkJSON: {fileID: 4900000, guid: df61d8c2de05abc4b9bbae09e19a72c3, type: 3}
 --- !u!1 &1934398364
 GameObject:
   m_ObjectHideFlags: 0
@@ -3024,7 +3025,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b49c8ea22b8a34ab61a2e7ce975d8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tempoEscrever: 0.02
   painelDialogo: {fileID: 2084103557}
+  IconeContinuar: {fileID: 130633613}
   textoDialogo: {fileID: 1461209087}
   nomeFalante: {fileID: 326721362}
   portraitAnimator: {fileID: 49777853}
@@ -3032,6 +3035,16 @@ MonoBehaviour:
   - {fileID: 115318397}
   - {fileID: 1538983557}
   - {fileID: 678814700}
+  audioEscrita:
+    Guid:
+      Data1: -2053184237
+      Data2: 1114326548
+      Data3: 1335733432
+      Data4: -1539764923
+    Path: event:/FalaRapida
+  FrequenciaAudio: 4
+  minPitch: -3
+  maxPitch: 3
 --- !u!1 &2018500681
 GameObject:
   m_ObjectHideFlags: 0
@@ -3366,4 +3379,3 @@ SceneRoots:
   - {fileID: 422590697}
   - {fileID: 1588783132}
   - {fileID: 1644611083}
-  - {fileID: 1292432338}
