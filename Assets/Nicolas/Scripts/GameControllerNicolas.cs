@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 public class GameControllerNicolas : MonoBehaviour
 {
-    [SerializeField] private GameObject player; //Referência ao jogador
+    [SerializeField] private GameObject player, pai;
     [SerializeField] private GameObject pauseMenu;  //Referência ao menu de pausa
     private static GameControllerNicolas instance;
     [HideInInspector] public bool gamePaused = false;   //Flag para controlar se o jogo está pausado ou não
@@ -30,8 +31,7 @@ public class GameControllerNicolas : MonoBehaviour
             Globals.firstScene = false;
             SceneTransitionController.GetInstance().bgTransition.transform.parent.gameObject.SetActive(false); //Desativa o canvas de transição
             Debug.Log("Primeira cena carregada");
-            if (player)
-                player.GetComponent<PlayerController>().canMove = true; //Habilita o movimento do jogador
+            EnablePlayerMovement();
         }
         else
         {
@@ -84,7 +84,7 @@ public class GameControllerNicolas : MonoBehaviour
         {
             if (player.GetComponent<PlayerController>().canMove)
             {
-                player.GetComponent<PlayerController>().canMove = false;  //Desabilita o movimento do jogador
+                DisablePlayerMovement();
                 gamePaused = true;
                 pauseMenu.SetActive(true);  //Ativa o menu de pausa
             }
@@ -93,7 +93,57 @@ public class GameControllerNicolas : MonoBehaviour
         {
             pauseMenu.SetActive(false);  //Desativa o menu de pausa
             gamePaused = false;
-            player.GetComponent<PlayerController>().canMove = true;  //Habilita o movimento do jogador
+            EnablePlayerMovement();
         }
+    }
+
+    public void EnablePlayerMovement()
+    {
+        if (player != null)
+            player.GetComponent<PlayerController>().canMove = true;  //Habilita o movimento do jogador
+    }
+    public void DisablePlayerMovement()
+    {
+        if (player != null)
+            player.GetComponent<PlayerController>().canMove = false;  //Desabilita o movimento do jogador
+    }
+    public void SetIdleDirectionPlayer()
+    { 
+        if (player != null)
+            player.GetComponent<PlayerController>().SetIdleDirection();  //Define a direção de idle do jogador
+    }
+    public void DisableDad()
+    {
+        if (pai != null)
+        {
+            pai.GetComponent<Pai>().ResetPosition();  //Reseta a posição do pai para a posição original
+            pai.GetComponent<Pai>().enabled = false;  //Desativa o pai se ele estiver ativo
+            pai.GetComponent<NavMeshAgent>().enabled = false;  //Desabilita o NavMeshAgent do pai
+        }
+    }
+    public void EnableDad()
+    {
+        if (pai != null)
+        {
+            pai.GetComponent<Pai>().enabled = true;  //Ativa o pai
+            pai.GetComponent<NavMeshAgent>().enabled = true;  //Habilita o NavMeshAgent do pai
+        }
+    }
+
+
+    public void FinishDoorInteraction(string origin, string destination)    //Aqui acontecerá checagens de triggers após a transição de porta, como ativar cenas, diálogos, etc...
+    {
+        Debug.Log("FinishDoorInteraction called. From: " + origin + " To: " + destination);
+        if (origin == "CasaPai")
+        {
+            DisableDad();
+        }
+        if (destination == "CasaPai")
+        {
+            EnableDad();
+        }
+
+        EnablePlayerMovement();
+        DoorTransitionController.GetInstance().isTransitioning = false; // Define a flag de transição como falsa
     }
 }
