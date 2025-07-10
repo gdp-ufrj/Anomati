@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{8749607c-0c2b-4a95-8cfe-e8674f464bbb}">
+		<property name="assetPath">
+			<value>Ambience/City/ambience_city_traffic_train_1.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>9.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9384a272-315e-411c-a916-668cb0bd1ebd}</destination>
+		</relationship>
+	</object>
+</objects>

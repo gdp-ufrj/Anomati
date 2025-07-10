@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{114f1c41-3670-4b4d-9099-04ef0ca66758}">
+		<property name="assetPath">
+			<value>o-coelhinho-que-cacava-baloes-258711_[cut_0sec].mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.16800000000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9384a272-315e-411c-a916-668cb0bd1ebd}</destination>
+		</relationship>
+	</object>
+</objects>

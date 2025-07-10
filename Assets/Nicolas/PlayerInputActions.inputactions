@@ -33,27 +33,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Interact",
+                    "name": "Submit",
                     "type": "Button",
-                    "id": "55e85644-e50e-4951-91a7-0a60a4c638fa",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "TimeTravel",
-                    "type": "Button",
-                    "id": "220188af-78ac-465d-ac21-29316e80c1fa",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Pause",
-                    "type": "Button",
-                    "id": "d74cfd0f-a5b6-4726-88ba-c073960530ae",
+                    "id": "0f066cf8-146a-4784-bce5-7277fade4a56",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -305,34 +287,23 @@
                 },
                 {
                     "name": "",
-                    "id": "94985ce6-9419-4e12-8317-64e0cb118872",
-                    "path": "<Keyboard>/e",
-                    "interactions": "Press",
+                    "id": "1c2e15be-dcb9-4e73-8d71-22ac097bcf0e",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Interact",
+                    "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "ba0e30eb-b09e-4e81-a90a-82af330cc3ff",
-                    "path": "<Keyboard>/t",
-                    "interactions": "Press",
+                    "id": "cfb32722-87ca-4623-969f-37b9f11fd235",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "TimeTravel",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "93053a72-dad6-4e8b-bd07-8da18ff9596b",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Pause",
+                    "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
