@@ -22,4 +22,16 @@ public class Pai : MonoBehaviour
     {
         transform.position = originalPosition.position;  //Reseta a posição do pai para a posição original
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("player"))
+        {
+            if (Globals.triggerDadRun && !Globals.endDadRun && !DoorTransitionController.GetInstance().isTransitioning)
+            {
+                Debug.Log("Pai colidiu com o jogador durante a perseguição!");
+                GameControllerNicolas.GetInstance().ResetDadRun();    //Reseta a perseguição com o pai
+            }
+        }
+    }
 }

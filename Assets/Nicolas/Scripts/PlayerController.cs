@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -44,6 +45,13 @@ public class PlayerController : MonoBehaviour
         {
             objetoInteracao = hit.collider.gameObject;
 
+            bool canInteract = GameControllerNicolas.GetInstance().CanInteractWithObject(objetoInteracao);   //Verifica se o objeto pode ser interagido
+            if(!canInteract)
+            {
+                Debug.Log("Interação não permitida com: " + objetoInteracao.name);
+                return;
+            }
+
             if (objetoInteracao.CompareTag("door"))
             {
                 doorController door = objetoInteracao.GetComponent<doorController>();
@@ -53,7 +61,7 @@ public class PlayerController : MonoBehaviour
 
             canMove = false;
             txtInteracao.SetActive(false); // Desativa o texto de interação
-            objetoInteracao.SendMessage("interacao", SendMessageOptions.DontRequireReceiver);   //Envia a mensagem de interação para o objeto atingido pelo raycast
+            objetoInteracao.SendMessage("interacao", true, SendMessageOptions.DontRequireReceiver);   //Envia a mensagem de interação para o objeto atingido pelo raycast
         }
         else
             objetoInteracao = null;
@@ -93,7 +101,13 @@ public class PlayerController : MonoBehaviour
         if (txtInteracao != null)
         {
             if (hit.collider != null)
+            {
+                //Debug.Log("Objeto interagível detectado: " + hit.collider.gameObject.name);
+
+                string txtInterac = GameControllerNicolas.GetInstance().GetInteractionText(hit.collider.gameObject);  //Obtém o texto de interação do objeto
+                txtInteracao.GetComponent<TMPro.TextMeshProUGUI>().text = txtInterac;
                 txtInteracao.SetActive(true); // Ativa o texto de interação
+            }
             else
                 txtInteracao.SetActive(false); // Desativa o texto de interação
         }
