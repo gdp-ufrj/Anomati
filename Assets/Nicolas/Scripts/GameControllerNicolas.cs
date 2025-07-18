@@ -45,6 +45,7 @@ public class GameControllerNicolas : MonoBehaviour
             FadeOut();
         }
 
+        SetDadDefault();  //Define o pai para o estado padrão
         Globals.currentScene = currentScene; //Armazena o nome da cena atual
     }
 
@@ -97,9 +98,7 @@ public class GameControllerNicolas : MonoBehaviour
             gamePaused = false;
             EnablePlayerMovement();
             if (Globals.triggerDadRun && !Globals.endDadRun)
-            {
-                EnableDadRun();  //Reativa a perseguição com o pai, se estiver ativa
-            }
+                EnableDadRun(afterPause: true);  //Reativa a perseguição com o pai
         }
     }
 
@@ -122,21 +121,42 @@ public class GameControllerNicolas : MonoBehaviour
     {
         if (pai != null)
         {
-            pai.GetComponent<Pai>().enabled = false;  //Desativa o script do pai
+            //pai.GetComponent<Pai>().enabled = false;  //Desativa o script do pai
+            pai.GetComponent<NavMeshAgent>().Warp(pai.transform.position);  //Para não dar o bug de teleporte
             pai.GetComponent<NavMeshAgent>().enabled = false;  //Desabilita o NavMeshAgent do pai
         }
     }
-    public void EnableDadRun()
+    public void EnableDadRun(bool afterPause=false)
     {
         if (pai != null)
         {
-            pai.GetComponent<Pai>().enabled = true;  //Ativa o pai
+            pai.GetComponent<NavMeshAgent>().Warp(pai.transform.position);  //Para não dar o bug de teleporte
+            pai.GetComponent<Pai>().enabled = true;
             pai.GetComponent<NavMeshAgent>().enabled = true;  //Habilita o NavMeshAgent do pai
+            if (!afterPause)
+                StartCoroutine(IncreaseDadVelocity());  //Aumenta a velocidade do pai gradualmente
         }
     }
+
+    private IEnumerator IncreaseDadVelocity()    //Coroutine para aumentar a velocidade do pai gradualmente
+    {
+        float tempo = 0f, tempoParaAumentar = 1f; //Tempo total para aumentar a velocidade
+        float originalSpeed = pai.GetComponent<NavMeshAgent>().speed; //Velocidade original do pai
+
+        pai.GetComponent<NavMeshAgent>().speed = 0f;
+        while (tempo < tempoParaAumentar)
+        {
+            pai.GetComponent<NavMeshAgent>().speed = Mathf.Lerp(0f, originalSpeed, tempo / tempoParaAumentar);
+            tempo += Time.deltaTime;
+            yield return null;
+        }
+        pai.GetComponent<NavMeshAgent>().speed = originalSpeed;
+    }
+
+
     public void ResetDadPosition()
     {
-        if (pai != null)
+        if (pai != null && pai.GetComponent<Pai>().enabled)
             pai.GetComponent<Pai>().ResetPosition();  //Reseta a posição do pai para a posição original
     }
 
@@ -170,11 +190,12 @@ public class GameControllerNicolas : MonoBehaviour
                 {
                     Globals.endDadRun = true;   //Finaliza a perseguição com o pai
                     DisableDadRun();
+                    SetDadDefault();
                 }
             }
             if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai))
                 if (Globals.triggerDadRun && !Globals.endDadRun)
-                    EnableDadRun();
+                    EnableDadRun();  //Ativa o pai
 
             if (destination == Globals.GetSceneName(Globals.MapNames.Atelie))
             {
@@ -187,7 +208,7 @@ public class GameControllerNicolas : MonoBehaviour
         {
             if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai))
                 if (Globals.triggerDadRun && !Globals.endDadRun)
-                    EnableDadRun();
+                    EnableDadRun();  //Ativa o pai
         }
 
         EnablePlayerMovement();
@@ -207,5 +228,23 @@ public class GameControllerNicolas : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);    //Espera um pouco
         porta_pai.SendMessage("interacao", false, SendMessageOptions.DontRequireReceiver);   //Inicia a transição para a casa do pai
+    }
+
+    public void SetDadDefault()
+    {
+        if (pai != null)
+        {
+            if (pai.GetComponent<Pai>().enabled)
+            {
+                pai.GetComponent<Pai>().ResetPosition();  //Reseta a posição do pai para a posição original
+                pai.GetComponent<Pai>().enabled = false;  //Desativa o script do pai
+            }
+            else
+            {
+                pai.GetComponent<Animator>().SetBool("IsWalking", false);  //Desativa a animação de caminhada do pai
+                pai.GetComponent<Animator>().SetFloat("LastInputX", 0f);
+                pai.GetComponent<Animator>().SetFloat("LastInputY", -1f);  //Define a direção de idle do pai
+            }
+        }
     }
 }
