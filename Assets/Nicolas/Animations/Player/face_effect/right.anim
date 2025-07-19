@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: idle_up
+  m_Name: right
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -0.01, y: 0.04, z: 0}
+        value: {x: 0.15, y: 0.5, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -30,20 +30,24 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: shadow
+    path: 
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -1370661682523340017, guid: 684e518bc1dea3c49bec15959769f1ef, type: 3}
+      value: {fileID: 4802728438025553981, guid: 08821cf06e4e9094f8f715fd4e0bb51b, type: 3}
+    - time: 0.1
+      value: {fileID: 5092514269727428640, guid: 08821cf06e4e9094f8f715fd4e0bb51b, type: 3}
+    - time: 0.2
+      value: {fileID: 5363568313178425266, guid: 08821cf06e4e9094f8f715fd4e0bb51b, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 60
+  m_SampleRate: 10
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -60,7 +64,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1970700845
+      path: 0
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -69,13 +73,15 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -1370661682523340017, guid: 684e518bc1dea3c49bec15959769f1ef, type: 3}
+    - {fileID: 4802728438025553981, guid: 08821cf06e4e9094f8f715fd4e0bb51b, type: 3}
+    - {fileID: 5092514269727428640, guid: 08821cf06e4e9094f8f715fd4e0bb51b, type: 3}
+    - {fileID: 5363568313178425266, guid: 08821cf06e4e9094f8f715fd4e0bb51b, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.016666668
+    m_StopTime: 0.3
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -97,7 +103,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.01
+        value: 0.15
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -108,7 +114,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: shadow
+    path: 
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -118,7 +124,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.04
+        value: 0.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -129,7 +135,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: shadow
+    path: 
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -150,11 +156,11 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: shadow
+    path: 
     classID: 4
     script: {fileID: 0}
     flags: 0
   m_EulerEditorCurves: []
-  m_HasGenericRootTransform: 0
+  m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events: []

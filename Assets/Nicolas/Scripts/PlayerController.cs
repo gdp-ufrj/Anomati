@@ -1,9 +1,9 @@
-using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 3f, sprintSpeed = 5f;
+    [SerializeField] private GameObject faceEffect;  //Efeito de rosto do jogador
 
     private PlayerInputActions playerInputActions;
     private Rigidbody2D rb;
@@ -120,9 +120,9 @@ public class PlayerController : MonoBehaviour
 
     public void Move()
     {    //Este método vai controlar o movimento do jogador e a animação de acordo com o vetor de movimento
-    
+
         if (GerenciadorDeDialogos.GetInstancia().dialogoAtivo) return; // Se o diálogo estiver ativo, não move o jogador
-        
+
         if (canMove)
             movementVector = playerInputActions.Player.Movement.ReadValue<Vector2>();
         else
@@ -148,6 +148,13 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isRunning", false);
             animator.SetFloat("LastInputX", animator.GetFloat("InputX"));
             animator.SetFloat("LastInputY", animator.GetFloat("InputY"));
+        }
+        if(faceEffect != null)
+        {
+            bool lookingUp = animator.GetFloat("InputY") > 0.1f;
+            faceEffect.GetComponent<Animator>().SetBool("LookingUp", lookingUp);
+            faceEffect.GetComponent<Animator>().SetFloat("InputX", animator.GetFloat("InputX"));
+            faceEffect.GetComponent<Animator>().SetFloat("InputY", animator.GetFloat("InputY"));
         }
         //Debug.Log(movementVector); // Debug para verificar o vetor de movimento
     }
