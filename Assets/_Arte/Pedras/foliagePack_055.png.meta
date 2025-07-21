@@ -139,37 +139,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: foliagePack_055_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 19
-        width: 82
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b485db4114267b9f0800000000000000
-      internalID: -452785205867095989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: foliagePack_055_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 82
-        height: 19
+        height: 59
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

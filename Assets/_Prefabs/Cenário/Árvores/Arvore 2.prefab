@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 419753554931410294}
   - component: {fileID: 2432021288630536165}
   - component: {fileID: 2041074514248717277}
+  - component: {fileID: -1194941330183919698}
   m_Layer: 0
   m_Name: Arvore 2
   m_TagString: Untagged
@@ -163,7 +164,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1782927673
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 10
   m_Sprite: {fileID: -5024162196098005157, guid: 3bf7e819ad7af324494e560f54b12519, type: 3}
   m_Color: {r: 0.6698113, g: 0.6413759, b: 0.6413759, a: 1}
@@ -222,3 +223,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.26861, y: 0.5172951}
   m_EdgeRadius: 0
+--- !u!114 &-1194941330183919698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5514213145633776978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e9455ca372e9341976b7ef30b64a1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
