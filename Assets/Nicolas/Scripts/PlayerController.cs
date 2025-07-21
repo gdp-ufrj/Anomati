@@ -9,9 +9,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private Vector2 movementVector;
-    private bool isSprinting = false;
+    private bool wantsToSprint = false, canInteractAgain = true;
 
     public bool canMove = false;   //Flag para controlar se o jogador pode se mover ou não  (será setado como verdadeiro quando o fade out terminar)
+    [HideInInspector] public bool canSprint = false, isSprinting = false, canTimeTravel = true;    //Flags de controle
 
     //interação com objetos
     public LayerMask interacao; // Camada de interação
@@ -19,20 +20,23 @@ public class PlayerController : MonoBehaviour
 
     private RaycastHit2D hit = new RaycastHit2D(); // Raycast para detectar objetos
 
+    private Stamina stamina;   //Referência ao sistema de stamina
+
     [SerializeField] private GameObject txtInteracao; // Texto de interação
 
     private void Awake()
     {
+        stamina = GetComponent<Stamina>(); // Obtém a referência ao componente Stamina
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         canMove = false; // Inicializa a flag de movimento como falsa
 
         //Adição dos eventos de inputs:
         playerInputActions = new PlayerInputActions();
-        playerInputActions.Player.SprintStart.performed += x => isSprinting = true;
-        playerInputActions.Player.SprintFinish.performed += x => isSprinting = false;
+        playerInputActions.Player.SprintStart.performed += x => { if (canSprint) wantsToSprint = true; };
+        playerInputActions.Player.SprintFinish.performed += x => wantsToSprint = false;
         playerInputActions.Player.Interact.performed += x => Interact();
-        playerInputActions.Player.TimeTravel.performed += x => TimeTravel();
+        playerInputActions.Player.TimeTravel.performed += x => { if (canTimeTravel) TimeTravel(); };
         playerInputActions.Player.Pause.performed += x => GameControllerNicolas.GetInstance().PauseGame();
 
         movementVector = Vector2.zero; //Inicializa o vetor de movimento como zero
@@ -46,7 +50,7 @@ public class PlayerController : MonoBehaviour
             objetoInteracao = hit.collider.gameObject;
 
             bool canInteract = GameControllerNicolas.GetInstance().CanInteractWithObject(objetoInteracao);   //Verifica se o objeto pode ser interagido
-            if(!canInteract)
+            if (!canInteract)
             {
                 Debug.Log("Interação não permitida com: " + objetoInteracao.name);
                 return;
@@ -57,9 +61,12 @@ public class PlayerController : MonoBehaviour
                 doorController door = objetoInteracao.GetComponent<doorController>();
                 if (door != null)
                     door.tPlayer = this.transform;
+
+                canMove = false;
             }
 
-            canMove = false;
+            //canMove = false;
+            canInteractAgain = false;
             txtInteracao.SetActive(false); // Desativa o texto de interação
             objetoInteracao.SendMessage("interacao", true, SendMessageOptions.DontRequireReceiver);   //Envia a mensagem de interação para o objeto atingido pelo raycast
         }
@@ -102,20 +109,32 @@ public class PlayerController : MonoBehaviour
         {
             if (hit.collider != null)
             {
-                //Debug.Log("Objeto interagível detectado: " + hit.collider.gameObject.name);
+                if (canInteractAgain)
+                {
+                    //Debug.Log("Objeto interagível detectado: " + hit.collider.gameObject.name);
 
-                string txtInterac = GameControllerNicolas.GetInstance().GetInteractionText(hit.collider.gameObject);  //Obtém o texto de interação do objeto
-                txtInteracao.GetComponent<TMPro.TextMeshProUGUI>().text = txtInterac;
-                txtInteracao.SetActive(true); // Ativa o texto de interação
+                    string txtInterac = GameControllerNicolas.GetInstance().GetInteractionText(hit.collider.gameObject);  //Obtém o texto de interação do objeto
+                    txtInteracao.GetComponent<TMPro.TextMeshProUGUI>().text = txtInterac;
+                    txtInteracao.SetActive(true); // Ativa o texto de interação
+                }
             }
             else
+            {
                 txtInteracao.SetActive(false); // Desativa o texto de interação
+                canInteractAgain = true;
+            }
         }
 
-        if (!isSprinting)    //Se não estiver correndo, use a velocidade de movimento normal
-            rb.MovePosition(rb.position + movementVector * movementSpeed * Time.fixedDeltaTime);
-        else
+        if (stamina.CanRun(wantsToSprint))
+        {
+            isSprinting = true;
             rb.MovePosition(rb.position + movementVector * sprintSpeed * Time.fixedDeltaTime);
+        }
+        else
+        {
+            isSprinting = false;
+            rb.MovePosition(rb.position + movementVector * movementSpeed * Time.fixedDeltaTime);
+        }
     }
 
     public void Move()
@@ -149,7 +168,7 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("LastInputX", animator.GetFloat("InputX"));
             animator.SetFloat("LastInputY", animator.GetFloat("InputY"));
         }
-        if(faceEffect != null)
+        if (faceEffect != null && faceEffect.activeSelf)
         {
             bool lookingUp = animator.GetFloat("InputY") > 0.1f;
             faceEffect.GetComponent<Animator>().SetBool("LookingUp", lookingUp);

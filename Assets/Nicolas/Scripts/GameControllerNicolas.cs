@@ -117,48 +117,6 @@ public class GameControllerNicolas : MonoBehaviour
         if (player != null)
             player.GetComponent<PlayerController>().SetIdleDirection();  //Define a direção de idle do jogador
     }
-    public void DisableDadRun()
-    {
-        if (pai != null)
-        {
-            //pai.GetComponent<Pai>().enabled = false;  //Desativa o script do pai
-            pai.GetComponent<NavMeshAgent>().Warp(pai.transform.position);  //Para não dar o bug de teleporte
-            pai.GetComponent<NavMeshAgent>().enabled = false;  //Desabilita o NavMeshAgent do pai
-        }
-    }
-    public void EnableDadRun(bool afterPause=false)
-    {
-        if (pai != null)
-        {
-            pai.GetComponent<NavMeshAgent>().Warp(pai.transform.position);  //Para não dar o bug de teleporte
-            pai.GetComponent<Pai>().enabled = true;
-            pai.GetComponent<NavMeshAgent>().enabled = true;  //Habilita o NavMeshAgent do pai
-            if (!afterPause)
-                StartCoroutine(IncreaseDadVelocity());  //Aumenta a velocidade do pai gradualmente
-        }
-    }
-
-    private IEnumerator IncreaseDadVelocity()    //Coroutine para aumentar a velocidade do pai gradualmente
-    {
-        float tempo = 0f, tempoParaAumentar = 1f; //Tempo total para aumentar a velocidade
-        float originalSpeed = pai.GetComponent<NavMeshAgent>().speed; //Velocidade original do pai
-
-        pai.GetComponent<NavMeshAgent>().speed = 0f;
-        while (tempo < tempoParaAumentar)
-        {
-            pai.GetComponent<NavMeshAgent>().speed = Mathf.Lerp(0f, originalSpeed, tempo / tempoParaAumentar);
-            tempo += Time.deltaTime;
-            yield return null;
-        }
-        pai.GetComponent<NavMeshAgent>().speed = originalSpeed;
-    }
-
-
-    public void ResetDadPosition()
-    {
-        if (pai != null && pai.GetComponent<Pai>().enabled)
-            pai.GetComponent<Pai>().ResetPosition();  //Reseta a posição do pai para a posição original
-    }
 
     public bool CanInteractWithObject(GameObject objeto)    //Método para verificar se o jogador pode interagir com um objeto
     {
@@ -178,7 +136,6 @@ public class GameControllerNicolas : MonoBehaviour
         return "Interagir";
     }
 
-
     public void FinishDoorInteraction(string origin, string destination, bool isDoor)    //Aqui acontecerá checagens de triggers após a transição de porta, como ativar cenas, diálogos, etc...
     {
         Debug.Log("FinishDoorInteraction called. From: " + origin + " To: " + destination);
@@ -191,18 +148,22 @@ public class GameControllerNicolas : MonoBehaviour
                     Globals.endDadRun = true;   //Finaliza a perseguição com o pai
                     DisableDadRun();
                     SetDadDefault();
+                    player.GetComponent<PlayerController>().canSprint = false;  //Desabilita o sprint do jogador
                 }
             }
             if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai))
                 if (Globals.triggerDadRun && !Globals.endDadRun)
+                {
                     EnableDadRun();  //Ativa o pai
+                    player.GetComponent<PlayerController>().canSprint = true;  //Habilita o sprint do jogador
+                }
 
             if (destination == Globals.GetSceneName(Globals.MapNames.Atelie))
-            {
-                //Testando a ativação do trigger para iniciar a perseguição com o pai (pode ser ativado após um diálogo, evento, etc.)
-                if (!Globals.triggerDadRun)
-                    Globals.triggerDadRun = true;
-            }
+                    {
+                        //Testando a ativação do trigger para iniciar a perseguição com o pai (pode ser ativado após um diálogo, evento, etc.)
+                        if (!Globals.triggerDadRun)
+                            Globals.triggerDadRun = true;
+                    }
         }
         else    //Se a interação com a porta tiver sido ativada de forma manual após algum evento
         {
@@ -216,7 +177,45 @@ public class GameControllerNicolas : MonoBehaviour
         DoorTransitionController.GetInstance().isTransitioning = false;
     }
 
+    //Métodos para a perseguição com o pai:
+    public void EnableDadRun(bool afterPause = false)
+    {
+        if (pai != null)
+        {
+            pai.GetComponent<NavMeshAgent>().Warp(pai.transform.position);  //Para não dar o bug de teleporte
+            pai.GetComponent<Pai>().enabled = true;
+            pai.GetComponent<NavMeshAgent>().enabled = true;  //Habilita o NavMeshAgent do pai
+            if (!afterPause)
+                StartCoroutine(IncreaseDadVelocity());  //Aumenta a velocidade do pai gradualmente
+        }
+    }
+    public void DisableDadRun()
+    {
+        if (pai != null)
+        {
+            pai.GetComponent<NavMeshAgent>().Warp(pai.transform.position);  //Para não dar o bug de teleporte
+            pai.GetComponent<NavMeshAgent>().enabled = false;  //Desabilita o NavMeshAgent do pai
+        }
+    }
+    private IEnumerator IncreaseDadVelocity()    //Coroutine para aumentar a velocidade do pai gradualmente
+    {
+        float tempo = 0f, tempoParaAumentar = 1f; //Tempo total para aumentar a velocidade
+        float originalSpeed = pai.GetComponent<NavMeshAgent>().speed; //Velocidade original do pai
 
+        pai.GetComponent<NavMeshAgent>().speed = 0f;
+        while (tempo < tempoParaAumentar)
+        {
+            pai.GetComponent<NavMeshAgent>().speed = Mathf.Lerp(0f, originalSpeed, tempo / tempoParaAumentar);
+            tempo += Time.deltaTime;
+            yield return null;
+        }
+        pai.GetComponent<NavMeshAgent>().speed = originalSpeed;
+    }
+    public void ResetDadPosition()
+    {
+        if (pai != null && pai.GetComponent<Pai>().enabled)
+            pai.GetComponent<Pai>().ResetPosition();  //Reseta a posição do pai para a posição original
+    }
     public void ResetDadRun()
     {
         canPause = false;
