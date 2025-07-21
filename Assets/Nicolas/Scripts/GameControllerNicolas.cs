@@ -1,13 +1,14 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 public class GameControllerNicolas : MonoBehaviour
 {
-    [SerializeField] private GameObject player, pai;
+    [SerializeField] private GameObject player, pai, porta_pai;
     [SerializeField] private GameObject pauseMenu;  //Referência ao menu de pausa
     private static GameControllerNicolas instance;
-    [HideInInspector] public bool gamePaused = false;   //Flag para controlar se o jogo está pausado ou não
+    [HideInInspector] public bool gamePaused = false, canPause = true;   //Flag para controlar se o jogo está pausado ou não
 
     public static GameControllerNicolas GetInstance()
     {
@@ -44,6 +45,7 @@ public class GameControllerNicolas : MonoBehaviour
             FadeOut();
         }
 
+        SetDadDefault();  //Define o pai para o estado padrão
         Globals.currentScene = currentScene; //Armazena o nome da cena atual
     }
 
@@ -85,6 +87,7 @@ public class GameControllerNicolas : MonoBehaviour
             if (player.GetComponent<PlayerController>().canMove)
             {
                 DisablePlayerMovement();
+                DisableDadRun();  //Desabilita a perseguição com o pai, se estiver ativa
                 gamePaused = true;
                 pauseMenu.SetActive(true);  //Ativa o menu de pausa
             }
@@ -94,6 +97,8 @@ public class GameControllerNicolas : MonoBehaviour
             pauseMenu.SetActive(false);  //Desativa o menu de pausa
             gamePaused = false;
             EnablePlayerMovement();
+            if (Globals.triggerDadRun && !Globals.endDadRun)
+                EnableDadRun(afterPause: true);  //Reativa a perseguição com o pai
         }
     }
 
@@ -108,42 +113,137 @@ public class GameControllerNicolas : MonoBehaviour
             player.GetComponent<PlayerController>().canMove = false;  //Desabilita o movimento do jogador
     }
     public void SetIdleDirectionPlayer()
-    { 
+    {
         if (player != null)
             player.GetComponent<PlayerController>().SetIdleDirection();  //Define a direção de idle do jogador
     }
-    public void DisableDad()
+
+    public bool CanInteractWithObject(GameObject objeto)    //Método para verificar se o jogador pode interagir com um objeto
     {
-        if (pai != null)
-        {
-            pai.GetComponent<Pai>().ResetPosition();  //Reseta a posição do pai para a posição original
-            pai.GetComponent<Pai>().enabled = false;  //Desativa o pai se ele estiver ativo
-            pai.GetComponent<NavMeshAgent>().enabled = false;  //Desabilita o NavMeshAgent do pai
-        }
-    }
-    public void EnableDad()
-    {
-        if (pai != null)
-        {
-            pai.GetComponent<Pai>().enabled = true;  //Ativa o pai
-            pai.GetComponent<NavMeshAgent>().enabled = true;  //Habilita o NavMeshAgent do pai
-        }
+        if (objeto.transform.Find("casa_pai") && Globals.triggerDadRun && !Globals.endDadRun)
+            return false;    //Se a porta for a do pai e a perseguição estiver ativa, não interage
+        return true;
     }
 
+    public string GetInteractionText(GameObject objeto)    //Método para obter o texto de interação de um objeto
+    {
+        if (objeto.transform.Find("casa_pai") && Globals.triggerDadRun && !Globals.endDadRun)
+            return "Porta Emperrada!";       //Texto específico para a porta do pai durante a perseguição
 
-    public void FinishDoorInteraction(string origin, string destination)    //Aqui acontecerá checagens de triggers após a transição de porta, como ativar cenas, diálogos, etc...
+        if (objeto.CompareTag("door"))
+            return "Abrir";
+
+        return "Interagir";
+    }
+
+    public void FinishDoorInteraction(string origin, string destination, bool isDoor)    //Aqui acontecerá checagens de triggers após a transição de porta, como ativar cenas, diálogos, etc...
     {
         Debug.Log("FinishDoorInteraction called. From: " + origin + " To: " + destination);
-        if (origin == "CasaPai")
+        if (isDoor)     //Se a interação tiver sido realmente com uma porta
         {
-            DisableDad();
+            if (origin == Globals.GetSceneName(Globals.MapNames.CasaPai))
+            {
+                if (Globals.triggerDadRun && !Globals.endDadRun)
+                {
+                    Globals.endDadRun = true;   //Finaliza a perseguição com o pai
+                    DisableDadRun();
+                    SetDadDefault();
+                    player.GetComponent<PlayerController>().canSprint = false;  //Desabilita o sprint do jogador
+                }
+            }
+            if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai))
+                if (Globals.triggerDadRun && !Globals.endDadRun)
+                {
+                    EnableDadRun();  //Ativa o pai
+                    player.GetComponent<PlayerController>().canSprint = true;  //Habilita o sprint do jogador
+                }
+
+            if (destination == Globals.GetSceneName(Globals.MapNames.Atelie))
+                    {
+                        //Testando a ativação do trigger para iniciar a perseguição com o pai (pode ser ativado após um diálogo, evento, etc.)
+                        if (!Globals.triggerDadRun)
+                            Globals.triggerDadRun = true;
+                    }
         }
-        if (destination == "CasaPai")
+        else    //Se a interação com a porta tiver sido ativada de forma manual após algum evento
         {
-            EnableDad();
+            if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai))
+                if (Globals.triggerDadRun && !Globals.endDadRun)
+                    EnableDadRun();  //Ativa o pai
         }
 
         EnablePlayerMovement();
-        DoorTransitionController.GetInstance().isTransitioning = false; // Define a flag de transição como falsa
+        canPause = true;
+        DoorTransitionController.GetInstance().isTransitioning = false;
+    }
+
+    //Métodos para a perseguição com o pai:
+    public void EnableDadRun(bool afterPause = false)
+    {
+        if (pai != null)
+        {
+            pai.GetComponent<NavMeshAgent>().Warp(pai.transform.position);  //Para não dar o bug de teleporte
+            pai.GetComponent<Pai>().enabled = true;
+            pai.GetComponent<NavMeshAgent>().enabled = true;  //Habilita o NavMeshAgent do pai
+            if (!afterPause)
+                StartCoroutine(IncreaseDadVelocity());  //Aumenta a velocidade do pai gradualmente
+        }
+    }
+    public void DisableDadRun()
+    {
+        if (pai != null)
+        {
+            pai.GetComponent<NavMeshAgent>().Warp(pai.transform.position);  //Para não dar o bug de teleporte
+            pai.GetComponent<NavMeshAgent>().enabled = false;  //Desabilita o NavMeshAgent do pai
+        }
+    }
+    private IEnumerator IncreaseDadVelocity()    //Coroutine para aumentar a velocidade do pai gradualmente
+    {
+        float tempo = 0f, tempoParaAumentar = 1f; //Tempo total para aumentar a velocidade
+        float originalSpeed = pai.GetComponent<NavMeshAgent>().speed; //Velocidade original do pai
+
+        pai.GetComponent<NavMeshAgent>().speed = 0f;
+        while (tempo < tempoParaAumentar)
+        {
+            pai.GetComponent<NavMeshAgent>().speed = Mathf.Lerp(0f, originalSpeed, tempo / tempoParaAumentar);
+            tempo += Time.deltaTime;
+            yield return null;
+        }
+        pai.GetComponent<NavMeshAgent>().speed = originalSpeed;
+    }
+    public void ResetDadPosition()
+    {
+        if (pai != null && pai.GetComponent<Pai>().enabled)
+            pai.GetComponent<Pai>().ResetPosition();  //Reseta a posição do pai para a posição original
+    }
+    public void ResetDadRun()
+    {
+        canPause = false;
+        DisableDadRun();
+        DisablePlayerMovement();
+        StartCoroutine(ResetDadRunIE());  //Inicia a coroutine para resetar a perseguição com o pai
+    }
+    public IEnumerator ResetDadRunIE()
+    {
+        yield return new WaitForSeconds(2f);    //Espera um pouco
+        porta_pai.SendMessage("interacao", false, SendMessageOptions.DontRequireReceiver);   //Inicia a transição para a casa do pai
+    }
+
+    public void SetDadDefault()
+    {
+        if (pai != null)
+        {
+            if (pai.GetComponent<Pai>().enabled)
+            {
+                pai.GetComponent<Pai>().ResetPosition();  //Reseta a posição do pai para a posição original
+                pai.GetComponent<Pai>().enabled = false;  //Desativa o script do pai
+            }
+            else
+            {
+                pai.GetComponent<Animator>().SetBool("IsWalking", false);  //Desativa a animação de caminhada do pai
+                pai.GetComponent<Animator>().SetFloat("LastInputX", 0f);
+                pai.GetComponent<Animator>().SetFloat("LastInputY", -1f);  //Define a direção de idle do pai
+            }
+        }
     }
 }
