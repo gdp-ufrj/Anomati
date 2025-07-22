@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{beaced61-b57c-4eaa-8b40-ab2fc539bbf5}">
 		<property name="assetPath">
-			<value>Character/noise_short.ogg</value>
+			<value>testes/Character/noise_short.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{e7f6a200-00e9-4ffc-8a07-3e805db06291}">
 		<property name="assetPath">
-			<value>Character/Radio/placeholder_640166_main_meco.ogg</value>
+			<value>testes/Character/Radio/placeholder_640166_main_meco.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

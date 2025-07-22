@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{0c4e56b8-e608-44b9-a84f-1180e4ae5fa9}">
 		<property name="assetPath">
-			<value>Interactables/wooden_collision_1_dry_dull.ogg</value>
+			<value>testes/Interactables/wooden_collision_1_dry_dull.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
