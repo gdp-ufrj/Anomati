@@ -1623,6 +1623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tPlayer: {fileID: 0}
   destino: {fileID: 1952096628}
+  destinationBounds: {fileID: 0}
 --- !u!61 &1162027643
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1711,7 +1712,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -712187261
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
   m_Color: {r: 0.19171266, g: 0.56078434, b: 0.0627451, a: 1}
@@ -2438,7 +2439,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -712187261
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.8867924, g: 0.33882165, b: 0.33882165, a: 1}
@@ -2564,7 +2565,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -712187261
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1837694684869931473, guid: 04a98262435b7384bacc4462d1579603, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2793,7 +2794,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4786d40b4514ee045a64f8ba3c2c3887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 4900000, guid: df61d8c2de05abc4b9bbae09e19a72c3, type: 3}
+  inkJSON: {fileID: 4900000, guid: f29363ce57958244b856a58cb4b11484, type: 3}
+  dialogoUnico: 1
+  dialogoAutomatico: 1
+  proximoGameObject: {fileID: 0}
 --- !u!1 &1934398364
 GameObject:
   m_ObjectHideFlags: 0
@@ -2954,7 +2958,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -712187261
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
   m_Color: {r: 0.5622641, g: 0.52061784, b: 0.06259162, a: 1}
@@ -2981,6 +2985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tPlayer: {fileID: 0}
   destino: {fileID: 1162027641}
+  destinationBounds: {fileID: 0}
 --- !u!1 &2012387480
 GameObject:
   m_ObjectHideFlags: 0
@@ -3109,7 +3114,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -712187261
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -6598946016331564889, guid: 23748c298f885bf4c89671f6d30f562b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3145,13 +3150,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2018500681}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe5e6371548a21442b436ff7016998d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 6
   sprintSpeed: 12
+  faceEffect: {fileID: 0}
+  canMove: 1
+  canSprint: 0
+  isSprinting: 0
+  canTimeTravel: 1
+  interacao:
+    serializedVersion: 2
+    m_Bits: 64
+  txtInteracao: {fileID: 0}
 --- !u!61 &2018500685
 BoxCollider2D:
   m_ObjectHideFlags: 0
