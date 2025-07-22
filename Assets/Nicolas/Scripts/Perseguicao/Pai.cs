@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,9 +11,12 @@ public class Pai : MonoBehaviour
     private Animator animator;
 
     [SerializeField] private List<GameObject> checkPoints;   //Lista de pontos no qual o pai pode parar durante a perseguição
+    [SerializeField] private float originalSpeed = 3f;  //Velocidade original do pai
     private int currentCheckPointIndex = 0;   //Índice do ponto atual na lista de checkPoints
     private bool checkpointSetted = false;  //Flag para verificar se o checkpoint foi definido
-    [SerializeField] private float originalSpeed = 3f;  //Velocidade original do pai
+    private bool isLookingForPlayer = false;  //Flag para verificar se o pai está procurando o jogador
+
+    private Vector3 lastPlayerReachablePosition;   //Última posição alcançável do jogador
 
     void Start()
     {
@@ -25,25 +29,46 @@ public class Pai : MonoBehaviour
     {
         if (agent.enabled)
         {
-            Debug.Log("Remaining Distance: " + agent.remainingDistance);
+            //Debug.Log("Remaining Distance: " + agent.remainingDistance);
             if (!IsDestinationReachable(target.position))    //Se não der para chegar no jogador
             {
-                agent.speed = originalSpeed * 0.75f;  //Reduz a velocidade do pai
                 if (!checkpointSetted)
                 {
                     checkpointSetted = true;
-                    SetCheckPoint();
+                    isLookingForPlayer = true;
+                    StartCoroutine(LookForPlayer());  //Inicia a rotina de procurar o jogador
                 }
-                //Debug.Log("Pai não consegue alcançar o jogador!");
             }
             else
             {
+                if (!GameControllerNicolas.GetInstance().canPause)
+                    GameControllerNicolas.GetInstance().canPause = true;   //Permite pausar o jogo novamente
+                lastPlayerReachablePosition = target.position;    //Atualiza a última posição alcançável do jogador
                 checkpointSetted = false;
                 agent.speed = originalSpeed;  //Reseta a velocidade do pai para a velocidade original
                 agent.SetDestination(target.position); //Se der para chegar no jogador, define o destino como a posição do jogador
             }
         }
         UpdateWalkAnimation();  //Atualiza a animação de caminhada do pai
+    }
+
+    private IEnumerator LookForPlayer()
+    {
+        GameControllerNicolas.GetInstance().canPause = false;
+        agent.SetDestination(lastPlayerReachablePosition);   //Define o destino como a última posição alcançável do jogador
+        yield return new WaitUntil(() => agent.desiredVelocity.magnitude < 0.1f);
+        //Debug.Log("Pai chegou na última posição do jogador");
+        SetIdleDirection(0);
+        yield return new WaitForSeconds(1f);
+        SetIdleDirection(1);
+        yield return new WaitForSeconds(1f);
+        SetIdleDirection(2);
+        yield return new WaitForSeconds(1f);
+        SetIdleDirection(3);
+        yield return new WaitForSeconds(1f);
+        agent.speed = originalSpeed * 0.75f;  //Reduz a velocidade do pai
+        isLookingForPlayer = false;
+        SetCheckPoint();  //Define um novo checkpoint após procurar o jogador
     }
 
     private void SetCheckPoint()
@@ -100,8 +125,8 @@ public class Pai : MonoBehaviour
                     animator.SetFloat("InputX", vel2D.x);
                     animator.SetFloat("InputY", vel2D.y);
                 }
-                else
-                    SetIdleDirection();
+                else if (!isLookingForPlayer)
+                    SetIdleDirection(0);
             }
             else
             {
@@ -157,14 +182,29 @@ public class Pai : MonoBehaviour
         return distToTarget < 0.5f;   //Se a distância entre o final do caminho e o destino for grande, é porque não achou um caminho viável
     }
 
-    public void SetIdleDirection()
+    public void SetIdleDirection(int direction)   //0: frente, 1: direita, 2: esquerda, 3: trás
     {
-        animator.SetFloat("InputX", 0);
-        animator.SetFloat("InputY", -1);
-
-        animator.SetFloat("LastInputX", 0);
-        animator.SetFloat("LastInputY", -1);
-
-        animator.SetBool("IsWalking", false);
+        animator.SetBool("IsWalking", false);   //Para a animação de caminhada
+        switch (direction)
+        {
+            case 0: //Frente
+                animator.SetFloat("InputX", 0);
+                animator.SetFloat("InputY", -1);
+                break;
+            case 1: //Direita
+                animator.SetFloat("InputX", 1);
+                animator.SetFloat("InputY", 0);
+                break;
+            case 2: //Esquerda
+                animator.SetFloat("InputX", -1);
+                animator.SetFloat("InputY", 0);
+                break;
+            case 3: //Trás
+                animator.SetFloat("InputX", 0);
+                animator.SetFloat("InputY", 1);
+                break;
+        }
+        animator.SetFloat("LastInputX", animator.GetFloat("InputX"));
+        animator.SetFloat("LastInputY", animator.GetFloat("InputY"));
     }
 }

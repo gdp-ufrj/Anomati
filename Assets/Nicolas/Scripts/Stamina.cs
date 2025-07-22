@@ -8,7 +8,7 @@ public class Stamina : MonoBehaviour
     [SerializeField] private float staminaRecoveryRate = 1f, staminaDrainRate = 1f;    //Por segundo
 
     [Header("Status")]
-    [SerializeField] private bool isExhausted = false;
+    private bool isExhausted = false;
     private float currentStamina;
     private PlayerController playerController;
     public Image staminaFillImage;    //Referência para a UI de Stamina

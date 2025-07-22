@@ -84,7 +84,7 @@ public class GameControllerNicolas : MonoBehaviour
     {
         if (!gamePaused)
         {
-            if (player.GetComponent<PlayerController>().canMove)
+            if (player.GetComponent<PlayerController>().canMove && canPause)
             {
                 DisablePlayerMovement();
                 DisableDadRun();  //Desabilita a perseguição com o pai, se estiver ativa

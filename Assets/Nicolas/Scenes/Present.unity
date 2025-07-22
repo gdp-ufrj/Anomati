@@ -1627,10 +1627,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e29d2088661c33540a4db5b3e6028a44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxStamina: 5
+  maxStamina: 2
   staminaRecoveryRate: 1
   staminaDrainRate: 1
-  isExhausted: 0
   staminaFillImage: {fileID: 1498370961}
 --- !u!1 &2103696184 stripped
 GameObject:
@@ -2434,7 +2433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8275253241833953347, guid: 99afd645bc39da8458f4d9e2ec3aeb13, type: 3}
       propertyPath: m_Speed
-      value: 3
+      value: 4.8
       objectReference: {fileID: 0}
     - target: {fileID: 8778521091886888160, guid: 99afd645bc39da8458f4d9e2ec3aeb13, type: 3}
       propertyPath: m_LocalScale.y
