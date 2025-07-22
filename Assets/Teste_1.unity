@@ -1623,6 +1623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tPlayer: {fileID: 0}
   destino: {fileID: 1952096628}
+  destinationBounds: {fileID: 0}
 --- !u!61 &1162027643
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1711,7 +1712,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -712187261
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
   m_Color: {r: 0.19171266, g: 0.56078434, b: 0.0627451, a: 1}
@@ -1795,7 +1796,7 @@ MonoBehaviour:
       Data2: 1107933579
       Data3: 1068165566
       Data4: 735358167
-    Path: event:/musica 2
+    Path: event:/testes/musica 2
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 2
@@ -2438,7 +2439,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -712187261
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.8867924, g: 0.33882165, b: 0.33882165, a: 1}
@@ -2564,7 +2565,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -712187261
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1837694684869931473, guid: 04a98262435b7384bacc4462d1579603, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2794,6 +2795,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: df61d8c2de05abc4b9bbae09e19a72c3, type: 3}
+  dialogoUnico: 0
+  dialogoAutomatico: 0
+  proximoGameObject: {fileID: 0}
 --- !u!1 &1934398364
 GameObject:
   m_ObjectHideFlags: 0
@@ -2954,7 +2958,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -712187261
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
   m_Color: {r: 0.5622641, g: 0.52061784, b: 0.06259162, a: 1}
@@ -2981,6 +2985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tPlayer: {fileID: 0}
   destino: {fileID: 1162027641}
+  destinationBounds: {fileID: 0}
 --- !u!1 &2012387480
 GameObject:
   m_ObjectHideFlags: 0
@@ -3041,7 +3046,7 @@ MonoBehaviour:
       Data2: 1114326548
       Data3: 1335733432
       Data4: -1539764923
-    Path: event:/FalaRapida
+    Path: event:/testes/FalaRapida
   FrequenciaAudio: 4
   minPitch: -3
   maxPitch: 3
@@ -3109,7 +3114,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -712187261
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -6598946016331564889, guid: 23748c298f885bf4c89671f6d30f562b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3152,6 +3157,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 6
   sprintSpeed: 12
+  faceEffect: {fileID: 0}
+  canMove: 0
+  canSprint: 0
+  isSprinting: 0
+  canTimeTravel: 1
+  interacao:
+    serializedVersion: 2
+    m_Bits: 0
+  txtInteracao: {fileID: 0}
 --- !u!61 &2018500685
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -3,42 +3,68 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class DialogoTrigger2: MonoBehaviour
+public class DialogoTrigger2 : MonoBehaviour
 {
-    private bool jogadorPerto; // Flag para verificar se o jogador está dentro do trigger
 
     [Header("Ink JSON")]
-    [SerializeField] private TextAsset inkJSON; // Referência ao arquivo JSON do Ink
+    [SerializeField] private TextAsset inkJSON;
 
+    [Header("Configurações")]
+    [SerializeField] private bool dialogoUnico = false;
+    [SerializeField] private bool dialogoAutomatico = false;
+    [Tooltip("Se atribuído, será ativado quando o diálogo acabar")]
+    [SerializeField] private GameObject proximoGameObject;
 
-    private void Awake()
-    {
-        jogadorPerto = false; // Inicializa a flag como falsa
-        Debug.Log("Longe");
-    }
+    private bool jogadorPerto2 = false;
+
     private void Update()
     {
-       if (jogadorPerto && !GerenciadorDeDialogos.GetInstancia().dialogoAtivo)
+        // dispara no E se for manual
+        if (!dialogoAutomatico
+            && jogadorPerto2
+            && !GerenciadorDeDialogos.GetInstancia().dialogoAtivo)
         {
-                GerenciadorDeDialogos.GetInstancia().EntrarModoDialogo(inkJSON);
-        }
-    } 
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        // Verifica se o objeto que entrou no trigger é o jogador
-        if (collider.gameObject.CompareTag("player"))
-        {
-            Debug.Log("Chegou perto");
-            jogadorPerto = true; // Define a flag como verdadeira
- 
+            IniciarDialogo();
         }
     }
-    private void OnTriggerExit2D(Collider2D collider)
+
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        // Verifica se o objeto que saiu do trigger é o jogador
-        if (collider.gameObject.tag == "Player")
+        if (!col.CompareTag("player")) return;
+        jogadorPerto2 = true;
+
+        // dispara automático se marcado
+        if (dialogoAutomatico
+            && !GerenciadorDeDialogos.GetInstancia().dialogoAtivo)
         {
-            jogadorPerto = false; // Define a flag como falsa
+            IniciarDialogo();
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.CompareTag("player"))
+            jogadorPerto2 = false;
+    }
+
+    private void IniciarDialogo()
+    {
+        // abre o diálogo
+        GerenciadorDeDialogos.GetInstancia().EntrarModoDialogo(inkJSON);
+        // já começa a coroutine que vai aguardar o fim
+        StartCoroutine(AguardarFimEDesencadear());
+    }
+
+    private IEnumerator AguardarFimEDesencadear()
+    {
+        // fica esperando dialogoAtivo virar false
+        yield return new WaitWhile(() => GerenciadorDeDialogos.GetInstancia().dialogoAtivo);
+
+        // aqui o diálogo já acabou
+        if (proximoGameObject != null)
+            proximoGameObject.SetActive(true);
+
+        if (dialogoUnico)
+            Destroy(gameObject);
     }
 }

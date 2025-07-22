@@ -98,7 +98,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5679347177663122711
 Transform:
   m_ObjectHideFlags: 0
@@ -246,11 +246,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 818462100
-      Data2: 1107933579
-      Data3: 1068165566
-      Data4: 735358167
-    Path: event:/musica 2
+      Data1: -896679240
+      Data2: 1228922320
+      Data3: -217824084
+      Data4: -519337789
+    Path: "event:/m\xFAsicas/anomati theme"
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 2
@@ -368,7 +368,7 @@ MonoBehaviour:
       Data2: 1114326548
       Data3: 1335733432
       Data4: -1539764923
-    Path: event:/FalaRapida
+    Path: event:/testes/FalaRapida
   FrequenciaAudio: 4
   minPitch: -3
   maxPitch: 3

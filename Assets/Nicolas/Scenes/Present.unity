@@ -2166,16 +2166,8 @@ PrefabInstance:
       propertyPath: staminaBar
       value: 
       objectReference: {fileID: 2103696184}
-    - target: {fileID: 4063786181116524541, guid: c68b1ffdd32ce9749bfb4953ad74c0ed, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4229805755441377474, guid: c68b1ffdd32ce9749bfb4953ad74c0ed, type: 3}
       propertyPath: player
-      value: 
-      objectReference: {fileID: 2018500683}
-    - target: {fileID: 4229805755441377474, guid: c68b1ffdd32ce9749bfb4953ad74c0ed, type: 3}
-      propertyPath: playerTransform
       value: 
       objectReference: {fileID: 2018500683}
     - target: {fileID: 4229805755441377474, guid: c68b1ffdd32ce9749bfb4953ad74c0ed, type: 3}
@@ -2214,26 +2206,6 @@ PrefabInstance:
       propertyPath: 'opcoes.Array.data[2]'
       value: 
       objectReference: {fileID: 2867496853032442771}
-    - target: {fileID: 4497014542784735236, guid: c68b1ffdd32ce9749bfb4953ad74c0ed, type: 3}
-      propertyPath: EventReference.Path
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4497014542784735236, guid: c68b1ffdd32ce9749bfb4953ad74c0ed, type: 3}
-      propertyPath: EventReference.Guid.Data1
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4497014542784735236, guid: c68b1ffdd32ce9749bfb4953ad74c0ed, type: 3}
-      propertyPath: EventReference.Guid.Data2
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4497014542784735236, guid: c68b1ffdd32ce9749bfb4953ad74c0ed, type: 3}
-      propertyPath: EventReference.Guid.Data3
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4497014542784735236, guid: c68b1ffdd32ce9749bfb4953ad74c0ed, type: 3}
-      propertyPath: EventReference.Guid.Data4
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8068474431237666091, guid: c68b1ffdd32ce9749bfb4953ad74c0ed, type: 3}
       propertyPath: clock
       value: 
@@ -2354,12 +2326,29 @@ PrefabInstance:
     - target: {fileID: 8760505924459557660, guid: 6ecab5e2ade38ae48add10f7bce9f46d, type: 3}
       propertyPath: inkJSON
       value: 
-      objectReference: {fileID: 4900000, guid: df61d8c2de05abc4b9bbae09e19a72c3, type: 3}
+      objectReference: {fileID: 4900000, guid: f29363ce57958244b856a58cb4b11484, type: 3}
+    - target: {fileID: 8760505924459557660, guid: 6ecab5e2ade38ae48add10f7bce9f46d, type: 3}
+      propertyPath: dialogoUnico
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760505924459557660, guid: 6ecab5e2ade38ae48add10f7bce9f46d, type: 3}
+      propertyPath: dialogoAutomatico
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760505924459557660, guid: 6ecab5e2ade38ae48add10f7bce9f46d, type: 3}
+      propertyPath: proximoGameObject
+      value: 
+      objectReference: {fileID: 6294229232660415866}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ecab5e2ade38ae48add10f7bce9f46d, type: 3}
+--- !u!1 &6294229232660415866 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4562905048830378599, guid: 6ecab5e2ade38ae48add10f7bce9f46d, type: 3}
+  m_PrefabInstance: {fileID: 6294229232660415865}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8015914810629704553
 PrefabInstance:
   m_ObjectHideFlags: 0

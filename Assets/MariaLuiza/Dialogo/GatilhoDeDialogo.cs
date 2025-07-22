@@ -28,7 +28,7 @@ public class DialogoTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (!col.CompareTag("Player")) return;
+        if (!col.CompareTag("player")) return;
         jogadorPerto = true;
 
         // dispara automático se marcado
@@ -41,7 +41,7 @@ public class DialogoTrigger : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.CompareTag("Player"))
+        if (col.CompareTag("player"))
             jogadorPerto = false;
     }
 
