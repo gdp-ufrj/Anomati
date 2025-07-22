@@ -1,0 +1,48 @@
+[O objetivo de Lúgubre é voltar para sua antiga casa e confrontar seu pai. Ao chegar em frente à antiga casa, a porta está entreaberta. Luz escapa sobre ela]
+[Ao interagir com a porta]
+Lúgubre: Ele ainda mora aqui… #speaker:player #portrait:player #layout:left
+
+
+Elisa: Vai entrar? #speaker:npc #layout:right
+
+
+Lúgubre: …Preciso. Mesmo que doa. #speaker:player #portrait:player #layout:left
+[Ao atravessar a porta, qualquer musica que esteja tocando para. O ambiente é escuro, com móveis envelhecidos e iluminado apenas pela luz da televisão.]
+[Um homem idoso está sentado na poltrona. É Átila. Ele se vira em direção à Lugubre, surpreso, mas sem força para reação.]
+Átila: Você voltou. #speaker:npc #layout:right
+
+
+Lúgubre: Oi… pai. #speaker:player #portrait:player #layout:left  
+Átila: … #speaker:npc #layout:right
+Lúgubre: Que cara é essa? Não está feliz em ver seu garoto? Aquele que você nunca amou? #speaker:player #portrait:player #layout:left
+Átila: … #speaker:npc #layout:right
+Lúgubre: Eu só estou aqui por uma razão, eu quero saber o porquê você nunca me deixou ser eu mesmo. Que pai é capaz disso? Por que … pai? #speaker:player #portrait:player #layout:left
+Átila: … #speaker:npc #layout:right
+Átila: Porque eu nunca pude ser EU mesmo. Era tudo muito duro para mim. E quando a gente não tem o que dar, só sobra o medo de perder mais coisas. #speaker:npc #layout:right
+ Lúgubre: Mas você tinha a escolha de me apoiar… #speaker:player #portrait:player #layout:left
+
+
+Átila: Eu achava que estava salvando você. Salvando de uma vida difícil. Como a que eu tive. #speaker:npc #layout:right
+
+
+Lúgubre: Você me afastou da minha razão de viver. #speaker:player #portrait:player #layout:left
+ 
+
+Átila: … Eu vejo isso agora, depois de todos esses anos eu consigo ver. #speaker:npc #layout:right
+
+
+Lúgubre: Por que vovô era tão diferente de você? #speaker:player #portrait:player #layout:left
+
+
+Átila (com voz trêmula): Porque ele nunca teve medo de amar. Já eu? Eu tive. #speaker:npc #layout:right
+Lúgubre: Tudo que eu queria… era poder te mostrar quem eu era. #speaker:player #portrait:player #layout:left
+
+
+Átila (triste): Eu vejo agora. E… me dói que você tenha precisado de outro pai pra sobreviver. #speaker:npc #layout:right
+
+
+Lúgubre: Então me escuta agora… só me deixa ser quem eu sempre fui. #speaker:player #portrait:player #layout:left
+
+
+Átila (chorando): … Vai. Encontra ele. Faça o que eu nunca pude fazer. #speaker:npc #layout:right
+[Após Lúgubre sair da casa, Átila chora em silêncio.]
