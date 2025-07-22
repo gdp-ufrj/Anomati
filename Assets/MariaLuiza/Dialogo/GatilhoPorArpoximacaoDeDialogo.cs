@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class DialogoTrigger: MonoBehaviour
+public class DialogoTrigger2: MonoBehaviour
 {
     private bool jogadorPerto; // Flag para verificar se o jogador está dentro do trigger
 
@@ -20,12 +20,7 @@ public class DialogoTrigger: MonoBehaviour
     {
        if (jogadorPerto && !GerenciadorDeDialogos.GetInstancia().dialogoAtivo)
         {
-            //Caso usar o ImputSystem do Unity:
-            //if (InputManager.GetInstance().GetSubmitPressed())
-            if(Input.GetKeyDown(KeyCode.E))
-            { 
                 GerenciadorDeDialogos.GetInstancia().EntrarModoDialogo(inkJSON);
-            }
         }
     } 
     private void OnTriggerEnter2D(Collider2D collider)
