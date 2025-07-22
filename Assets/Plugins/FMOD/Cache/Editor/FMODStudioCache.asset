@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Bank A.assets.bank
   Name: Bank A.assets
   StudioPath: bank:/Bank A.assets
-  lastModified: 638877775197872713
+  lastModified: 638843126996470864
   FileSizes: []
   Exists: 1
 --- !u!114 &-5405450495698368311
@@ -33,7 +33,7 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638877775197980808
+  lastModified: 638865877398446441
   FileSizes: []
   Exists: 1
 --- !u!114 &-3781066342275836406
@@ -102,7 +102,7 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Bank A.bank
   Name: Bank A
   StudioPath: bank:/Bank A
-  lastModified: 638877775197882703
+  lastModified: 638843126957700866
   FileSizes: []
   Exists: 1
 --- !u!114 &-1857433873315060074
@@ -147,7 +147,7 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Bank B.bank
   Name: Bank B
   StudioPath: bank:/Bank B
-  lastModified: 638877775197915710
+  lastModified: 638847422677499657
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -183,7 +183,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 8985956451467242848}
   cacheVersion: 131847
-  cacheTime: 638877775197990865
+  cacheTime: 638865877398931646
   SerializableEventsDict:
   - key: event:/musica 2
     index: 0
@@ -294,7 +294,7 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Bank B.assets.bank
   Name: Bank B.assets
   StudioPath: bank:/Bank B.assets
-  lastModified: 638877775197915710
+  lastModified: 638847422677776142
   FileSizes: []
   Exists: 1
 --- !u!114 &7730424215674981863
@@ -339,7 +339,7 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Master.assets.bank
   Name: Master.assets
   StudioPath: bank:/Master.assets
-  lastModified: 638877775197970807
+  lastModified: 638865877398896164
   FileSizes: []
   Exists: 1
 --- !u!114 &8985956451467242848
@@ -357,7 +357,7 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638877775197990865
+  lastModified: 638865877398931646
   FileSizes:
   - Name: 
     Value: 1268
