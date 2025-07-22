@@ -4,25 +4,19 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 3f, sprintSpeed = 5f;
     [SerializeField] private GameObject faceEffect;  //Efeito de rosto do jogador
-
     private PlayerInputActions playerInputActions;
     private Rigidbody2D rb;
     private Animator animator;
     private Vector2 movementVector;
     private bool wantsToSprint = false, canInteractAgain = true;
-
     public bool canMove = false;   //Flag para controlar se o jogador pode se mover ou não  (será setado como verdadeiro quando o fade out terminar)
     [HideInInspector] public bool canSprint = false, isSprinting = false, canTimeTravel = true;    //Flags de controle
 
-    //interação com objetos
     public LayerMask interacao; // Camada de interação
     private GameObject objetoInteracao; // Objeto que será interagido
-
-    private RaycastHit2D hit = new RaycastHit2D(); // Raycast para detectar objetos
-
+    private RaycastHit2D hit = new RaycastHit2D();   //Raycast para detectar objetos
     private Stamina stamina;   //Referência ao sistema de stamina
-
-    [SerializeField] private GameObject txtInteracao; // Texto de interação
+    [SerializeField] private GameObject txtInteracao;   //Texto de interação
 
     private void Awake()
     {
@@ -125,7 +119,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (stamina.CanRun(wantsToSprint))
+        if (stamina.CanRun(wantsToSprint) && movementVector != Vector2.zero)
         {
             isSprinting = true;
             rb.MovePosition(rb.position + movementVector * sprintSpeed * Time.fixedDeltaTime);

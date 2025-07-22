@@ -30,24 +30,23 @@ public class doorController : MonoBehaviour
     IEnumerator acionarPorta(bool isDoor=true)
     {
         DoorTransitionController.GetInstance().isTransitioning = true; // Define a flag de transição como verdadeira
+        GameControllerNicolas.GetInstance().DisablePlayerMovement(); // Desabilita o movimento do jogador
         _fadeController.fadeIn(); // Inicia o fade in
         yield return new WaitWhile(() => _fadeController.fumeImage.color.a < 0.9f); // Espera até que o fade in esteja completo
         yield return new WaitForSeconds(0.2f); // Espera mais um pouco
 
-        GameControllerNicolas.GetInstance().DisablePlayerMovement(); // Desabilita o movimento do jogador
         tPlayer.position = destino.position; // Teleporta o jogador para o ponto de destino
         CameraController.GetInstance().SetNewBounds(destinationBounds); //Atualiza os limites da câmera para o novo destino
 
-        GameControllerNicolas.GetInstance().SetIdleDirectionPlayer();  //Define a direção de idle do jogador
-        GameControllerNicolas.GetInstance().ResetDadPosition(); //Reseta a posição do pai
+        string origin = "", destination = "";
+        origin = transform.parent.transform.parent.gameObject.name;   //Armazena o nome do cenário ond está a porta (a cena de origem)
+        destination = destinationBounds.transform.parent.gameObject.name; //Armazena o nome do cenário de destino (a cena para onde a porta leva)
+        GameControllerNicolas.GetInstance().BetweenDoorInteraction(origin, destination, isDoor);    //Cuida das coisas entre a transição de portas (como triggers, etc...)
 
         yield return new WaitForSeconds(0.5f); // Espera um pouco antes de continuar
         _fadeController.fadeOut(); // Inicia o fade out
 
         yield return new WaitForSeconds(0.5f); // Espera um pouco para dar tempo para o jogador se estabilizar na nova posição
-        string origin = "", destination = "";
-        origin = transform.parent.transform.parent.gameObject.name;   //Armazena o nome do cenário ond está a porta (a cena de origem)
-        destination = destinationBounds.transform.parent.gameObject.name; //Armazena o nome do cenário de destino (a cena para onde a porta leva)
-        GameControllerNicolas.GetInstance().FinishDoorInteraction(origin, destination, isDoor);    // Finaliza a interação com a porta no controlador do jogo (ativa cenas, triggers, etc...)
+        GameControllerNicolas.GetInstance().FinishDoorInteraction(origin, destination, isDoor);    //Finaliza a interação com a porta no controlador do jogo (ativa cenas, triggers, etc...)
     }
 }

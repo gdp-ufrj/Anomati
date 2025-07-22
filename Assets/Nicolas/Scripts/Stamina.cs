@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Stamina : MonoBehaviour
 {
@@ -9,8 +10,8 @@ public class Stamina : MonoBehaviour
     [Header("Status")]
     [SerializeField] private bool isExhausted = false;
     private float currentStamina;
-
     private PlayerController playerController;
+    public Image staminaFillImage;    //Referência para a UI de Stamina
 
     void Start()
     {
@@ -20,12 +21,14 @@ public class Stamina : MonoBehaviour
 
     void Update()
     {
+        if (!playerController.canMove)
+            return;
         HandleStamina(playerController.isSprinting);
     }
 
-    void HandleStamina(bool wantsToSprint)
+    void HandleStamina(bool isSprinting)
     {
-        if (wantsToSprint && !isExhausted)
+        if (isSprinting && !isExhausted)
         {
             currentStamina -= staminaDrainRate * Time.deltaTime;
 
@@ -44,6 +47,16 @@ public class Stamina : MonoBehaviour
                 isExhausted = false;
             }
         }
+
+        if (staminaFillImage != null)
+        {
+            float percent = GetStaminaPercent();
+            staminaFillImage.fillAmount = percent;    //Atualizando a barra de stamina
+
+            Color corMin = Color.red;
+            Color corMax = Color.yellow;
+            staminaFillImage.color = Color.Lerp(corMin, corMax, percent);
+        }
     }
 
     public bool CanRun(bool wantsToSprint)
@@ -54,5 +67,16 @@ public class Stamina : MonoBehaviour
     public float GetStaminaPercent()
     {
         return currentStamina / maxStamina;
+    }
+
+    public void ResetStamina()
+    {
+        currentStamina = maxStamina;
+        isExhausted = false;
+        if (staminaFillImage != null)
+        {
+            staminaFillImage.fillAmount = 1f;    //Reseta a barra de stamina
+            staminaFillImage.color = Color.yellow;   //Reseta a cor da barra de stamina
+        }
     }
 }

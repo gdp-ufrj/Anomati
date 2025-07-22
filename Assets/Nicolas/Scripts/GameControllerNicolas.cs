@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameControllerNicolas : MonoBehaviour
 {
     [SerializeField] private GameObject player, pai, porta_pai;
-    [SerializeField] private GameObject pauseMenu;  //Referência ao menu de pausa
+    [SerializeField] private GameObject pauseMenu, staminaBar;   //Referência para o menu de pausa e barra de stamina
     private static GameControllerNicolas instance;
     [HideInInspector] public bool gamePaused = false, canPause = true;   //Flag para controlar se o jogo está pausado ou não
 
@@ -136,6 +136,31 @@ public class GameControllerNicolas : MonoBehaviour
         return "Interagir";
     }
 
+
+    public void BetweenDoorInteraction(string origin, string destination, bool isDoor)    //Será chamado durante a transição de porta (durante o fade)
+    {
+        SetIdleDirectionPlayer();  //Define a direção de idle do jogador
+        ResetDadPosition();        //Reseta a posição do pai
+
+        if (isDoor)     //Se a interação tiver sido realmente com uma porta
+        {
+            if (origin == Globals.GetSceneName(Globals.MapNames.CasaPai))
+            {
+                if (Globals.triggerDadRun && !Globals.endDadRun)
+                    DisableSprintSystem();    //Desabilita o sistema de sprint e stamina do jogador
+            }
+            if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai))
+                if (Globals.triggerDadRun && !Globals.endDadRun)
+                    EnableSprintSystem();   //Habilita o sistema de corrida e stamina do jogador
+        }
+        else    //Se a interação com a porta tiver sido ativada de forma manual após algum evento
+        {
+            if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai))
+                if (Globals.triggerDadRun && !Globals.endDadRun)
+                    EnableSprintSystem();   //Habilita o sistema de corrida e stamina do jogador
+        }
+    }
+
     public void FinishDoorInteraction(string origin, string destination, bool isDoor)    //Aqui acontecerá checagens de triggers após a transição de porta, como ativar cenas, diálogos, etc...
     {
         Debug.Log("FinishDoorInteraction called. From: " + origin + " To: " + destination);
@@ -148,22 +173,18 @@ public class GameControllerNicolas : MonoBehaviour
                     Globals.endDadRun = true;   //Finaliza a perseguição com o pai
                     DisableDadRun();
                     SetDadDefault();
-                    player.GetComponent<PlayerController>().canSprint = false;  //Desabilita o sprint do jogador
                 }
             }
             if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai))
                 if (Globals.triggerDadRun && !Globals.endDadRun)
-                {
                     EnableDadRun();  //Ativa o pai
-                    player.GetComponent<PlayerController>().canSprint = true;  //Habilita o sprint do jogador
-                }
 
             if (destination == Globals.GetSceneName(Globals.MapNames.Atelie))
-                    {
-                        //Testando a ativação do trigger para iniciar a perseguição com o pai (pode ser ativado após um diálogo, evento, etc.)
-                        if (!Globals.triggerDadRun)
-                            Globals.triggerDadRun = true;
-                    }
+            {
+                //Testando a ativação do trigger para iniciar a perseguição com o pai (pode ser ativado após um diálogo, evento, etc.)
+                if (!Globals.triggerDadRun)
+                    Globals.triggerDadRun = true;
+            }
         }
         else    //Se a interação com a porta tiver sido ativada de forma manual após algum evento
         {
@@ -243,6 +264,34 @@ public class GameControllerNicolas : MonoBehaviour
                 pai.GetComponent<Animator>().SetBool("IsWalking", false);  //Desativa a animação de caminhada do pai
                 pai.GetComponent<Animator>().SetFloat("LastInputX", 0f);
                 pai.GetComponent<Animator>().SetFloat("LastInputY", -1f);  //Define a direção de idle do pai
+            }
+        }
+    }
+
+    public void EnableSprintSystem()
+    {
+        if (player != null)
+        {
+            Stamina stamina = player.GetComponent<Stamina>();
+            if (stamina != null)
+            {
+                staminaBar.SetActive(true);  //Ativa a barra de stamina na UI
+                stamina.enabled = true;  //Habilita o sistema de stamina
+                stamina.ResetStamina();  //Reseta a stamina do jogador
+                player.GetComponent<PlayerController>().canSprint = true;  //Habilita o sprint do jogador
+            }
+        }
+    }
+    public void DisableSprintSystem()
+    {
+        if (player != null)
+        {
+            Stamina stamina = player.GetComponent<Stamina>();
+            if (stamina != null)
+            {
+                staminaBar.SetActive(false);  //Desativa a barra de stamina na UI
+                stamina.enabled = false;  //Desabilita o sistema de stamina
+                player.GetComponent<PlayerController>().canSprint = false;  //Desabilita o sprint do jogador
             }
         }
     }
