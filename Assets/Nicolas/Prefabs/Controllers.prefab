@@ -78,6 +78,8 @@ Transform:
   - {fileID: 1973131371982097133}
   - {fileID: 6069320467750818321}
   - {fileID: 8993148248825712592}
+  - {fileID: 2705285625182944927}
+  - {fileID: 8839708376926837931}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4063786181116524541
@@ -125,8 +127,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  pai: {fileID: 0}
+  porta_pai: {fileID: 0}
   pauseMenu: {fileID: 0}
+  staminaBar: {fileID: 0}
   gamePaused: 0
+  canPause: 1
 --- !u!1 &4499502905104613921
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,6 +179,89 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgTransition: {fileID: 0}
   clock: {fileID: 0}
+--- !u!1 &4979309772803021537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8839708376926837931}
+  - component: {fileID: 699584335564908282}
+  - component: {fileID: 4497014542784735236}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8839708376926837931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4979309772803021537}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 930.78644, y: 252.68752, z: -0.92349494}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8588417391443194342}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &699584335564908282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4979309772803021537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 1
+  UnloadEvent: 2
+  Banks:
+  - Bank A
+  - Master
+  CollisionTag: 
+  PreloadSamples: 0
+--- !u!114 &4497014542784735236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4979309772803021537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 818462100
+      Data2: 1107933579
+      Data3: 1068165566
+      Data4: 735358167
+    Path: event:/musica 2
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &6804117015208512162
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,3 +308,67 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cinemachineCamera: {fileID: 0}
   player: {fileID: 0}
+--- !u!1 &8175619597615324461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2705285625182944927}
+  - component: {fileID: 4342481863017481903}
+  m_Layer: 0
+  m_Name: Dialogo Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2705285625182944927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8175619597615324461}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 812.87085, y: 458.03137, z: 6.9634304}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8588417391443194342}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4342481863017481903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8175619597615324461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19b49c8ea22b8a34ab61a2e7ce975d8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempoEscrever: 0.02
+  painelDialogo: {fileID: 0}
+  IconeContinuar: {fileID: 0}
+  textoDialogo: {fileID: 0}
+  nomeFalante: {fileID: 0}
+  portraitAnimator: {fileID: 0}
+  opcoes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  audioEscrita:
+    Guid:
+      Data1: -2053184237
+      Data2: 1114326548
+      Data3: 1335733432
+      Data4: -1539764923
+    Path: event:/FalaRapida
+  FrequenciaAudio: 4
+  minPitch: -3
+  maxPitch: 3

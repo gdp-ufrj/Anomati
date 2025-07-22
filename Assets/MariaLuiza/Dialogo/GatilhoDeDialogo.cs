@@ -55,10 +55,10 @@ public class DialogoTrigger : MonoBehaviour
 
     private IEnumerator AguardarFimEDesencadear()
     {
-        // espera o diálogo terminar
+        // fica esperando dialogoAtivo virar false
         yield return new WaitWhile(() => GerenciadorDeDialogos.GetInstancia().dialogoAtivo);
 
-        // acontece quando o diálogo acaba
+        // aqui o diálogo já acabou
         if (proximoGameObject != null)
             proximoGameObject.SetActive(true);
 
