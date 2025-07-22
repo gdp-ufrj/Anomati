@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8707387312796293677
+--- !u!114 &-8645895122248542045
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,16 +9,53 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Bank A.assets.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FalaRapida
   m_EditorClassIdentifier: 
-  Path: Assets/FmodBanks/Desktop/Bank A.assets.bank
-  Name: Bank A.assets
-  StudioPath: bank:/Bank A.assets
-  lastModified: 638877775197872713
-  FileSizes: []
-  Exists: 1
---- !u!114 &-5405450495698368311
+  Path: event:/FalaRapida
+  Guid:
+    Data1: -2053184237
+    Data2: 1114326548
+    Data3: 1335733432
+    Data4: -1539764923
+  Banks:
+  - {fileID: -7741204102015973975}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5516914528584171713}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-8475333340994697059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FalaPersonagem
+  m_EditorClassIdentifier: 
+  Path: event:/FalaPersonagem
+  Guid:
+    Data1: 91059555
+    Data2: 1093043424
+    Data3: -1686645074
+    Data4: 2027468319
+  Banks:
+  - {fileID: -7741204102015973975}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7741204102015973975
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33,10 +70,48 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638877775197980808
+  lastModified: 638865877398446441
   FileSizes: []
   Exists: 1
---- !u!114 &-3781066342275836406
+--- !u!114 &-6665811767807192889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Bank B.assets.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FmodBanks/Desktop/Bank B.assets.bank
+  Name: Bank B.assets
+  StudioPath: bank:/Bank B.assets
+  lastModified: 638847422677776142
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-6525760594886156119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FmodBanks/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638865877398931646
+  FileSizes:
+  - Name: 
+    Value: 1268
+  Exists: 1
+--- !u!114 &-5516914528584171713
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60,34 +135,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-3530715154995263675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/musica 2
-  m_EditorClassIdentifier: 
-  Path: event:/musica 2
-  Guid:
-    Data1: 818462100
-    Data2: 1107933579
-    Data3: 1068165566
-    Data4: 735358167
-  Banks:
-  - {fileID: -2871213666684700431}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-2871213666684700431
+--- !u!114 &-5111207302283374507
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,134 +145,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Bank A.bank
+  m_Name: bank:/Master.assets.bank
   m_EditorClassIdentifier: 
-  Path: Assets/FmodBanks/Desktop/Bank A.bank
-  Name: Bank A
-  StudioPath: bank:/Bank A
-  lastModified: 638877775197882703
+  Path: Assets/FmodBanks/Desktop/Master.assets.bank
+  Name: Master.assets
+  StudioPath: bank:/Master.assets
+  lastModified: 638865877398896164
   FileSizes: []
   Exists: 1
---- !u!114 &-1857433873315060074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Teste
-  m_EditorClassIdentifier: 
-  Path: event:/Teste
-  Guid:
-    Data1: 576892664
-    Data2: 1178869672
-    Data3: 547442852
-    Data4: -1537757314
-  Banks:
-  - {fileID: -1467908827270006204}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-1467908827270006204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Bank B.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FmodBanks/Desktop/Bank B.bank
-  Name: Bank B
-  StudioPath: bank:/Bank B
-  lastModified: 638877775197915710
-  FileSizes: []
-  Exists: 1
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 8985956451467242848}
-  - {fileID: -5405450495698368311}
-  - {fileID: -8707387312796293677}
-  - {fileID: -2871213666684700431}
-  - {fileID: 8706539376081655903}
-  - {fileID: 6107805614071954107}
-  - {fileID: -1467908827270006204}
-  EditorEvents:
-  - {fileID: -3530715154995263675}
-  - {fileID: 1886443880993489188}
-  - {fileID: -1857433873315060074}
-  - {fileID: 7730424215674981863}
-  - {fileID: 855664480883214619}
-  - {fileID: 5144904719653826130}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: -5405450495698368311}
-  StringsBanks:
-  - {fileID: 8985956451467242848}
-  cacheVersion: 131847
-  cacheTime: 638877775197990865
-  SerializableEventsDict:
-  - key: event:/musica 2
-    index: 0
-  - key: event:/Rua
-    index: 1
-  - key: event:/Teste
-    index: 2
-  - key: event:/Voice
-    index: 3
-  - key: event:/FalaPersonagem
-    index: 4
-  - key: event:/FalaRapida
-    index: 5
---- !u!114 &855664480883214619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FalaPersonagem
-  m_EditorClassIdentifier: 
-  Path: event:/FalaPersonagem
-  Guid:
-    Data1: 91059555
-    Data2: 1093043424
-    Data3: -1686645074
-    Data4: 2027468319
-  Banks:
-  - {fileID: -5405450495698368311}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &1886443880993489188
+--- !u!114 &-3819629698870495336
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,7 +172,7 @@ MonoBehaviour:
     Data3: 695148447
     Data4: -1607474877
   Banks:
-  - {fileID: -5405450495698368311}
+  - {fileID: -7741204102015973975}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -251,35 +180,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &5144904719653826130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FalaRapida
-  m_EditorClassIdentifier: 
-  Path: event:/FalaRapida
-  Guid:
-    Data1: -2053184237
-    Data2: 1114326548
-    Data3: 1335733432
-    Data4: -1539764923
-  Banks:
-  - {fileID: -5405450495698368311}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -3781066342275836406}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &6107805614071954107
+--- !u!114 &-772921974450746198
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -289,15 +190,107 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Bank B.assets.bank
+  m_Name: bank:/Bank B.bank
   m_EditorClassIdentifier: 
-  Path: Assets/FmodBanks/Desktop/Bank B.assets.bank
-  Name: Bank B.assets
-  StudioPath: bank:/Bank B.assets
-  lastModified: 638877775197915710
+  Path: Assets/FmodBanks/Desktop/Bank B.bank
+  Name: Bank B
+  StudioPath: bank:/Bank B
+  lastModified: 638847422677499657
   FileSizes: []
   Exists: 1
---- !u!114 &7730424215674981863
+--- !u!114 &-279316559927062918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Teste
+  m_EditorClassIdentifier: 
+  Path: event:/Teste
+  Guid:
+    Data1: 576892664
+    Data2: 1178869672
+    Data3: 547442852
+    Data4: -1537757314
+  Banks:
+  - {fileID: -772921974450746198}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -6525760594886156119}
+  - {fileID: 6242886350813955312}
+  - {fileID: 3292709882224100398}
+  - {fileID: -6665811767807192889}
+  - {fileID: -772921974450746198}
+  - {fileID: -5111207302283374507}
+  - {fileID: -7741204102015973975}
+  EditorEvents:
+  - {fileID: 8608805119661097679}
+  - {fileID: -279316559927062918}
+  - {fileID: -8645895122248542045}
+  - {fileID: 4600330316562536959}
+  - {fileID: -8475333340994697059}
+  - {fileID: -3819629698870495336}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -7741204102015973975}
+  StringsBanks:
+  - {fileID: -6525760594886156119}
+  cacheVersion: 131847
+  cacheTime: 638865877398931646
+  SerializableEventsDict:
+  - key: event:/musica 2
+    index: 0
+  - key: event:/Teste
+    index: 1
+  - key: event:/FalaRapida
+    index: 2
+  - key: event:/Voice
+    index: 3
+  - key: event:/FalaPersonagem
+    index: 4
+  - key: event:/Rua
+    index: 5
+--- !u!114 &3292709882224100398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Bank A.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FmodBanks/Desktop/Bank A.bank
+  Name: Bank A
+  StudioPath: bank:/Bank A
+  lastModified: 638843126957700866
+  FileSizes: []
+  Exists: 1
+--- !u!114 &4600330316562536959
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -316,7 +309,7 @@ MonoBehaviour:
     Data3: -1296949372
     Data4: 128797497
   Banks:
-  - {fileID: -5405450495698368311}
+  - {fileID: -7741204102015973975}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -324,7 +317,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &8706539376081655903
+--- !u!114 &6242886350813955312
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -334,15 +327,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.assets.bank
+  m_Name: bank:/Bank A.assets.bank
   m_EditorClassIdentifier: 
-  Path: Assets/FmodBanks/Desktop/Master.assets.bank
-  Name: Master.assets
-  StudioPath: bank:/Master.assets
-  lastModified: 638877775197970807
+  Path: Assets/FmodBanks/Desktop/Bank A.assets.bank
+  Name: Bank A.assets
+  StudioPath: bank:/Bank A.assets
+  lastModified: 638843126996470864
   FileSizes: []
   Exists: 1
---- !u!114 &8985956451467242848
+--- !u!114 &8608805119661097679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -351,14 +344,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/musica 2
   m_EditorClassIdentifier: 
-  Path: Assets/FmodBanks/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638877775197990865
-  FileSizes:
-  - Name: 
-    Value: 1268
-  Exists: 1
+  Path: event:/musica 2
+  Guid:
+    Data1: 818462100
+    Data2: 1107933579
+    Data3: 1068165566
+    Data4: 735358167
+  Banks:
+  - {fileID: 3292709882224100398}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
