@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{246956ff-33db-4372-a45d-6fccdfa45456}">
 		<property name="assetPath">
-			<value>UI/ui_cancel.ogg</value>
+			<value>testes/UI/ui_cancel.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

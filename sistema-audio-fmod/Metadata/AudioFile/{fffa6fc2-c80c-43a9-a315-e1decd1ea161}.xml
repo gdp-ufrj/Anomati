@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{fffa6fc2-c80c-43a9-a315-e1decd1ea161}">
 		<property name="assetPath">
-			<value>Interactables/barrel_rolling_loop.ogg</value>
+			<value>testes/Interactables/barrel_rolling_loop.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

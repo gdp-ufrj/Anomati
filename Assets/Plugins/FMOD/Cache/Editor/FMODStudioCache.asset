@@ -15,9 +15,63 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Bank A.assets.bank
   Name: Bank A.assets
   StudioPath: bank:/Bank A.assets
-  lastModified: 638881286007618115
+  lastModified: 638888054712020650
   FileSizes: []
   Exists: 1
+--- !u!114 &-8258743144725295880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/testes/musica 2
+  m_EditorClassIdentifier: 
+  Path: event:/testes/musica 2
+  Guid:
+    Data1: 818462100
+    Data2: 1107933579
+    Data3: 1068165566
+    Data4: 735358167
+  Banks:
+  - {fileID: -2871213666684700431}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5591585256767147298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/testes/Rua
+  m_EditorClassIdentifier: 
+  Path: event:/testes/Rua
+  Guid:
+    Data1: -1766874913
+    Data2: 1295607705
+    Data3: 695148447
+    Data4: -1607474877
+  Banks:
+  - {fileID: -5405450495698368311}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5405450495698368311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33,34 +87,10 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638881286007942533
+  lastModified: 638888054712177499
   FileSizes: []
   Exists: 1
---- !u!114 &-3781066342275836406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/FalaRapida/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  StudioPath: 
-  Min: -3
-  Max: 3
-  Default: 1
-  ID:
-    data1: 653003414
-    data2: 1591193567
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-3530715154995263675
+--- !u!114 &-4434795335537239106
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,16 +100,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/musica 2
+  m_Name: event:/testes/Teste
   m_EditorClassIdentifier: 
-  Path: event:/musica 2
+  Path: event:/testes/Teste
   Guid:
-    Data1: 818462100
-    Data2: 1107933579
-    Data3: 1068165566
-    Data4: 735358167
+    Data1: 576892664
+    Data2: 1178869672
+    Data3: 547442852
+    Data4: -1537757314
   Banks:
-  - {fileID: -2871213666684700431}
+  - {fileID: -1467908827270006204}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -102,10 +132,10 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Bank A.bank
   Name: Bank A
   StudioPath: bank:/Bank A
-  lastModified: 638881286007638102
+  lastModified: 638888054712030658
   FileSizes: []
   Exists: 1
---- !u!114 &-1857433873315060074
+--- !u!114 &-2859611739106742128
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,20 +145,75 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Teste
+  m_Name: "event:/m\xFAsicas/anomati theme"
   m_EditorClassIdentifier: 
-  Path: event:/Teste
+  Path: "event:/m\xFAsicas/anomati theme"
   Guid:
-    Data1: 576892664
-    Data2: 1178869672
-    Data3: 547442852
-    Data4: -1537757314
+    Data1: -896679240
+    Data2: 1228922320
+    Data3: -217824084
+    Data4: -519337789
   Banks:
-  - {fileID: -1467908827270006204}
+  - {fileID: -5405450495698368311}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 70000
+--- !u!114 &-2857593842367118096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/testes/FalaPersonagem
+  m_EditorClassIdentifier: 
+  Path: event:/testes/FalaPersonagem
+  Guid:
+    Data1: 91059555
+    Data2: 1093043424
+    Data3: -1686645074
+    Data4: 2027468319
+  Banks:
+  - {fileID: -5405450495698368311}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1923438611092184775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/testes/FalaRapida
+  m_EditorClassIdentifier: 
+  Path: event:/testes/FalaRapida
+  Guid:
+    Data1: -2053184237
+    Data2: 1114326548
+    Data3: 1335733432
+    Data4: -1539764923
+  Banks:
+  - {fileID: -5405450495698368311}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 8511793552184647911}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -147,7 +232,7 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Bank B.bank
   Name: Bank B
   StudioPath: bank:/Bank B
-  lastModified: 638881286007797132
+  lastModified: 638888054712067119
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -171,33 +256,36 @@ MonoBehaviour:
   - {fileID: 6107805614071954107}
   - {fileID: -1467908827270006204}
   EditorEvents:
-  - {fileID: -3530715154995263675}
-  - {fileID: 1886443880993489188}
-  - {fileID: -1857433873315060074}
-  - {fileID: 7730424215674981863}
-  - {fileID: 855664480883214619}
-  - {fileID: 5144904719653826130}
+  - {fileID: -8258743144725295880}
+  - {fileID: -4434795335537239106}
+  - {fileID: -1923438611092184775}
+  - {fileID: 1776504207976369713}
+  - {fileID: -2857593842367118096}
+  - {fileID: -2859611739106742128}
+  - {fileID: -5591585256767147298}
   EditorParameters: []
   MasterBanks:
   - {fileID: -5405450495698368311}
   StringsBanks:
   - {fileID: 8985956451467242848}
   cacheVersion: 131847
-  cacheTime: 638881286007965240
+  cacheTime: 638888054712177499
   SerializableEventsDict:
-  - key: event:/musica 2
+  - key: event:/testes/musica 2
     index: 0
-  - key: event:/Rua
+  - key: event:/testes/Teste
     index: 1
-  - key: event:/Teste
+  - key: event:/testes/FalaRapida
     index: 2
-  - key: event:/Voice
+  - key: event:/testes/Voice
     index: 3
-  - key: event:/FalaPersonagem
+  - key: event:/testes/FalaPersonagem
     index: 4
-  - key: event:/FalaRapida
+  - key: "event:/m\xFAsicas/anomati theme"
     index: 5
---- !u!114 &855664480883214619
+  - key: event:/testes/Rua
+    index: 6
+--- !u!114 &1776504207976369713
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,75 +295,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FalaPersonagem
+  m_Name: event:/testes/Voice
   m_EditorClassIdentifier: 
-  Path: event:/FalaPersonagem
+  Path: event:/testes/Voice
   Guid:
-    Data1: 91059555
-    Data2: 1093043424
-    Data3: -1686645074
-    Data4: 2027468319
-  Banks:
-  - {fileID: -5405450495698368311}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &1886443880993489188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Rua
-  m_EditorClassIdentifier: 
-  Path: event:/Rua
-  Guid:
-    Data1: -1766874913
-    Data2: 1295607705
-    Data3: 695148447
-    Data4: -1607474877
-  Banks:
-  - {fileID: -5405450495698368311}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &5144904719653826130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FalaRapida
-  m_EditorClassIdentifier: 
-  Path: event:/FalaRapida
-  Guid:
-    Data1: -2053184237
-    Data2: 1114326548
-    Data3: 1335733432
-    Data4: -1539764923
+    Data1: -213772701
+    Data2: 1272035052
+    Data3: -1296949372
+    Data4: 128797497
   Banks:
   - {fileID: -5405450495698368311}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters:
-  - {fileID: -3781066342275836406}
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -294,10 +327,10 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Bank B.assets.bank
   Name: Bank B.assets
   StudioPath: bank:/Bank B.assets
-  lastModified: 638881286007757212
+  lastModified: 638888054712052085
   FileSizes: []
   Exists: 1
---- !u!114 &7730424215674981863
+--- !u!114 &8511793552184647911
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -306,24 +339,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voice
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/FalaRapida/Pitch
   m_EditorClassIdentifier: 
-  Path: event:/Voice
-  Guid:
-    Data1: -213772701
-    Data2: 1272035052
-    Data3: -1296949372
-    Data4: 128797497
-  Banks:
-  - {fileID: -5405450495698368311}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  Name: Pitch
+  StudioPath: 
+  Min: -3
+  Max: 3
+  Default: 1
+  ID:
+    data1: 653003414
+    data2: 1591193567
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &8706539376081655903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,7 +369,7 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Master.assets.bank
   Name: Master.assets
   StudioPath: bank:/Master.assets
-  lastModified: 638881286007917206
+  lastModified: 638888054712162378
   FileSizes: []
   Exists: 1
 --- !u!114 &8985956451467242848
@@ -357,8 +387,8 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638881286007965240
+  lastModified: 638888054712177499
   FileSizes:
   - Name: 
-    Value: 1268
+    Value: 1340
   Exists: 1

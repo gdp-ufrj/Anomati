@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{50d2b7e8-43fa-4abe-98d7-7d769f82af5e}">
 		<property name="assetPath">
-			<value>Weapons/M4/weapons_m4_head_01.ogg</value>
+			<value>testes/Weapons/M4/weapons_m4_head_01.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

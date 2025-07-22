@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{1dd5ba31-d2f7-43c9-821c-b679296fec13}">
 		<property name="assetPath">
-			<value>Ambience/Forest/amb_forest_rain_drop_3.ogg</value>
+			<value>testes/Ambience/Forest/amb_forest_rain_drop_3.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

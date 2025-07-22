@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{28defffb-d4dc-405c-a3d5-1a17da7a5f68}">
 		<property name="assetPath">
-			<value>Ambience/Forest/amb_forest_thunderstorm_03.ogg</value>
+			<value>testes/Ambience/Forest/amb_forest_thunderstorm_03.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

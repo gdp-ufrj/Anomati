@@ -51,6 +51,7 @@ public class GerenciadorDeDialogos : MonoBehaviour
     private const string SPEAKER_TAG = "speaker"; // Tag para o falante
     private const string PORTRAIT_TAG = "portrait"; // Tag para o retrato
     private const string LAYOUT_TAG = "layout"; // Tag para o layout
+    public event Action OnDialogoFinalizado;
 
     private void Awake()
     {
@@ -58,7 +59,7 @@ public class GerenciadorDeDialogos : MonoBehaviour
         {
             Debug.LogWarning("Há mais de um Grenciador de diálogo na cena");
         }
-        instancia = this; 
+        instancia = this;
 
         //audioSource = this.gameObject.AddComponent<AudioSource>(); // Adiciona um AudioSource ao GameObject do gerenciador de diálogos
     }
@@ -155,6 +156,8 @@ public class GerenciadorDeDialogos : MonoBehaviour
         dialogoAtivo = false;
         painelDialogo.SetActive(false);
         textoDialogo.text = "";
+
+        OnDialogoFinalizado?.Invoke();
     }
 
     private void ContinuarHistoria()
