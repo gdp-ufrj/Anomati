@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      risco_frente_0: 7039089735123893916
+      risco_frente_1: -3369465717729912813
+      risco_frente_2: 7121353295295718960
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

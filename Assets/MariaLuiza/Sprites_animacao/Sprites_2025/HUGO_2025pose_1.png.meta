@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HUGO_2025pose_1_0: -3612039400360488707
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

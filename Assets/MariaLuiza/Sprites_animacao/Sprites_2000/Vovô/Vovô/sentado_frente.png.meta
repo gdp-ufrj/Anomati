@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sentado_frente_0: -4679685471573799760
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

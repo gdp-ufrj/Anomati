@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      eliza_costa_0: 2282181743782771101
+      eliza_costa_1: 6681080263474064420
+      eliza_costa_2: -5575048856605936355
+      eliza_costa_3: 3750445757398470225
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

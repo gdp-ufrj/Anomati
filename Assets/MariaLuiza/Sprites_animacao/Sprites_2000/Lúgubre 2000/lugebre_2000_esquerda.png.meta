@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      lugebre_2000_esquerda_0: -5705098677337264013
+      lugebre_2000_esquerda_1: -8494526032953864669
+      lugebre_2000_esquerda_2: -5289339399535695596
+      lugebre_2000_esquerda_3: -1587226588613293743
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

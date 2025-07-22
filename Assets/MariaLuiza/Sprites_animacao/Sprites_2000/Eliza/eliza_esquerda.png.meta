@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      eliza_esquerda_0: 6246561715734860962
+      eliza_esquerda_1: 6803274395555379796
+      eliza_esquerda_2: 6854056878570420980
+      eliza_esquerda_3: 3193177950328741209
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

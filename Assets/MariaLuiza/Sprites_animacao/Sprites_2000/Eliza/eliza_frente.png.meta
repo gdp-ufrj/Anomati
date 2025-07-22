@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      eliza_frente_0: 4894310705753302416
+      eliza_frente_1: -6952634885747042028
+      eliza_frente_2: 1762043654785248614
+      eliza_frente_3: 3529607470009310267
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
