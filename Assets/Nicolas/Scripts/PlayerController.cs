@@ -62,7 +62,11 @@ public class PlayerController : MonoBehaviour
             //canMove = false;
             canInteractAgain = false;
             txtInteracao.SetActive(false); // Desativa o texto de interação
-            objetoInteracao.SendMessage("interacao", true, SendMessageOptions.DontRequireReceiver);   //Envia a mensagem de interação para o objeto atingido pelo raycast
+
+            object[] Array = new object[2];
+            Array[0] = false;
+            Array[1] = true;
+            objetoInteracao.SendMessage("interacao", Array, SendMessageOptions.DontRequireReceiver);   //Envia a mensagem de interação para o objeto atingido pelo raycast
         }
         else
             objetoInteracao = null;
