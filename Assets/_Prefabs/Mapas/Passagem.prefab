@@ -405,8 +405,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3710876939923336547}
+  - component: {fileID: 1203488874551159575}
+  - component: {fileID: 8807919405065366213}
   m_Layer: 0
-  m_Name: Dasativar Whiteout Flashback
+  m_Name: A1D3 parte 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -427,6 +429,43 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5046525785899372376}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1203488874551159575
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2919697004713526166}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20.22349, y: 7.0374784, z: 1}
+  m_Center: {x: -0.084477425, y: 1.0137391, z: 0}
+--- !u!114 &8807919405065366213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2919697004713526166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 710c814ddd15fcd41879345c1f43ce1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inkJSON: {fileID: 4900000, guid: 2a222b9f0dc8b27419c4c43b1a8dea03, type: 3}
+  dialogoUnico: 1
+  dialogoAutomatico: 1
+  proximoGameObject: {fileID: 0}
 --- !u!1 &3061267751412181934
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,12 +585,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3938424794518318937}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.18, y: 0.97, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.18, y: 0.9700012, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5046525785899372376}
+  m_Father: {fileID: 524225627674487145}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6228650563893199135
 SpriteRenderer:
@@ -1116,6 +1155,7 @@ Transform:
   - {fileID: 4556684398430861131}
   - {fileID: 4895395230244291115}
   - {fileID: 5046525785899372376}
+  - {fileID: 5426889606537491209}
   - {fileID: 7694160502015339775}
   - {fileID: 8141358477092750991}
   m_Father: {fileID: 0}
@@ -1675,7 +1715,6 @@ Transform:
   m_Children:
   - {fileID: 717145091124958063}
   - {fileID: 2628168018816182515}
-  - {fileID: 5426889606537491209}
   - {fileID: 3710876939923336547}
   m_Father: {fileID: 524225627674487145}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
