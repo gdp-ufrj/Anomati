@@ -1,9 +1,6 @@
-[Fade out, a tela agora é branca, apenas o diálogo de lúgubre é visível]
+//[Fade out, a tela agora é branca, apenas o diálogo de lúgubre é visível]
+Tais palavras despertam algo adormecido dentro de mim… #speaker:Lúgubre #portrait:lugebre #layout:left
+Pureza. Dor. Descobertas #speaker:Lúgubre #portrait:lugebre #layout:left
 
-Lúgubre: Tais palavras despertam algo adormecido dentro de mim… #speaker:player #portrait:player #layout:left
-
-Lúgubre: Pureza. Dor. Descobertas #speaker:player #portrait:player #layout:leftv
-
-Lúgubre: Teria eu de embarcar nessa longa viagem? #speaker:player #portrait:player #layout:left
-
+Teria eu de embarcar nessa longa viagem? #speaker:Lúgubre #portrait:lugebre #layout:left
 

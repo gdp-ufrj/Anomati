@@ -1,5 +1,3 @@
-
-
 Senhor de idade: Olá, meu jovem! O que faz aqui? Pensei que estivesse com seu pai. #speaker:npc #layout:right
 
 Menino sem rosto: Não quero ficar perto dele, vô Evandro. Assim que ele virou o olhar eu saí correndo. #speaker:player #portrait:player #layout:left

@@ -1,20 +1,20 @@
-[Fade out, a tela agora é branca, apenas o diálogo de lúgubre é visível]
+//[Fade out, a tela agora é branca, apenas o diálogo de lúgubre é visível]
 
-Lúgubre: Tais palavras despertam algo adormecido dentro de mim… #speaker:player #portrait:player #layout:left
+Tais palavras despertam algo adormecido dentro de mim… #speaker:Lúgubre #portrait:lugebre #layout:left
 
-Lúgubre: Pureza. Dor. Descobertas #speaker:player #portrait:player #layout:left
+Pureza. Dor. Descobertas #speaker:Lúgubre #portrait:lugebre #layout:left
 
-Lúgubre: Teria eu de embarcar nessa longa viagem? #speaker:player #portrait:player #layout:left
+Teria eu de embarcar nessa longa viagem? #speaker:Lúgubre #portrait:lugebre #layout:left
 
-[A tela branca desaparece de maneira gradativa. Agora, a tela remete a uma câmera do início do século. Um menino sem rosto, mas com voz, adentra uma sala misteriosa, iluminada pelo sol]
+//[A tela branca desaparece de maneira gradativa. Agora, a tela remete a uma câmera do início do século. Um menino sem rosto, mas com voz, adentra uma sala misteriosa, iluminada pelo sol]
 
 Menino: Acho que ele me perdeu de vista #speaker:player #portrait:player #layout:left
 
-[Dentro desta sala, há a presença de alguns quadros, nota-se que é um ateliê, o menino terá a possibilidade de interagir com esses quadros.]
+//[Dentro desta sala, há a presença de alguns quadros, nota-se que é um ateliê, o menino terá a possibilidade de interagir com esses quadros.]
 
-[Ao norte do ateliê, nota-se a presença de um senhor e um pequeno garoto ao seu lado]
+//[Ao norte do ateliê, nota-se a presença de um senhor e um pequeno garoto ao seu lado]
 
-[Ao clicar para falar com o garoto]
+//[Ao clicar para falar com o garoto]
 
 Menino sem rosto: Oi, tudo bem? #speaker:player #portrait:player #layout:left
 

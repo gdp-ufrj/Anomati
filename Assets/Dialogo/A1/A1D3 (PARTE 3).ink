@@ -1,9 +1,9 @@
 
-Menino sem rosto: Oi, tudo bem? #speaker:player #portrait:player #layout:left
+Oi, tudo bem? #speaker:Menino sem rosto #portrait:player #layout:left
 
-Menino tímido: … #speaker:npc #layout:right
+… #speaker:Menino tímido #layout:right
 
-Menino sem rosto: Você é mudo? #speaker:player #portrait:player #layout:left
+Você é mudo? #speaker:Menino sem rosto #portrait:player #layout:left
 
-Menino tímido: …Olá #speaker:npc #layout:right
+…Olá #speaker:Menino tímido #layout:right
 
