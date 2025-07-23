@@ -16,7 +16,7 @@ public class Globals : MonoBehaviour
 
 
     //Variáveis triggers:
-    public static bool triggerDadRun = false, endDadRun = false;  //Trigger para iniciar e finalizar a perseguição com o pai
+    public static bool triggerDadRun = true, endDadRun = false;  //Trigger para iniciar e finalizar a perseguição com o pai
     public static bool finishAto1 = false, finishAto2 = false, finishAto3 = false;
 
 

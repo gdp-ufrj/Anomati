@@ -163,6 +163,7 @@ public class Pai : MonoBehaviour
             if (Globals.triggerDadRun && !Globals.endDadRun && !DoorTransitionController.GetInstance().isTransitioning)
             {
                 Debug.Log("Pai colidiu com o jogador durante a perseguição!");
+                StopAllCoroutines();
                 GameControllerNicolas.GetInstance().ResetDadRun();    //Reseta a perseguição com o pai
             }
         }

@@ -8,6 +8,8 @@ TagManager:
   - NPC
   - pai
   - player
+  - mesa
+  - armario
   layers:
   - Default
   - TransparentFX

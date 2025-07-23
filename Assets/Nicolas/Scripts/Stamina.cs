@@ -21,7 +21,7 @@ public class Stamina : MonoBehaviour
 
     void Update()
     {
-        if (!playerController.canMove)
+        if (!playerController.canRecoverStamina)
             return;
         HandleStamina(playerController.isSprinting);
     }
