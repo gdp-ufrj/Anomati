@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerCanMove : MonoBehaviour
 {
     public PlayerController Player;
+    public bool CanMove = false;
     public GameObject porta;
     public bool isTeleport = false;
 
@@ -15,7 +16,10 @@ public class PlayerCanMove : MonoBehaviour
         }
         else
         {
-            Player.canMove = true;
+            if (CanMove)
+            {
+                Player.canMove = true;
+            }
         }
     }
 
