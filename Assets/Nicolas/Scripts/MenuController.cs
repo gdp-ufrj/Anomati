@@ -9,7 +9,7 @@ public class MenuController : MonoBehaviour
 
     public void StartGame()
     {
-        SceneTransitionController.GetInstance().LoadScene("Present");  //Carrega a cena do jogo
+        SceneTransitionController.GetInstance().LoadScene("Present2");  //Carrega a cena do jogo
     }
 
     public void OpenSettings()

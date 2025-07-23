@@ -56,6 +56,7 @@ public class doorController : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.5f); // Espera um pouco para dar tempo para o jogador se estabilizar na nova posição
-        GameControllerNicolas.GetInstance().FinishDoorInteraction(origin, destination, isDoor);    //Finaliza a interação com a porta no controlador do jogo (ativa cenas, triggers, etc...)
+        bool isFlashback = !haveFade;
+        GameControllerNicolas.GetInstance().FinishDoorInteraction(origin, destination, isDoor, isFlashback);    //Finaliza a interação com a porta no controlador do jogo (ativa cenas, triggers, etc...)
     }
 }

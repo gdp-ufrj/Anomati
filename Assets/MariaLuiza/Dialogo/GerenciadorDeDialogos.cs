@@ -159,7 +159,7 @@ public class GerenciadorDeDialogos : MonoBehaviour
         textoDialogo.text = "";
 
         OnDialogoFinalizado?.Invoke();
-        GameControllerNicolas.GetInstance().EnablePlayerMovement();
+        //GameControllerNicolas.GetInstance().EnablePlayerMovement();
     }
 
     private void ContinuarHistoria()

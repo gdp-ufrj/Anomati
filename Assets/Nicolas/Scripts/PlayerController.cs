@@ -173,15 +173,31 @@ public class PlayerController : MonoBehaviour
         //Debug.Log(movementVector); // Debug para verificar o vetor de movimento
     }
     
-    public void SetIdleDirection()
+    public void SetIdleDirection(int direction)
     {
-        animator.SetFloat("InputX", 0);
-        animator.SetFloat("InputY", -1);
-
-        animator.SetFloat("LastInputX", 0);
-        animator.SetFloat("LastInputY", -1);
-
         animator.SetBool("isWalking", false);
         animator.SetBool("isRunning", false);
+
+        switch (direction)
+        {
+            case 0: //Frente
+                animator.SetFloat("InputX", 0);
+                animator.SetFloat("InputY", -1);
+                break;
+            case 1: //Direita
+                animator.SetFloat("InputX", 1);
+                animator.SetFloat("InputY", 0);
+                break;
+            case 2: //Esquerda
+                animator.SetFloat("InputX", -1);
+                animator.SetFloat("InputY", 0);
+                break;
+            case 3: //Trás
+                animator.SetFloat("InputX", 0);
+                animator.SetFloat("InputY", 1);
+                break;
+        }
+        animator.SetFloat("LastInputX", animator.GetFloat("InputX"));
+        animator.SetFloat("LastInputY", animator.GetFloat("InputY"));
     }
 }

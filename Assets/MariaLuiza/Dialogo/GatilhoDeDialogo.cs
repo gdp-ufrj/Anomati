@@ -11,6 +11,7 @@ public class DialogoTrigger : MonoBehaviour
     [SerializeField] private bool dialogoAutomatico = false;
     [Tooltip("Se atribuído, será ativado quando o diálogo acabar")]
     [SerializeField] private GameObject proximoGameObject;
+    [SerializeField] private GameObject[] proximosGameObjects;
 
     private bool jogadorPerto = false;
 
@@ -61,6 +62,15 @@ public class DialogoTrigger : MonoBehaviour
         // aqui o diálogo já acabou
         if (proximoGameObject != null)
             proximoGameObject.SetActive(true);
+        
+        if (proximosGameObjects != null && proximosGameObjects.Length > 0)
+        {
+            foreach (var go in proximosGameObjects)
+            {
+                if (go != null)
+                    go.SetActive(true);
+            }
+        }
 
         if (dialogoUnico)
             Destroy(gameObject);

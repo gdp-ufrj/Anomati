@@ -87,8 +87,10 @@ public class GameControllerNicolas : MonoBehaviour
 
     public void PauseGame()
     {
+        //Debug.Log("PauseGame called. Game paused: " + gamePaused);
         if (!gamePaused)
         {
+            Debug.Log("Game is not paused, attempting to pause. Player can move: " + player.GetComponent<PlayerController>().canMove + ", Can pause: " + canPause);
             if (player.GetComponent<PlayerController>().canMove && canPause)
             {
                 DisablePlayerMovement();
@@ -120,23 +122,41 @@ public class GameControllerNicolas : MonoBehaviour
     public void SetIdleDirectionPlayer()
     {
         if (player != null)
-            player.GetComponent<PlayerController>().SetIdleDirection();  //Define a direção de idle do jogador
+            player.GetComponent<PlayerController>().SetIdleDirection(0);  //Define a direção de idle do jogador
     }
 
     public bool CanInteractWithObject(GameObject objeto)    //Método para verificar se o jogador pode interagir com um objeto
     {
-        if (objeto.transform.Find("casa_pai") && Globals.triggerDadRun && !Globals.endDadRun)
-            return false;    //Se a porta for a do pai e a perseguição estiver ativa, não interage
+        if (objeto.CompareTag("door"))
+        {
+            if (objeto.transform.parent.transform.parent != null)
+            {
+                string nomeMapa = objeto.transform.parent.transform.parent.name; //Obtém o nome do mapa da porta interagida
+                if (nomeMapa == Globals.GetSceneName(Globals.MapNames.CasaPai2000) && Globals.triggerDadRun && !Globals.endDadRun)
+                    return false;   //Se o objeto for uma porta do pai durante a perseguição, não interage
+                if (nomeMapa == Globals.GetSceneName(Globals.MapNames.Atelie2000) && !Globals.finishAto1)
+                    return false;   //Se o objeto for a porta do ateliê de 2025 e o ato 1 não tiver sido finalizado, não interage
+            }
+        }
+
         return true;
     }
 
     public string GetInteractionText(GameObject objeto)    //Método para obter o texto de interação de um objeto
     {
-        if (objeto.transform.Find("casa_pai") && Globals.triggerDadRun && !Globals.endDadRun)
-            return "Porta Emperrada!";       //Texto específico para a porta do pai durante a perseguição
-
         if (objeto.CompareTag("door"))
-            return "Abrir";
+        {
+            if (objeto.transform.parent.transform.parent != null)
+            {
+                string nomeMapa = objeto.transform.parent.transform.parent.name;
+                if (nomeMapa == Globals.GetSceneName(Globals.MapNames.CasaPai2000) && Globals.triggerDadRun && !Globals.endDadRun)
+                    return "Porta Trancada!";
+                if (nomeMapa == Globals.GetSceneName(Globals.MapNames.Atelie2000) && !Globals.finishAto1)
+                    return "Não quero sair.";
+            }
+
+            return "Abrir";    //Texto padrão para portas
+        }
 
         return "Interagir";
     }
@@ -166,7 +186,7 @@ public class GameControllerNicolas : MonoBehaviour
         }
     }
 
-    public void FinishDoorInteraction(string origin, string destination, bool isDoor)    //Aqui acontecerá checagens de triggers após a transição de porta, como ativar cenas, diálogos, etc...
+    public void FinishDoorInteraction(string origin, string destination, bool isDoor, bool isFlashback)    //Aqui acontecerá checagens de triggers após a transição de porta, como ativar cenas, diálogos, etc...
     {
         Debug.Log("FinishDoorInteraction called. From: " + origin + " To: " + destination);
         if (isDoor)     //Se a interação tiver sido realmente com uma porta
@@ -183,13 +203,6 @@ public class GameControllerNicolas : MonoBehaviour
             if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai2000))
                 if (Globals.triggerDadRun && !Globals.endDadRun)
                     EnableDadRun();  //Ativa o pai
-
-            if (destination == Globals.GetSceneName(Globals.MapNames.Atelie2000))
-            {
-                //Testando a ativação do trigger para iniciar a perseguição com o pai (pode ser ativado após um diálogo, evento, etc.)
-                if (!Globals.triggerDadRun)
-                    Globals.triggerDadRun = true;
-            }
         }
         else    //Se a interação com a porta tiver sido ativada de forma manual após algum evento
         {
@@ -198,7 +211,8 @@ public class GameControllerNicolas : MonoBehaviour
                     EnableDadRun();  //Ativa o pai
         }
 
-        EnablePlayerMovement();
+        if (!isFlashback)
+            EnablePlayerMovement();
         canPause = true;
         DoorTransitionController.GetInstance().isTransitioning = false;
     }
@@ -298,6 +312,20 @@ public class GameControllerNicolas : MonoBehaviour
                 stamina.enabled = false;  //Desabilita o sistema de stamina
                 player.GetComponent<PlayerController>().canSprint = false;  //Desabilita o sprint do jogador
             }
+        }
+    }
+
+    public void ChangePlayerSprite(string time)
+    {
+        if (player == null)
+            return;
+        if (time == "Past")
+        {
+            Debug.Log("Mudando sprite do jogador para passado");
+        }
+        else if (time == "Present")
+        {
+            Debug.Log("Mudando sprite do jogador para presente");
         }
     }
 }
