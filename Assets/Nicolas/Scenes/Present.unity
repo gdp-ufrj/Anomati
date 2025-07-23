@@ -2078,7 +2078,7 @@ Transform:
   m_GameObject: {fileID: 1035758545}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7999998, y: -77.70999, z: -10}
+  m_LocalPosition: {x: 0.7823224, y: -77.71099, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4820,6 +4820,10 @@ PrefabInstance:
     - target: {fileID: 2846389333189592730, guid: 6ecab5e2ade38ae48add10f7bce9f46d, type: 3}
       propertyPath: m_Name
       value: Rodoviaria
+      objectReference: {fileID: 0}
+    - target: {fileID: 6964556963011356859, guid: 6ecab5e2ade38ae48add10f7bce9f46d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8760505924459557660, guid: 6ecab5e2ade38ae48add10f7bce9f46d, type: 3}
       propertyPath: inkJSON
