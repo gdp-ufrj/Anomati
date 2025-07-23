@@ -63,10 +63,7 @@ public class PlayerController : MonoBehaviour
             canInteractAgain = false;
             txtInteracao.SetActive(false); // Desativa o texto de interação
 
-            object[] Array = new object[2];
-            Array[0] = false;
-            Array[1] = true;
-            objetoInteracao.SendMessage("interacao", Array, SendMessageOptions.DontRequireReceiver);   //Envia a mensagem de interação para o objeto atingido pelo raycast
+            objetoInteracao.SendMessage("interacao", new object[] { true, true }, SendMessageOptions.DontRequireReceiver);   //Envia a mensagem de interação para o objeto atingido pelo raycast
         }
         else
             objetoInteracao = null;
@@ -138,7 +135,7 @@ public class PlayerController : MonoBehaviour
     public void Move()
     {    //Este método vai controlar o movimento do jogador e a animação de acordo com o vetor de movimento
 
-        if (GerenciadorDeDialogos.GetInstancia().dialogoAtivo) return; // Se o diálogo estiver ativo, não move o jogador
+        //if (GerenciadorDeDialogos.GetInstancia().dialogoAtivo) return; // Se o diálogo estiver ativo, não move o jogador
 
         if (canMove)
             movementVector = playerInputActions.Player.Movement.ReadValue<Vector2>();

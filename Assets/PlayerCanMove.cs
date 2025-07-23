@@ -28,10 +28,7 @@ public class PlayerCanMove : MonoBehaviour
 
     private IEnumerator Teleport()
     {
-        object[] Array = new object[2];
-        Array[0] = false;
-        Array[1] = haveFade;
-        yield return new WaitForSeconds(1f);   //Esperando 1 srgundo antes de iniciar a transição
-        porta.SendMessage("interacao", Array, SendMessageOptions.DontRequireReceiver);   //Inicia a transição para a casa do pai
+        yield return new WaitForSeconds(1f);   //Esperando 1 segundo antes de iniciar a transição
+        porta.SendMessage("interacao", new object[] { false, haveFade }, SendMessageOptions.DontRequireReceiver);   //Inicia a transição para a casa do pai
     }
 }

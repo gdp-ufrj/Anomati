@@ -140,6 +140,7 @@ public class GerenciadorDeDialogos : MonoBehaviour
      
     public void EntrarModoDialogo(TextAsset inkJSON)
     {
+        GameControllerNicolas.GetInstance().DisablePlayerMovement();
         historiaAtual = new Story(inkJSON.text);
         dialogoAtivo = true;
         painelDialogo.SetActive(true);
@@ -158,6 +159,7 @@ public class GerenciadorDeDialogos : MonoBehaviour
         textoDialogo.text = "";
 
         OnDialogoFinalizado?.Invoke();
+        GameControllerNicolas.GetInstance().EnablePlayerMovement();
     }
 
     private void ContinuarHistoria()
@@ -208,7 +210,7 @@ public class GerenciadorDeDialogos : MonoBehaviour
             {
                 var instancia = RuntimeManager.CreateInstance(audioEscrita);
                 float pitchValue = UnityEngine.Random.Range(minPitch, maxPitch);
-                Debug.Log($"Pitch usado: {pitchValue}");
+                //Debug.Log($"Pitch usado: {pitchValue}");
                 instancia.setParameterByName("pitchControl", pitchValue);
                 instancia.start();
                 instancia.release();

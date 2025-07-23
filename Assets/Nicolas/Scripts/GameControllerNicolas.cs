@@ -49,6 +49,11 @@ public class GameControllerNicolas : MonoBehaviour
         Globals.currentScene = currentScene; //Armazena o nome da cena atual
     }
 
+    void Update()
+    {
+        //Debug.Log("Player can move: " + player.GetComponent<PlayerController>().canMove);
+    }
+
     public void TimeTravel()
     {
         Globals.lastPlayerPosition = player.transform.position; //Armazena a posição atual do jogador
@@ -144,18 +149,18 @@ public class GameControllerNicolas : MonoBehaviour
 
         if (isDoor)     //Se a interação tiver sido realmente com uma porta
         {
-            if (origin == Globals.GetSceneName(Globals.MapNames.CasaPai))
+            if (origin == Globals.GetSceneName(Globals.MapNames.CasaPai2000))
             {
                 if (Globals.triggerDadRun && !Globals.endDadRun)
                     DisableSprintSystem();    //Desabilita o sistema de sprint e stamina do jogador
             }
-            if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai))
+            if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai2000))
                 if (Globals.triggerDadRun && !Globals.endDadRun)
                     EnableSprintSystem();   //Habilita o sistema de corrida e stamina do jogador
         }
         else    //Se a interação com a porta tiver sido ativada de forma manual após algum evento
         {
-            if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai))
+            if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai2000))
                 if (Globals.triggerDadRun && !Globals.endDadRun)
                     EnableSprintSystem();   //Habilita o sistema de corrida e stamina do jogador
         }
@@ -166,7 +171,7 @@ public class GameControllerNicolas : MonoBehaviour
         Debug.Log("FinishDoorInteraction called. From: " + origin + " To: " + destination);
         if (isDoor)     //Se a interação tiver sido realmente com uma porta
         {
-            if (origin == Globals.GetSceneName(Globals.MapNames.CasaPai))
+            if (origin == Globals.GetSceneName(Globals.MapNames.CasaPai2000))
             {
                 if (Globals.triggerDadRun && !Globals.endDadRun)
                 {
@@ -175,11 +180,11 @@ public class GameControllerNicolas : MonoBehaviour
                     SetDadDefault();
                 }
             }
-            if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai))
+            if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai2000))
                 if (Globals.triggerDadRun && !Globals.endDadRun)
                     EnableDadRun();  //Ativa o pai
 
-            if (destination == Globals.GetSceneName(Globals.MapNames.Atelie))
+            if (destination == Globals.GetSceneName(Globals.MapNames.Atelie2000))
             {
                 //Testando a ativação do trigger para iniciar a perseguição com o pai (pode ser ativado após um diálogo, evento, etc.)
                 if (!Globals.triggerDadRun)
@@ -188,7 +193,7 @@ public class GameControllerNicolas : MonoBehaviour
         }
         else    //Se a interação com a porta tiver sido ativada de forma manual após algum evento
         {
-            if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai))
+            if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai2000))
                 if (Globals.triggerDadRun && !Globals.endDadRun)
                     EnableDadRun();  //Ativa o pai
         }
@@ -247,7 +252,7 @@ public class GameControllerNicolas : MonoBehaviour
     public IEnumerator ResetDadRunIE()
     {
         yield return new WaitForSeconds(2f);    //Espera um pouco
-        porta_pai.SendMessage("interacao", false, SendMessageOptions.DontRequireReceiver);   //Inicia a transição para a casa do pai
+        porta_pai.SendMessage("interacao", new object[] { false, true }, SendMessageOptions.DontRequireReceiver);   //Inicia a transição para a casa do pai
     }
 
     public void SetDadDefault()

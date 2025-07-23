@@ -17,7 +17,7 @@ public class DynamicYSort : MonoBehaviour
 
     void Start()
     {
-        _ySortingOffset = _sortingOffset != null ? _sortingOffset.position.y : 0f;
+        _ySortingOffset = _sortingOffset != null ? _sortingOffset.localPosition.y : 0f;
     }
     void LateUpdate()
     {

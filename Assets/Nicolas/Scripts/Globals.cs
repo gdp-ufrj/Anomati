@@ -11,7 +11,7 @@ public class Globals : MonoBehaviour
 
     public enum MapNames    //Enum para os nomes dos mapas
     {
-        Atelie, CasaPai, Montanha, CasaHugo, Centro
+        Atelie2000, CasaPai2000, Montanha2000, CasaHugo2000, Centro2000, Atelie2025, CasaPai2025, Montanha2025, CasaHugo2025, Centro2025
     }
 
 
@@ -30,11 +30,16 @@ public class Globals : MonoBehaviour
     {
         switch (map)
         {
-            case MapNames.Atelie: return "Atelie";
-            case MapNames.CasaPai:  return "CasaPai";
-            case MapNames.Montanha:   return "Montanha";
-            case MapNames.CasaHugo: return "CasaHugo";
-            case MapNames.Centro:  return "Centro";
+            case MapNames.Atelie2000: return "Atelie2000";
+            case MapNames.CasaPai2000: return "CasaPai2000";
+            case MapNames.Montanha2000: return "Montanha2000";
+            case MapNames.CasaHugo2000: return "CasaHugo2000";
+            case MapNames.Centro2000: return "Centro2000";
+            case MapNames.Atelie2025: return "Atelie2025";
+            case MapNames.CasaPai2025: return "CasaPai2025";
+            case MapNames.Montanha2025: return "Montanha2025";
+            case MapNames.CasaHugo2025: return "CasaHugo2025";
+            case MapNames.Centro2025: return "Centro2025";
             default: return "";
         }
     }
