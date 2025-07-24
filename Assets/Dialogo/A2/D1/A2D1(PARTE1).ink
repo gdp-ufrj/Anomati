@@ -1,0 +1,3 @@
+//[Ao andar em frente, Lugubre finalmente chega a Anomati. A praça do centro da cidade contem moradores, porém todos possuem uma aparencia espectral. O centro da cidade possui quatro sessões, uma ao norte, uma em cada lateral e uma no sul, onde Lugubre chegou]
+//[Dialogo automatico ao chegar ao centro]
+Ao mesmo tempo que as coisas parecem iguais, tenho a impressão que tudo está um pouco diferente. #speaker:Lúgubre #portrait:helio_adulto_1 #layout:left
