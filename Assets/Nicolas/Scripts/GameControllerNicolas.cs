@@ -244,6 +244,10 @@ public class GameControllerNicolas : MonoBehaviour
                     {
                         Debug.Log("Não quero habilitar o movimento do jogador");
                     }
+                    else
+                    {
+                        EnablePlayerMovement();  //Habilita o movimento do jogador
+                    }
                 }
                 else if (destination == Globals.GetSceneName(Globals.MapNames.Montanha2000))
                 {
