@@ -2,19 +2,19 @@ Olá, meu jovem! O que faz aqui? Pensei que estivesse com seu pai.#speaker:??? #
 
 Não quero ficar perto dele, vô Evandro. Assim que ele virou o olhar eu saí correndo. #speaker:Menino #portrait:helio_criança #layout:left
 
-Ora, ora... Mas o que houve, meu pequeno Kurumí”? Você não gostaria de passar mais tempo com seu pai?#speaker:Evandro #portrait:avo #layout:right
+Ora, ora... Mas o que houve, meu pequeno Kurumí? Você não gostaria de passar mais tempo com seu pai?#speaker:Evandro #portrait:avo #layout:right
 
-Ele não me dá sossego, eu não tenho um minuto de paz com ele. Depois da escola ele me obriga a fazer  lições extra de matemática enquanto eu quero desenhar. #speaker:“Kurumi” #portrait:helio_criança #layout:left
+Ele não me dá sossego, eu não tenho um minuto de paz com ele. Depois da escola ele me obriga a fazer  lições extra de matemática enquanto eu quero desenhar. #speaker:Kurumi #portrait:helio_criança #layout:left
 
 Meu Átila… Sempre tão sério. Sabe, a vida era bem difícil quando ele era da sua idade. Eu sonhava que ele fosse um artista como eu, mas ele tomou outro rumo #speaker:Evandro #portrait:avo #layout:right
 
-Pois eu quero ser um artista como o senhor! Fala com ele, por favor? Se o senhor falar com ele com certeza ele deixa! #speaker:“Kurumi” #portrait:helio_criança #layout:left
+Pois eu quero ser um artista como o senhor! Fala com ele, por favor? Se o senhor falar com ele com certeza ele deixa! #speaker:Kurumi #portrait:helio_criança #layout:left
 
 Hm... talvez ele ouça, sim. Bom, eu tenho certeza que o pequeno Hugo vai adorar ter um amiguinho da idade dele fazendo companhia! #speaker:Evandro #portrait:avo #layout:right
 
 Vou falar com seu pai, agora pare de chorar, “Lágrimas não combinam com essa cidade” #speaker:Evandro #portrait:avo #layout:right
 
-Certo, vovô. Você é o melhor! #speaker:“Kurumi” #portrait:helio_criança #layout:left
+Certo, vovô. Você é o melhor! #speaker:Kurumi #portrait:helio_criança #layout:left
 
 Espero que sejamos ótimos amigos, Kurumi! #speaker:Hugo #portrait:hugo_criança #layout:right
 
