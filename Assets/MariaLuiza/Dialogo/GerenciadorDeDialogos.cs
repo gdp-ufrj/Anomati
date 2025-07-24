@@ -147,7 +147,8 @@ public class GerenciadorDeDialogos : MonoBehaviour
 
         nomeFalante.text = "???"; // Limpa o nome do falante
         portraitAnimator.Play("default"); // Reseta o retrato
-        layoutAnimator.Play("right"); // Reseta o layout
+        //Pode trazer erro na localização, mas é necessário para o layout
+        layoutAnimator.Play("left"); // Reseta o layout
 
         ContinuarHistoria();
     }
@@ -255,9 +256,11 @@ public class GerenciadorDeDialogos : MonoBehaviour
                     break;
                 case PORTRAIT_TAG:
                     portraitAnimator.Play(valorTag);
+                    portraitAnimator.Update(0f);
                     break;
                 case LAYOUT_TAG:
                     layoutAnimator.Play(valorTag);
+                    layoutAnimator.Update(0f); 
                     break;
                 default:
                     Debug.LogWarning("Tag desconhecida: " + tipoTag);

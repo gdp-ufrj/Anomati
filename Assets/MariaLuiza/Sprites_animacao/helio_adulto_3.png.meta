@@ -106,12 +106,12 @@ TextureImporter:
       name: helio_adulto_3_0
       rect:
         serializedVersion: 2
-        x: 588
-        y: 13
-        width: 706
-        height: 2783
+        x: 514
+        y: 1337
+        width: 746
+        height: 1459
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -124,33 +124,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: helio_adulto_3_1
-      rect:
-        serializedVersion: 2
-        x: 1569
-        y: 2143
-        width: 42
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85365f826fa95c6d0800000000000000
-      internalID: -2970797997141171368
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 60bb36babf3020d43a8da25bd1d3eaeb
     internalID: 0
     vertices: []
     indices: 
@@ -159,7 +137,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      helio_adulto_3_2: -1329078820
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,9 +1,9 @@
 
-Oi, tudo bem? #speaker:Menino sem rosto #portrait:player #layout:left
+Oi, tudo bem? #speaker:Menino #portrait:helio_criança #layout:left
 
-… #speaker:Menino tímido #layout:right
+… #speaker:??? #portrait:hugo_criança #layout:right
 
-Você é mudo? #speaker:Menino sem rosto #portrait:player #layout:left
+Você é mudo? #speaker:Menino #portrait:helio_criança #layout:left
 
-…Olá #speaker:Menino tímido #layout:right
+…Olá #speaker:??? #portrait:hugo_criança #layout:right
 

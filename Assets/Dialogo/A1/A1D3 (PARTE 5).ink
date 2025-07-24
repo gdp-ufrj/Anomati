@@ -1,12 +1,11 @@
+“Lágrimas não combinam com essa cidade”, como poderia me esquecer? #speaker:Lúgubre #portrait:helio_adulto_1 #layout:left
 
+Você é bem estranho… #speaker:Eliza #portrait:elisa #layout:right
 
-Lúgubre: “Lágrimas não combinam com essa cidade”, como poderia me esquecer? #speaker:player #portrait:player #layout:left
+Minhas mãos! #speaker:Lúgubre #portrait:helio_adulto_1 #layout:left
 
-Elisa: Você é bem estranho… #speaker:npc #layout:right
+As mãos de Lúgubre começam a brilhar #layout:narração
 
-Lúgubre: (Mãos começam a brilhar) Minhas mãos! #speaker:player #portrait:player #layout:left
+Meu sonho, meu sonho distante… Já quis usar essas mãos para dar cor ao mundo. #speaker:Lúgubre #portrait:helio_adulto_1 #layout:left
 
-
-Lúgubre: Meu sonho, meu sonho distante… Já quis usar essas mãos para dar cor ao mundo. #speaker:player #portrait:player #layout:left
-
-Lúgubre: Preciso ver o ateliê #speaker:player #portrait:player #layout:left
+Preciso ver o ateliê #speaker:Lúgubre #portrait:helio_adulto_1 #layout:left
