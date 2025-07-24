@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sidewalk_corner_0_0: 3500136462185435631
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
