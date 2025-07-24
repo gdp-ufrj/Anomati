@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{e5d21fc2-a078-46bc-ac93-3b4c8b4086e2}">
+		<property name="assetPath">
+			<value>213406__chewiesmissus__wooddooropen.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.7028125000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9384a272-315e-411c-a916-668cb0bd1ebd}</destination>
+		</relationship>
+	</object>
+</objects>
