@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{7556a117-9e23-47b3-80fa-524e220fdd99}">
 		<property name="assetPath">
-			<value>a1b24574-fac5-4004-9846-f0f57b89b9df (audio-extractor.net).wav</value>
+			<value>voz kurumi.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
