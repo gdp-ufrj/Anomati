@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{e042432e-4df4-47f1-a7f7-478e9c6b28e4}">
+	<object class="AudioFile" id="{8b2c2b09-d84c-43b6-99e3-28c06503ea8d}">
 		<property name="assetPath">
-			<value>atelie_presente.wav</value>
+			<value>ventania_atelie.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
@@ -14,7 +14,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>54.5</value>
+			<value>61.39655328798186</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{9384a272-315e-411c-a916-668cb0bd1ebd}</destination>
