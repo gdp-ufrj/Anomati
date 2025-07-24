@@ -135,8 +135,18 @@ public class GameControllerNicolas : MonoBehaviour
                 string nomeObjeto = objeto.name; 
                 if (nomeMapa == Globals.GetSceneName(Globals.MapNames.Centro2025))
                 {
-                    if (!Globals.finishAto2)    //Se tentar entrar em qualquer mapa que não for o ateliê e tiver no ato 2, não entra
-                        return false;
+                    if (!Globals.finishAto2)
+                    {
+                        if (nomeObjeto.Contains("atelie"))    //Se estiver tentando ir para o ateliê
+                        {
+                            if (!Globals.endDadRun) return false;
+                            return true;
+                        }
+                        else
+                        {
+                            return false;   //Se não for a porta do ateliê, não interage
+                        }
+                    }
                 }
                 if (nomeMapa == Globals.GetSceneName(Globals.MapNames.CasaPai2000) && Globals.triggerDadRun && !Globals.endDadRun)
                     if (!nomeObjeto.Contains("fundos"))   //Se não for a porta dos fundos
@@ -221,7 +231,14 @@ public class GameControllerNicolas : MonoBehaviour
         }
 
         if (!isFlashback)
-            EnablePlayerMovement();
+        {
+            if (origin == Globals.GetSceneName(Globals.MapNames.CasaPai2000) && !Globals.finishAto2)
+            {
+                Debug.Log("Saiu da perseguição");
+            }
+            else
+                EnablePlayerMovement();
+        }
         canPause = true;
         DoorTransitionController.GetInstance().isTransitioning = false;
     }
