@@ -39,7 +39,7 @@ public class doorController : MonoBehaviour
             _fadeController.fadeIn(); // Inicia o fade in
             yield return new WaitWhile(() => _fadeController.fumeImage.color.a < 0.9f); // Espera até que o fade in esteja completo
         }
-            yield return new WaitForSeconds(0.2f); // Espera mais um pouco
+        yield return new WaitForSeconds(0.2f); // Espera mais um pouco
 
         tPlayer.position = destino.position; // Teleporta o jogador para o ponto de destino
         CameraController.GetInstance().SetNewBounds(destinationBounds); //Atualiza os limites da câmera para o novo destino
@@ -47,7 +47,8 @@ public class doorController : MonoBehaviour
         string origin = "", destination = "";
         origin = transform.parent.transform.parent.gameObject.name;   //Armazena o nome do cenário ond está a porta (a cena de origem)
         destination = destinationBounds.transform.parent.gameObject.name; //Armazena o nome do cenário de destino (a cena para onde a porta leva)
-        GameControllerNicolas.GetInstance().BetweenDoorInteraction(origin, destination, isDoor);    //Cuida das coisas entre a transição de portas (como triggers, etc...)
+        bool isFlashback = !haveFade;
+        GameControllerNicolas.GetInstance().BetweenDoorInteraction(origin, destination, isDoor, isFlashback);    //Cuida das coisas entre a transição de portas (como triggers, etc...)
 
         if (haveFade)
         {
@@ -56,7 +57,6 @@ public class doorController : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.5f); // Espera um pouco para dar tempo para o jogador se estabilizar na nova posição
-        bool isFlashback = !haveFade;
         GameControllerNicolas.GetInstance().FinishDoorInteraction(origin, destination, isDoor, isFlashback);    //Finaliza a interação com a porta no controlador do jogo (ativa cenas, triggers, etc...)
     }
 }

@@ -150,6 +150,7 @@ public class Pai : MonoBehaviour
 
     public void ResetPosition()
     {
+        StopAllCoroutines();
         transform.position = originalPosition.position;  //Reseta a posição do pai para a posição original
         animator.SetBool("IsWalking", false);
         animator.SetFloat("LastInputX", 0f);
@@ -163,7 +164,6 @@ public class Pai : MonoBehaviour
             if (Globals.triggerDadRun && !Globals.endDadRun && !DoorTransitionController.GetInstance().isTransitioning)
             {
                 Debug.Log("Pai colidiu com o jogador durante a perseguição!");
-                StopAllCoroutines();
                 GameControllerNicolas.GetInstance().ResetDadRun();    //Reseta a perseguição com o pai
             }
         }

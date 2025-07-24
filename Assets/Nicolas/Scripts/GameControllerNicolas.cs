@@ -132,8 +132,15 @@ public class GameControllerNicolas : MonoBehaviour
             if (objeto.transform.parent.transform.parent != null)
             {
                 string nomeMapa = objeto.transform.parent.transform.parent.name; //Obtém o nome do mapa da porta interagida
+                string nomeObjeto = objeto.name; 
+                if (nomeMapa == Globals.GetSceneName(Globals.MapNames.Centro2025))
+                {
+                    if (!Globals.finishAto2)    //Se tentar entrar em qualquer mapa que não for o ateliê e tiver no ato 2, não entra
+                        return false;
+                }
                 if (nomeMapa == Globals.GetSceneName(Globals.MapNames.CasaPai2000) && Globals.triggerDadRun && !Globals.endDadRun)
-                    return false;   //Se o objeto for uma porta do pai durante a perseguição, não interage
+                    if (!nomeObjeto.Contains("fundos"))   //Se não for a porta dos fundos
+                        return false;
                 if (nomeMapa == Globals.GetSceneName(Globals.MapNames.Atelie2000) && !Globals.finishAto1)
                     return false;   //Se o objeto for a porta do ateliê de 2025 e o ato 1 não tiver sido finalizado, não interage
             }
@@ -149,8 +156,10 @@ public class GameControllerNicolas : MonoBehaviour
             if (objeto.transform.parent.transform.parent != null)
             {
                 string nomeMapa = objeto.transform.parent.transform.parent.name;
+                string nomeObjeto = objeto.name;
                 if (nomeMapa == Globals.GetSceneName(Globals.MapNames.CasaPai2000) && Globals.triggerDadRun && !Globals.endDadRun)
-                    return "Porta Trancada!";
+                    if (!nomeObjeto.Contains("fundos"))   //Se não for a porta dos fundos
+                        return "Porta Trancada!";
                 if (nomeMapa == Globals.GetSceneName(Globals.MapNames.Atelie2000) && !Globals.finishAto1)
                     return "Não quero sair.";
             }
@@ -162,7 +171,7 @@ public class GameControllerNicolas : MonoBehaviour
     }
 
 
-    public void BetweenDoorInteraction(string origin, string destination, bool isDoor)    //Será chamado durante a transição de porta (durante o fade)
+    public void BetweenDoorInteraction(string origin, string destination, bool isDoor, bool isFlashback)    //Será chamado durante a transição de porta (durante o fade)
     {
         SetIdleDirectionPlayer();  //Define a direção de idle do jogador
         ResetDadPosition();        //Reseta a posição do pai
@@ -174,15 +183,15 @@ public class GameControllerNicolas : MonoBehaviour
                 if (Globals.triggerDadRun && !Globals.endDadRun)
                     DisableSprintSystem();    //Desabilita o sistema de sprint e stamina do jogador
             }
-            if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai2000))
-                if (Globals.triggerDadRun && !Globals.endDadRun)
-                    EnableSprintSystem();   //Habilita o sistema de corrida e stamina do jogador
         }
         else    //Se a interação com a porta tiver sido ativada de forma manual após algum evento
         {
-            if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai2000))
-                if (Globals.triggerDadRun && !Globals.endDadRun)
-                    EnableSprintSystem();   //Habilita o sistema de corrida e stamina do jogador
+            if (!isFlashback)
+            {
+                if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai2000))
+                    if (Globals.triggerDadRun && !Globals.endDadRun)
+                        EnableSprintSystem();   //Habilita o sistema de corrida e stamina do jogador
+            }
         }
     }
 
@@ -200,15 +209,15 @@ public class GameControllerNicolas : MonoBehaviour
                     SetDadDefault();
                 }
             }
-            if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai2000))
-                if (Globals.triggerDadRun && !Globals.endDadRun)
-                    EnableDadRun();  //Ativa o pai
         }
         else    //Se a interação com a porta tiver sido ativada de forma manual após algum evento
         {
-            if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai2000))
-                if (Globals.triggerDadRun && !Globals.endDadRun)
-                    EnableDadRun();  //Ativa o pai
+            if (!isFlashback)
+            {
+                if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai2000))
+                    if (Globals.triggerDadRun && !Globals.endDadRun)
+                        EnableDadRun();  //Ativa o pai
+            }
         }
 
         if (!isFlashback)
@@ -291,6 +300,7 @@ public class GameControllerNicolas : MonoBehaviour
     {
         if (player != null)
         {
+            EnablePlayerMovement();
             Stamina stamina = player.GetComponent<Stamina>();
             if (stamina != null)
             {
