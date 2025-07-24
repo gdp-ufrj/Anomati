@@ -232,9 +232,27 @@ public class GameControllerNicolas : MonoBehaviour
 
         if (!isFlashback)
         {
-            if (origin == Globals.GetSceneName(Globals.MapNames.CasaPai2000) && !Globals.finishAto2)
+            if (!Globals.finishAto2)
             {
-                Debug.Log("Saiu da perseguição");
+                if (origin == Globals.GetSceneName(Globals.MapNames.CasaPai2000))
+                {
+                    Debug.Log("Não quero habilitar o movimento do jogador");
+                }
+                else if (!Globals.finishDialogoElizaAteliePresent)
+                {
+                    if (destination == Globals.GetSceneName(Globals.MapNames.Atelie2025))
+                    {
+                        Debug.Log("Não quero habilitar o movimento do jogador");
+                    }
+                }
+                else if (destination == Globals.GetSceneName(Globals.MapNames.Montanha2000))
+                {
+                    Debug.Log("Não quero habilitar o movimento do jogador");
+                }
+                else
+                {
+                    EnablePlayerMovement();
+                }
             }
             else
                 EnablePlayerMovement();

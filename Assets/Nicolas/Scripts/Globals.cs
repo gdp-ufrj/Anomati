@@ -16,8 +16,8 @@ public class Globals : MonoBehaviour
 
 
     //Variáveis triggers:
-    public static bool triggerDadRun = true, endDadRun = false;  //Trigger para iniciar e finalizar a perseguição com o pai
-    public static bool finishAto1 = false, finishAto2 = false, finishAto3 = false;
+    public static bool triggerDadRun = true, endDadRun = true;  //Trigger para iniciar e finalizar a perseguição com o pai
+    public static bool finishAto1 = false, finishAto2 = false, finishAto3 = false, finishDialogoElizaAteliePresent = false;
 
 
     public static void ResetGlobalVariables()
@@ -29,6 +29,7 @@ public class Globals : MonoBehaviour
         finishAto1 = false;  //Reseta o trigger de finalização do ato 1
         finishAto2 = false;  //Reseta o trigger de finalização do ato 2
         finishAto3 = false;  //Reseta o trigger de finalização do ato 3
+        finishDialogoElizaAteliePresent = false;  //Reseta o trigger de finalização do diálogo com Eliza no Ateliê no presente
     }
 
 
