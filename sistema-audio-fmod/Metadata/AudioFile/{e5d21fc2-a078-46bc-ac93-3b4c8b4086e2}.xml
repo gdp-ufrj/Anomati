@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{e5d21fc2-a078-46bc-ac93-3b4c8b4086e2}">
 		<property name="assetPath">
-			<value>213406__chewiesmissus__wooddooropen.wav</value>
+			<value>porta abrindo.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>96</value>
