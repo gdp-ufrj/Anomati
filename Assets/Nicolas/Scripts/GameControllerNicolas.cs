@@ -132,7 +132,7 @@ public class GameControllerNicolas : MonoBehaviour
             if (objeto.transform.parent.transform.parent != null)
             {
                 string nomeMapa = objeto.transform.parent.transform.parent.name; //Obtém o nome do mapa da porta interagida
-                string nomeObjeto = objeto.name; 
+                string nomeObjeto = objeto.name;
                 if (nomeMapa == Globals.GetSceneName(Globals.MapNames.Centro2025))
                 {
                     if (!Globals.finishAto2)
@@ -142,10 +142,21 @@ public class GameControllerNicolas : MonoBehaviour
                             if (!Globals.endDadRun) return false;
                             return true;
                         }
-                        else
+                        else return false;   //Se não for a porta do ateliê, não interage
+                    }
+                    else    //Se terminou o ato 2
+                    {
+                        if (nomeObjeto.Contains("pai"))    //Se estiver tentando ir para a casa do pai
                         {
-                            return false;   //Se não for a porta do ateliê, não interage
+                            if (!Globals.dialogoCasaPai2025) return false;
+                            return true;
                         }
+                        else if (nomeObjeto.Contains("hugo"))   //Se estiver tentando ir para a casa do Hugo
+                        {
+                            if (!Globals.dialogoPai2025) return false;
+                            return true;
+                        }
+                        else return false;
                     }
                 }
                 if (nomeMapa == Globals.GetSceneName(Globals.MapNames.CasaPai2000) && Globals.triggerDadRun && !Globals.endDadRun)
@@ -165,8 +176,32 @@ public class GameControllerNicolas : MonoBehaviour
         {
             if (objeto.transform.parent.transform.parent != null)
             {
-                string nomeMapa = objeto.transform.parent.transform.parent.name;
+                string nomeMapa = objeto.transform.parent.transform.parent.name; //Obtém o nome do mapa da porta interagida
                 string nomeObjeto = objeto.name;
+                if (nomeMapa == Globals.GetSceneName(Globals.MapNames.Centro2025))
+                {
+                    if (!Globals.finishAto2)
+                    {
+                        if (!nomeObjeto.Contains("atelie"))    //Se estiver tentando ir para o ateliê
+                        {
+                            return "Preciso ir ao Ateliê.";
+                        }
+                    }
+                    else    //Se terminou o ato 2
+                    {
+                        if (!Globals.dialogoPai2025)   //Se ainda não falou com o pai
+                        {
+                            if (!nomeObjeto.Contains("pai"))
+                                return "Preciso ir à casa do meu pai.";
+                        }
+                        else
+                        {
+                            if (!nomeObjeto.Contains("hugo"))
+                                return "Preciso ir até a casa do Hugo.";
+                        }
+                    }
+                }
+
                 if (nomeMapa == Globals.GetSceneName(Globals.MapNames.CasaPai2000) && Globals.triggerDadRun && !Globals.endDadRun)
                     if (!nomeObjeto.Contains("fundos"))   //Se não for a porta dos fundos
                         return "Porta Trancada!";
@@ -241,25 +276,26 @@ public class GameControllerNicolas : MonoBehaviour
                 else if (!Globals.finishDialogoElizaAteliePresent)
                 {
                     if (destination == Globals.GetSceneName(Globals.MapNames.Atelie2025))
-                    {
                         Debug.Log("Não quero habilitar o movimento do jogador");
-                    }
                     else
-                    {
                         EnablePlayerMovement();  //Habilita o movimento do jogador
-                    }
                 }
                 else if (destination == Globals.GetSceneName(Globals.MapNames.Montanha2000))
-                {
                     Debug.Log("Não quero habilitar o movimento do jogador");
-                }
                 else
-                {
                     EnablePlayerMovement();
-                }
             }
             else
+            {
                 EnablePlayerMovement();
+            }
+            //else   //Se terminou o ato 2
+            //{
+            //    if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai2025) && !Globals.dialogoPai2025)
+            //        Debug.Log("Não quero habilitar o movimento do jogador");
+            //    else
+            //        EnablePlayerMovement();
+            //}
         }
         canPause = true;
         DoorTransitionController.GetInstance().isTransitioning = false;
