@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                if (objetoInteracao != null)
+                if (objetoInteracao.transform.parent.transform.Find("canvas") != null)
                     canvasObjInteracao = objetoInteracao.transform.parent.transform.Find("canvas").gameObject; //Encontra o Canvas do objeto interagível
                 if (canvasObjInteracao != null)
                     canvasObjInteracao.SetActive(true);    //Ativa o Canvas do objeto interagível

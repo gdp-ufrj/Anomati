@@ -10,5 +10,6 @@ public class ResetAtelieAto2 : MonoBehaviour
         dialogoTriggerHugo.enabled = false;
         triggerTimelineAtelie.SetActive(true);
         triggerTimelineCentro.SetActive(true);
+        Destroy(gameObject);
     }
 }
