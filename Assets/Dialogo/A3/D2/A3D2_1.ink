@@ -2,6 +2,6 @@
 
 O corpo inteiro de Lúgubre começa a brilhar #layout:narração
 
-Lúgubre: Bem, é agora ou nunca #speaker:Lúgubre #portrait:helio_adulto_1 #layout:left
+Bem, é agora ou nunca #speaker:Lúgubre #portrait:helio_adulto_3 #layout:left
 
 //[Ele interage com a porta.]

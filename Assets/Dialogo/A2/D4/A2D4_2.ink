@@ -1,6 +1,6 @@
-Isso foi… estranho. #speaker:Kurumi #portrait:helio_criança #layout:left
+Isso foi… estranho #speaker:Kurumi #portrait:helio_criança #layout:left
 
-É. Mas bom. Muito bom. #speaker:Hugo #portrait:hugo_criança #layout:right
+É. Mas bom. Muito bom #speaker:Hugo #portrait:hugo_criança #layout:right
 
 Talvez lágrimas combinem com essa cidade sim #speaker:Hugo #portrait:hugo_criança #layout:right
 

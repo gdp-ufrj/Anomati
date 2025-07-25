@@ -1,5 +1,5 @@
 //[Fim da memória. O peito de Lúgubre brilha]
-O abdômen de Lúgrube começa a brilhar #layout:narração
+O abdômen de Lúgubre começa a brilhar #layout:narração
 
 Mesmo durante uma perda, houve amor #speaker:Lúgubre #portrait:helio_adulto_3 #layout:left
 
