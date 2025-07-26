@@ -424,7 +424,11 @@ public class GameControllerNicolas : MonoBehaviour
             player.GetComponent<SpriteRenderer>().color = color;
             foreach (GameObject sprite in playerSprites)
             {
-                sprite.SetActive(false);  //Desativa todos os sprites do jogador
+                if (sprite.GetComponent<SpriteRenderer>() != null) {
+                    sprite.GetComponent<SpriteRenderer>().enabled = false;
+                }
+                else
+                    sprite.SetActive(false);  //Desativa todos os sprites do jogador
             }
         }
     }
@@ -439,7 +443,11 @@ public class GameControllerNicolas : MonoBehaviour
         }
         foreach (GameObject sprite in playerSprites)
         {
-            sprite.SetActive(true); 
+            if (sprite.GetComponent<SpriteRenderer>() != null) {
+                sprite.GetComponent<SpriteRenderer>().enabled = true;
+            }
+            else
+                sprite.SetActive(true);
         }
     }
 }

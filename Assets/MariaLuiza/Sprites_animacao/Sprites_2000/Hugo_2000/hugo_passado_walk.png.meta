@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 4c7fc0057bfd35842af94e4b86a67fb9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1941598431731478010
+    second: hugo_passado_walk_0
+  - first:
+      213: 3630222585469616154
+    second: hugo_passado_walk_1
+  - first:
+      213: -566860984027425724
+    second: hugo_passado_walk_2
+  - first:
+      213: 9062114910099700803
+    second: hugo_passado_walk_3
+  - first:
+      213: 3727225088005757583
+    second: hugo_passado_walk_4
+  - first:
+      213: 5532380294159222252
+    second: hugo_passado_walk_5
+  - first:
+      213: -6785512345585101495
+    second: hugo_passado_walk_6
+  - first:
+      213: 5653320274111869203
+    second: hugo_passado_walk_7
+  - first:
+      213: 881889344171939553
+    second: hugo_passado_walk_8
+  - first:
+      213: -1282040473603846477
+    second: hugo_passado_walk_9
+  - first:
+      213: -9009096843090309496
+    second: hugo_passado_walk_10
+  - first:
+      213: 6953701576644298805
+    second: hugo_passado_walk_11
+  - first:
+      213: -2047196435460996220
+    second: hugo_passado_walk_12
+  - first:
+      213: 845778465789589590
+    second: hugo_passado_walk_13
+  - first:
+      213: 5117949372867655127
+    second: hugo_passado_walk_14
+  - first:
+      213: 2873943590133604732
+    second: hugo_passado_walk_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 120
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hugo_passado_walk_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 110
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afd6fc39c71f1fa10800000000000000
+      internalID: 1941598431731478010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugo_passado_walk_1
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 109
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a10448e2534216230800000000000000
+      internalID: 3630222585469616154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugo_passado_walk_2
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 108
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 444540a30fa1228f0800000000000000
+      internalID: -566860984027425724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugo_passado_walk_3
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 0
+        width: 109
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34c73426f7913cd70800000000000000
+      internalID: 9062114910099700803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugo_passado_walk_4
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 106
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8ad1884873c9b330800000000000000
+      internalID: 3727225088005757583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugo_passado_walk_5
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 0
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce54bb3d096f6cc40800000000000000
+      internalID: 5532380294159222252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugo_passado_walk_6
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 0
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9455f5e097405d1a0800000000000000
+      internalID: -6785512345585101495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugo_passado_walk_7
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 0
+        width: 106
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 311b3f336d0a47e40800000000000000
+      internalID: 5653320274111869203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugo_passado_walk_8
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 0
+        width: 89
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e61292afa91d3c00800000000000000
+      internalID: 881889344171939553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugo_passado_walk_9
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 0
+        width: 89
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3be4b275bf6453ee0800000000000000
+      internalID: -1282040473603846477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugo_passado_walk_10
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 2
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88e4288472249f280800000000000000
+      internalID: -9009096843090309496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugo_passado_walk_11
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 1
+        width: 89
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53805fdddb2808060800000000000000
+      internalID: 6953701576644298805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugo_passado_walk_12
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1
+        width: 89
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 483c6ee30b5e693e0800000000000000
+      internalID: -2047196435460996220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugo_passado_walk_13
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 0
+        width: 89
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6583014980fccbb00800000000000000
+      internalID: 845778465789589590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugo_passado_walk_14
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 2
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d5b53ca6db960740800000000000000
+      internalID: 5117949372867655127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugo_passado_walk_15
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 0
+        width: 89
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c71ac6ae77c42e720800000000000000
+      internalID: 2873943590133604732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      hugo_passado_walk_0: 1941598431731478010
+      hugo_passado_walk_1: 3630222585469616154
+      hugo_passado_walk_10: -9009096843090309496
+      hugo_passado_walk_11: 6953701576644298805
+      hugo_passado_walk_12: -2047196435460996220
+      hugo_passado_walk_13: 845778465789589590
+      hugo_passado_walk_14: 5117949372867655127
+      hugo_passado_walk_15: 2873943590133604732
+      hugo_passado_walk_2: -566860984027425724
+      hugo_passado_walk_3: 9062114910099700803
+      hugo_passado_walk_4: 3727225088005757583
+      hugo_passado_walk_5: 5532380294159222252
+      hugo_passado_walk_6: -6785512345585101495
+      hugo_passado_walk_7: 5653320274111869203
+      hugo_passado_walk_8: 881889344171939553
+      hugo_passado_walk_9: -1282040473603846477
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

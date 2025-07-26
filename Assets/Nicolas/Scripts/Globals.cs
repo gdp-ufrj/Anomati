@@ -16,15 +16,14 @@ public class Globals : MonoBehaviour
 
 
     //Variáveis triggers:
-    public static bool triggerDadRun = true, endDadRun = true;  //Trigger para iniciar e finalizar a perseguição com o pai
-    public static bool finishAto1 = true, finishAto2 = true, finishAto3 = false, finishDialogoElizaAteliePresent = true, dialogoCasaPai2025 = true, dialogoPai2025 = true;
+    public static bool triggerDadRun = true, endDadRun = false;  //Trigger para iniciar e finalizar a perseguição com o pai
+    public static bool finishAto1 = false, finishAto2 = false, finishAto3 = false, finishDialogoElizaAteliePresent = false, dialogoCasaPai2025 = false, dialogoPai2025 = false;
 
 
     public static void ResetGlobalVariables()
     {
         lastPlayerPosition = Vector2.zero;  //Reseta a variável para armazenar a última posição do jogador
         lastCameraBounds = "";  //Reseta a variável para armazenar o nome dos limites da câmera
-        triggerDadRun = false;  //Reseta o trigger de perseguição com o pai
         endDadRun = false;  //Reseta o trigger de finalização da perseguição
         finishAto1 = false;  //Reseta o trigger de finalização do ato 1
         finishAto2 = false;  //Reseta o trigger de finalização do ato 2
