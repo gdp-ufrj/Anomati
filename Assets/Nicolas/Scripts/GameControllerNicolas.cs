@@ -203,9 +203,9 @@ public class GameControllerNicolas : MonoBehaviour
                     }
                 }
 
-                if (nomeMapa == Globals.GetSceneName(Globals.MapNames.CasaPai2000) && Globals.triggerDadRun && !Globals.endDadRun)
-                    if (!nomeObjeto.Contains("fundos"))   //Se não for a porta dos fundos
-                        return "Porta Trancada!";
+                //if (nomeMapa == Globals.GetSceneName(Globals.MapNames.CasaPai2000) && Globals.triggerDadRun && !Globals.endDadRun)
+                //    if (!nomeObjeto.Contains("fundos"))   //Se não for a porta dos fundos
+                //        return "Porta Trancada!";
                 if (nomeMapa == Globals.GetSceneName(Globals.MapNames.Atelie2000) && !Globals.finishAto1)
                     return "Não quero sair.";
             }
@@ -417,7 +417,8 @@ public class GameControllerNicolas : MonoBehaviour
             player.GetComponent<SpriteRenderer>().color = color;
             foreach (GameObject sprite in playerSprites)
             {
-                if (sprite.GetComponent<SpriteRenderer>() != null) {
+                if (sprite.GetComponent<SpriteRenderer>() != null)
+                {
                     sprite.GetComponent<SpriteRenderer>().enabled = false;
                 }
                 else
@@ -436,11 +437,22 @@ public class GameControllerNicolas : MonoBehaviour
         }
         foreach (GameObject sprite in playerSprites)
         {
-            if (sprite.GetComponent<SpriteRenderer>() != null) {
+            if (sprite.GetComponent<SpriteRenderer>() != null)
+            {
                 sprite.GetComponent<SpriteRenderer>().enabled = true;
             }
             else
                 sprite.SetActive(true);
+        }
+    }
+    
+    public void MovePlayerToPosition(Transform newPosition, int idleDirection)
+    {
+        if (player != null)
+        {
+            if (newPosition != null)
+                player.transform.position = newPosition.position;  //Move o jogador para a nova posição
+            player.GetComponent<PlayerController>().SetIdleDirection(idleDirection);  //Define a direção de idle do jogador
         }
     }
 }
