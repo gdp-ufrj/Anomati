@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 28a248df39e3931478b6d101efea8157
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1496816306347362172
+    second: lugubre_2025_0
+  - first:
+      213: 6914216917104462589
+    second: lugubre_2025_1
+  - first:
+      213: -1051263601125824156
+    second: lugubre_2025_2
+  - first:
+      213: -716439502003678832
+    second: lugubre_2025_3
+  - first:
+      213: 7950273059562983892
+    second: lugubre_2025_4
+  - first:
+      213: -789476612144662252
+    second: lugubre_2025_5
+  - first:
+      213: -3916268299339713831
+    second: lugubre_2025_6
+  - first:
+      213: -5975424338888646974
+    second: lugubre_2025_7
+  - first:
+      213: 7012282565871652477
+    second: lugubre_2025_8
+  - first:
+      213: -9062027997307722667
+    second: lugubre_2025_9
+  - first:
+      213: -4541214774573210865
+    second: lugubre_2025_10
+  - first:
+      213: -5627181208750293283
+    second: lugubre_2025_11
+  - first:
+      213: 1475315516725997351
+    second: lugubre_2025_12
+  - first:
+      213: 1677136623752897381
+    second: lugubre_2025_13
+  - first:
+      213: 6519888210641557776
+    second: lugubre_2025_14
+  - first:
+      213: 1160492276205032794
+    second: lugubre_2025_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 120
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lugubre_2025_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1
+        width: 118
+        height: 147
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4883726ff7d3a3be0800000000000000
+      internalID: -1496816306347362172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_2025_1
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 2
+        width: 118
+        height: 146
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfa020c27ab34ff50800000000000000
+      internalID: 6914216917104462589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_2025_2
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 1
+        width: 118
+        height: 147
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 469e89913592961f0800000000000000
+      internalID: -1051263601125824156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_2025_3
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 1
+        width: 118
+        height: 147
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 091530c9112be06f0800000000000000
+      internalID: -716439502003678832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_2025_4
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 3
+        width: 108
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d11c9ea93b055e60800000000000000
+      internalID: 7950273059562983892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_2025_5
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 2
+        width: 110
+        height: 145
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41973ae34373b05f0800000000000000
+      internalID: -789476612144662252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_2025_6
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 2
+        width: 109
+        height: 145
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d2bbb42bbe96a9c0800000000000000
+      internalID: -3916268299339713831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_2025_7
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 2
+        width: 109
+        height: 145
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ce91521937031da0800000000000000
+      internalID: -5975424338888646974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_2025_8
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 3
+        width: 109
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7ec17b47d1a05160800000000000000
+      internalID: 7012282565871652477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_2025_9
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 2
+        width: 110
+        height: 145
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55424d39c853d3280800000000000000
+      internalID: -9062027997307722667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_2025_10
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 2
+        width: 110
+        height: 145
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f03eec0193d5af0c0800000000000000
+      internalID: -4541214774573210865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_2025_11
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 2
+        width: 110
+        height: 145
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dde7fa5318c38e1b0800000000000000
+      internalID: -5627181208750293283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_2025_12
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 1
+        width: 117
+        height: 147
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72f231a55af597410800000000000000
+      internalID: 1475315516725997351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_2025_13
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 1
+        width: 117
+        height: 147
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 563e69a9fd2664710800000000000000
+      internalID: 1677136623752897381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_2025_14
+      rect:
+        serializedVersion: 2
+        x: 2084
+        y: 2
+        width: 117
+        height: 146
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0191c82a8cb4b7a50800000000000000
+      internalID: 6519888210641557776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_2025_15
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 1
+        width: 117
+        height: 147
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5519cf9395ea1010800000000000000
+      internalID: 1160492276205032794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 19be9782142071e4092be30bf94c8cb8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      lugubre_2025_0: -1496816306347362172
+      lugubre_2025_1: 6914216917104462589
+      lugubre_2025_10: -4541214774573210865
+      lugubre_2025_11: -5627181208750293283
+      lugubre_2025_12: 1475315516725997351
+      lugubre_2025_13: 1677136623752897381
+      lugubre_2025_14: 6519888210641557776
+      lugubre_2025_15: 1160492276205032794
+      lugubre_2025_2: -1051263601125824156
+      lugubre_2025_3: -716439502003678832
+      lugubre_2025_4: 7950273059562983892
+      lugubre_2025_5: -789476612144662252
+      lugubre_2025_6: -3916268299339713831
+      lugubre_2025_7: -5975424338888646974
+      lugubre_2025_8: 7012282565871652477
+      lugubre_2025_9: -9062027997307722667
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

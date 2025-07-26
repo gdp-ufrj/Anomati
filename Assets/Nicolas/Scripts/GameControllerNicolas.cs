@@ -405,14 +405,7 @@ public class GameControllerNicolas : MonoBehaviour
     {
         if (player == null)
             return;
-        if (time == "Past")
-        {
-            Debug.Log("Mudando sprite do jogador para passado");
-        }
-        else if (time == "Present")
-        {
-            Debug.Log("Mudando sprite do jogador para presente");
-        }
+        player.GetComponent<PlayerController>().SetPlayerSprite(time);
     }
 
     public void HidePlayer()

@@ -1,9 +1,12 @@
+using UnityEditor.Animations;
 using UnityEngine;
+
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 3f, sprintSpeed = 5f;
-    [SerializeField] private GameObject faceEffect;  //Efeito de rosto do jogador
+    [SerializeField] private GameObject faceEffect, lights;
+    [SerializeField] private AnimatorController controllerPresente, controllerPassado; //Referências para os controladores de animação do jogador no presente e passado
     private PlayerInputActions playerInputActions;
     private Rigidbody2D rb;
     private Animator animator;
@@ -214,6 +217,22 @@ public class PlayerController : MonoBehaviour
             faceEffect.GetComponent<Animator>().SetFloat("InputY", animator.GetFloat("InputY"));
         }
         //Debug.Log(movementVector); // Debug para verificar o vetor de movimento
+    }
+
+    public void SetPlayerSprite(string time)
+    {
+        if (time == "Past")
+        {
+            animator.runtimeAnimatorController = controllerPassado;  //Muda o controlador de animação do jogador para o passado
+            faceEffect.GetComponent<Animator>().SetBool("Present", false);
+            lights.SetActive(false); // Desativa as luzes no passado
+        }
+        else if (time == "Present")
+        {
+            animator.runtimeAnimatorController = controllerPresente;  //Muda o controlador de animação do jogador para o presente
+            faceEffect.GetComponent<Animator>().SetBool("Present", true);
+            lights.SetActive(true); // Ativa as luzes no presente
+        }
     }
     
     public void SetIdleDirection(int direction)
