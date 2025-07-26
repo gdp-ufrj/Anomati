@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Nicolas/Scenes/Past.unity
     guid: 983980a87b1ee63419924fb0d7d3a9fd
+  - enabled: 1
+    path: Assets/Nicolas/Scenes/Present2.unity
+    guid: b1264cb75a675f44387205d3fbb88c97
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

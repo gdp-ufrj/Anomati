@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
                 isObjCasaPai = true;
                 canMove = false;
                 isHiding = true;
+                GameControllerNicolas.GetInstance().HidePlayer(); //Chama o método de esconder o jogador
                 lastPosition = transform.position;
                 //Debug.Log("Interagindo com: " + objetoInteracao.name);
                 Vector3 newPosition = new Vector3(objetoInteracao.transform.parent.transform.position.x, objetoInteracao.transform.parent.transform.position.y, transform.position.z);
@@ -84,6 +85,7 @@ public class PlayerController : MonoBehaviour
             {
                 canMove = true; // Permite o movimento novamente
                 isHiding = false; // Desativa o estado de esconder
+                GameControllerNicolas.GetInstance().ShowPlayer(); //Chama o método de mostrar o jogador
                 SetIdleDirection(0);
                 transform.position = lastPosition; // Restaura a posição original do jogador
                 transform.gameObject.GetComponent<CircleCollider2D>().enabled = true;

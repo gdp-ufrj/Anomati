@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameControllerNicolas : MonoBehaviour
 {
     [SerializeField] private GameObject player, pai, porta_pai;
+    [SerializeField] private GameObject[] playerSprites;  //Referência para os sprites do jogador
     [SerializeField] private GameObject pauseMenu, staminaBar;   //Referência para o menu de pausa e barra de stamina
     private static GameControllerNicolas instance;
     [HideInInspector] public bool gamePaused = false, canPause = true;   //Flag para controlar se o jogo está pausado ou não
@@ -151,11 +152,11 @@ public class GameControllerNicolas : MonoBehaviour
                             if (!Globals.dialogoCasaPai2025) return false;
                             return true;
                         }
-                        else if (nomeObjeto.Contains("hugo"))   //Se estiver tentando ir para a casa do Hugo
-                        {
-                            if (!Globals.dialogoPai2025) return false;
-                            return true;
-                        }
+                        //else if (nomeObjeto.Contains("hugo"))   //Se estiver tentando ir para a casa do Hugo
+                        //{
+                        //    if (!Globals.dialogoPai2025) return false;
+                        //    return true;
+                        //}
                         else return false;
                     }
                 }
@@ -411,6 +412,34 @@ public class GameControllerNicolas : MonoBehaviour
         else if (time == "Present")
         {
             Debug.Log("Mudando sprite do jogador para presente");
+        }
+    }
+
+    public void HidePlayer()
+    {
+        if (player != null)
+        {
+            Color color = player.GetComponent<SpriteRenderer>().color;
+            color.a = 0f;  //Define a transparência do jogador para 0
+            player.GetComponent<SpriteRenderer>().color = color;
+            foreach (GameObject sprite in playerSprites)
+            {
+                sprite.SetActive(false);  //Desativa todos os sprites do jogador
+            }
+        }
+    }
+
+    public void ShowPlayer()
+    {
+        if (player != null)
+        {
+            Color color = player.GetComponent<SpriteRenderer>().color;
+            color.a = 1f;  //Define a transparência do jogador para 1
+            player.GetComponent<SpriteRenderer>().color = color;
+        }
+        foreach (GameObject sprite in playerSprites)
+        {
+            sprite.SetActive(true); 
         }
     }
 }
