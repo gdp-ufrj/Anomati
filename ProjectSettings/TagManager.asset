@@ -47,6 +47,9 @@ TagManager:
   - name: Background
     uniqueID: 3761543027
     locked: 0
+  - name: tilemapBackground
+    uniqueID: 153644165
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -61,9 +64,6 @@ TagManager:
     locked: 0
   - name: HUD
     uniqueID: 777387279
-    locked: 0
-  - name: obstacle
-    uniqueID: 2179739479
     locked: 0
   m_RenderingLayers:
   - Default

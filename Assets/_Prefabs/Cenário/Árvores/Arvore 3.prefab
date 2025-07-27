@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 4355095154992833924}
   - component: {fileID: 8183615728325207911}
   - component: {fileID: 5651807644445015575}
-  - component: {fileID: -3697088026964695298}
+  - component: {fileID: 7954863134431495015}
   m_Layer: 0
   m_Name: Arvore 3
   m_TagString: Untagged
@@ -225,7 +225,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.023784637, y: -0.99688005}
+  m_Offset: {x: 0.021516085, y: -1.1375191}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -235,9 +235,9 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.26861, y: 0.5591302}
+  m_Size: {x: 0.23685312, y: 0.27785206}
   m_EdgeRadius: 0
---- !u!114 &-3697088026964695298
+--- !u!114 &7954863134431495015
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,9 +246,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 3930364185559680975}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88e9455ca372e9341976b7ef30b64a1d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_Priority: 10
+  m_ComponentVersion: 5
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_AlphaCutoff: 0.1
+  m_ApplyToSortingLayers: 739734e0856c280900000000cd29035283e28cd5c7aeba950ffd552e
+  m_ShapePath:
+  - {x: -0.44000006, y: -0.915, z: 0}
+  - {x: -0.44000006, y: 0.915, z: 0}
+  - {x: 0.44000006, y: 0.915, z: 0}
+  - {x: 0.44000006, y: -0.915, z: 0}
+  m_ShapePathHash: 0
+  m_InstanceId: 0
+  m_ShadowShape2DComponent: {fileID: 8183615728325207911}
+  m_ShadowShape2DProvider:
+    rid: 6568463299312091258
+  m_ShadowCastingSource: 2
+  m_ShadowMesh:
+    m_Mesh: {fileID: 0}
+    m_LocalBounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.35998535, y: 0.83499146, z: 0}
+    m_EdgeProcessing: 1
+    m_TrimEdge: 0.08
+    m_FlipX: 0
+    m_FlipY: 0
+    m_InitialTrim: 0.08
+  m_CastingOption: 0
+  m_PreviousTrimEdge: 0.08
+  m_PreviousEdgeProcessing: 1
+  m_PreviousShadowCastingSource: 2
+  m_PreviousShadowShape2DSource: {fileID: 8183615728325207911}
+  references:
+    version: 2
+    RefIds:
+    - rid: 6568463299312091258
+      type: {class: ShadowShape2DProvider_SpriteRenderer, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data: 
 --- !u!1 &5211090478593286620
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,6 +300,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8118538502264787973}
   - component: {fileID: 5106993478758666564}
+  - component: {fileID: 8100613444596544485}
+  - component: {fileID: 5709951135934407722}
   m_Layer: 0
   m_Name: Arvore1
   m_TagString: Untagged
@@ -336,3 +379,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8100613444596544485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5211090478593286620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e9455ca372e9341976b7ef30b64a1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5709951135934407722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5211090478593286620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_Priority: 1
+  m_ComponentVersion: 5
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_AlphaCutoff: 0.1
+  m_ApplyToSortingLayers: 739734e0856c280900000000cd29035283e28cd5c7aeba950ffd552e
+  m_ShapePath:
+  - {x: -0.21000004, y: -0.22999996, z: 0}
+  - {x: -0.21000004, y: 0.23000002, z: 0}
+  - {x: 0.21000004, y: 0.23000002, z: 0}
+  - {x: 0.21000004, y: -0.22999996, z: 0}
+  m_ShapePathHash: 0
+  m_InstanceId: 0
+  m_ShadowShape2DComponent: {fileID: 5106993478758666564}
+  m_ShadowShape2DProvider:
+    rid: 6568463299312091259
+  m_ShadowCastingSource: 2
+  m_ShadowMesh:
+    m_Mesh: {fileID: 0}
+    m_LocalBounds:
+      m_Center: {x: 0.01499939, y: 0, z: 0}
+      m_Extent: {x: 0.10499573, y: 0.19000244, z: 0}
+    m_EdgeProcessing: 1
+    m_TrimEdge: 0.04
+    m_FlipX: 0
+    m_FlipY: 0
+    m_InitialTrim: 0.04
+  m_CastingOption: 0
+  m_PreviousTrimEdge: 0.04
+  m_PreviousEdgeProcessing: 1
+  m_PreviousShadowCastingSource: 2
+  m_PreviousShadowShape2DSource: {fileID: 5106993478758666564}
+  references:
+    version: 2
+    RefIds:
+    - rid: 6568463299312091259
+      type: {class: ShadowShape2DProvider_SpriteRenderer, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data: 
