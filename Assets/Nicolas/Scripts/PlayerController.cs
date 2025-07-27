@@ -1,4 +1,3 @@
-using UnityEditor.Animations;
 using UnityEngine;
 
 
@@ -6,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 3f, sprintSpeed = 5f;
     [SerializeField] private GameObject faceEffect, lights;
-    [SerializeField] private AnimatorController controllerPresente, controllerPassado; //Referências para os controladores de animação do jogador no presente e passado
+    [SerializeField] private RuntimeAnimatorController controllerPresente, controllerPassado; //Referências para os controladores de animação do jogador no presente e passado
     private PlayerInputActions playerInputActions;
     private Rigidbody2D rb;
     private Animator animator;
