@@ -62,5 +62,8 @@ TagManager:
   - name: HUD
     uniqueID: 777387279
     locked: 0
+  - name: obstacle
+    uniqueID: 2179739479
+    locked: 0
   m_RenderingLayers:
   - Default

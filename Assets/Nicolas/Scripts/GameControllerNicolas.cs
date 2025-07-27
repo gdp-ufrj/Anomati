@@ -165,6 +165,11 @@ public class GameControllerNicolas : MonoBehaviour
                 if (nomeMapa == Globals.GetSceneName(Globals.MapNames.CasaPai2000) && Globals.triggerDadRun && !Globals.endDadRun)
                     if (!nomeObjeto.Contains("fundos"))   //Se não for a porta dos fundos
                         return false;
+                    else
+                    {
+                        DisableDadRun();
+                        return true;
+                    }
                 if (nomeMapa == Globals.GetSceneName(Globals.MapNames.Atelie2000) && !Globals.finishAto1)
                     return false;   //Se o objeto for a porta do ateliê de 2025 e o ato 1 não tiver sido finalizado, não interage
             }
@@ -292,13 +297,6 @@ public class GameControllerNicolas : MonoBehaviour
             {
                 EnablePlayerMovement();
             }
-            //else   //Se terminou o ato 2
-            //{
-            //    if (destination == Globals.GetSceneName(Globals.MapNames.CasaPai2025) && !Globals.dialogoPai2025)
-            //        Debug.Log("Não quero habilitar o movimento do jogador");
-            //    else
-            //        EnablePlayerMovement();
-            //}
         }
         canPause = true;
         DoorTransitionController.GetInstance().isTransitioning = false;
