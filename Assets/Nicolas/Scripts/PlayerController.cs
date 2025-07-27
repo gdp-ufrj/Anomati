@@ -45,42 +45,45 @@ public class PlayerController : MonoBehaviour
         bool isObjCasaPai = false;
         if (hit.collider != null)
         {
-            objetoInteracao = hit.collider.gameObject; //Armazena o objeto atingido pelo raycast
-            bool canInteract = GameControllerNicolas.GetInstance().CanInteractWithObject(objetoInteracao);   //Verifica se o objeto pode ser interagido
-            if (!canInteract)
+            if (canMove)
             {
-                Debug.Log("Interação não permitida com: " + objetoInteracao.name);
-                return;
+                objetoInteracao = hit.collider.gameObject; //Armazena o objeto atingido pelo raycast
+                bool canInteract = GameControllerNicolas.GetInstance().CanInteractWithObject(objetoInteracao);   //Verifica se o objeto pode ser interagido
+                if (!canInteract)
+                {
+                    Debug.Log("Interação não permitida com: " + objetoInteracao.name);
+                    return;
+                }
+
+                if (objetoInteracao.CompareTag("door"))
+                {
+                    doorController door = objetoInteracao.GetComponent<doorController>();
+                    if (door != null)
+                        door.tPlayer = this.transform;
+
+                    canMove = false;
+                }
+                else if (objetoInteracao.CompareTag("mesa") || objetoInteracao.CompareTag("armario"))
+                {
+                    isObjCasaPai = true;
+                    canMove = false;
+                    isHiding = true;
+                    GameControllerNicolas.GetInstance().HidePlayer(); //Chama o método de esconder o jogador
+                    lastPosition = transform.position;
+                    //Debug.Log("Interagindo com: " + objetoInteracao.name);
+                    Vector3 newPosition = new Vector3(objetoInteracao.transform.parent.transform.position.x, objetoInteracao.transform.parent.transform.position.y, transform.position.z);
+                    transform.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                    transform.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+                    transform.position = newPosition;  //Move o jogador para dentro do objeto interagido
+                }
+
+                //canMove = false;
+                canInteractAgain = false;
+                txtInteracao.SetActive(false); // Desativa o texto de interação
+
+                if (!isObjCasaPai)
+                    objetoInteracao.SendMessage("interacao", new object[] { true, true }, SendMessageOptions.DontRequireReceiver);   //Envia a mensagem de interação para o objeto atingido pelo raycast
             }
-
-            if (objetoInteracao.CompareTag("door"))
-            {
-                doorController door = objetoInteracao.GetComponent<doorController>();
-                if (door != null)
-                    door.tPlayer = this.transform;
-
-                canMove = false;
-            }
-            else if (objetoInteracao.CompareTag("mesa") || objetoInteracao.CompareTag("armario"))
-            {
-                isObjCasaPai = true;
-                canMove = false;
-                isHiding = true;
-                GameControllerNicolas.GetInstance().HidePlayer(); //Chama o método de esconder o jogador
-                lastPosition = transform.position;
-                //Debug.Log("Interagindo com: " + objetoInteracao.name);
-                Vector3 newPosition = new Vector3(objetoInteracao.transform.parent.transform.position.x, objetoInteracao.transform.parent.transform.position.y, transform.position.z);
-                transform.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
-                transform.gameObject.GetComponent<CircleCollider2D>().enabled = false;
-                transform.position = newPosition;  //Move o jogador para dentro do objeto interagido
-            }
-
-            //canMove = false;
-            canInteractAgain = false;
-            txtInteracao.SetActive(false); // Desativa o texto de interação
-
-            if (!isObjCasaPai)
-                objetoInteracao.SendMessage("interacao", new object[] { true, true }, SendMessageOptions.DontRequireReceiver);   //Envia a mensagem de interação para o objeto atingido pelo raycast
         }
         else
         {

@@ -17,7 +17,7 @@ public class Globals : MonoBehaviour
 
     //Variáveis triggers:
     public static bool triggerDadRun = true, endDadRun = false;  //Trigger para iniciar e finalizar a perseguição com o pai
-    public static bool finishAto1 = true, finishAto2 = false, finishAto3 = false, finishDialogoElizaAteliePresent = false, dialogoCasaPai2025 = false, dialogoPai2025 = false;
+    public static bool finishAto1 = false, finishAto2 = false, finishAto3 = false, finishDialogoElizaAteliePresent = false, dialogoCasaPai2025 = false, dialogoPai2025 = false;
 
 
     public static void ResetGlobalVariables()
