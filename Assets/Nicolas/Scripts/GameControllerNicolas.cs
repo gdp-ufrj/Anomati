@@ -10,6 +10,7 @@ public class GameControllerNicolas : MonoBehaviour
     [SerializeField] private GameObject pauseMenu, staminaBar;   //Referência para o menu de pausa e barra de stamina
     private static GameControllerNicolas instance;
     [HideInInspector] public bool gamePaused = false, canPause = true;   //Flag para controlar se o jogo está pausado ou não
+    private bool isPresent = true; //Flag para controlar se o jogador está no presente ou no passado
 
     public static GameControllerNicolas GetInstance()
     {
@@ -406,6 +407,10 @@ public class GameControllerNicolas : MonoBehaviour
     {
         if (player == null)
             return;
+        if (time == "Present")
+            isPresent = true;
+        else
+            isPresent = false;
         player.GetComponent<PlayerController>().SetPlayerSprite(time);
     }
 
@@ -443,7 +448,10 @@ public class GameControllerNicolas : MonoBehaviour
                 sprite.GetComponent<SpriteRenderer>().enabled = true;
             }
             else
-                sprite.SetActive(true);
+            {
+                if (sprite.name == "Luzes" && isPresent)    //Só liga as luzes se estiver no presente
+                    sprite.SetActive(true);
+            }
         }
     }
     
