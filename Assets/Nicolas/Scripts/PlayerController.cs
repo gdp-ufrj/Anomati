@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         playerInputActions.Player.SprintStart.performed += x => { if (canSprint) wantsToSprint = true; };
         playerInputActions.Player.SprintFinish.performed += x => wantsToSprint = false;
         playerInputActions.Player.Interact.performed += x => Interact();
-        playerInputActions.Player.TimeTravel.performed += x => { if (canTimeTravel) TimeTravel(); };
+        //playerInputActions.Player.TimeTravel.performed += x => { if (canTimeTravel) TimeTravel(); };
         playerInputActions.Player.Pause.performed += x => GameControllerNicolas.GetInstance().PauseGame();
 
         movementVector = Vector2.zero; //Inicializa o vetor de movimento como zero
@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
             objetoInteracao = null;
         }
     }
-
+/*
     private void TimeTravel()
     {
         if (canMove)
@@ -111,6 +111,7 @@ public class PlayerController : MonoBehaviour
             GameControllerNicolas.GetInstance().TimeTravel(); //Chama o método de viagem no tempo do controlador de jogo
         }
     }
+*/
 
     private void OnEnable()
     {

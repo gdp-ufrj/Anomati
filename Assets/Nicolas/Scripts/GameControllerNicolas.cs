@@ -54,7 +54,7 @@ public class GameControllerNicolas : MonoBehaviour
     {
         //Debug.Log("Player can move: " + player.GetComponent<PlayerController>().canMove);
     }
-
+/*
     public void TimeTravel()
     {
         Globals.lastPlayerPosition = player.transform.position; //Armazena a posição atual do jogador
@@ -65,6 +65,7 @@ public class GameControllerNicolas : MonoBehaviour
         else if (SceneManager.GetActiveScene().name.Contains("Present"))
             SceneTransitionController.GetInstance().LoadScene("Past");  //Carrega a cena do passado
     }
+*/
 
     public void FadeOut()    //Controla o fade-out da cena com ou sem a animação do relógio
     {
@@ -203,9 +204,9 @@ public class GameControllerNicolas : MonoBehaviour
                     }
                 }
 
-                //if (nomeMapa == Globals.GetSceneName(Globals.MapNames.CasaPai2000) && Globals.triggerDadRun && !Globals.endDadRun)
-                //    if (!nomeObjeto.Contains("fundos"))   //Se não for a porta dos fundos
-                //        return "Porta Trancada!";
+                if (nomeMapa == Globals.GetSceneName(Globals.MapNames.CasaPai2000) && Globals.triggerDadRun && !Globals.endDadRun)
+                    if (!nomeObjeto.Contains("fundos"))   //Se não for a porta dos fundos
+                        return "Porta Trancada!";
                 if (nomeMapa == Globals.GetSceneName(Globals.MapNames.Atelie2000) && !Globals.finishAto1)
                     return "Não quero sair.";
             }
