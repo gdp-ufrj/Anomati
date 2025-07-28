@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Bank A.assets.bank
   Name: Bank A.assets
   StudioPath: bank:/Bank A.assets
-  lastModified: 638893097410394439
+  lastModified: 638888088274866152
   FileSizes: []
   Exists: 1
 --- !u!114 &-8639543697514622003
@@ -223,7 +223,7 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638893151410245768
+  lastModified: 638893173097822610
   FileSizes: []
   Exists: 1
 --- !u!114 &-4434795335537239106
@@ -376,7 +376,7 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Bank A.bank
   Name: Bank A
   StudioPath: bank:/Bank A
-  lastModified: 638893097384206572
+  lastModified: 638888088274876099
   FileSizes: []
   Exists: 1
 --- !u!114 &-2859611739106742128
@@ -530,7 +530,7 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Bank B.bank
   Name: Bank B
   StudioPath: bank:/Bank B
-  lastModified: 638893097410555612
+  lastModified: 638888088274936095
   FileSizes: []
   Exists: 1
 --- !u!114 &-972835601864699246
@@ -692,7 +692,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 8985956451467242848}
   cacheVersion: 131847
-  cacheTime: 638893151410945727
+  cacheTime: 638893173097842610
   SerializableEventsDict:
   - key: event:/testes/musica 2
     index: 0
@@ -985,7 +985,7 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Bank B.assets.bank
   Name: Bank B.assets
   StudioPath: bank:/Bank B.assets
-  lastModified: 638893097417621249
+  lastModified: 638888088274926096
   FileSizes: []
   Exists: 1
 --- !u!114 &7219734502621404980
@@ -1054,7 +1054,7 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Master.assets.bank
   Name: Master.assets
   StudioPath: bank:/Master.assets
-  lastModified: 638893151410935732
+  lastModified: 638893173097802607
   FileSizes: []
   Exists: 1
 --- !u!114 &8872817408014725195
@@ -1099,7 +1099,7 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638893151410945727
+  lastModified: 638893173097842610
   FileSizes:
   - Name: 
     Value: 2520
