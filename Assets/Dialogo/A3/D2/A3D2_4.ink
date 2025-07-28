@@ -8,7 +8,7 @@ Pois é. Mas vai ser difícil, muito difícil. #speaker:Hugo #portrait:hugo_cria
 
 Promete não me esquecer? #speaker:Kurumi #portrait:helio_criança_com_rosto #layout:left
 
-Eu nunca vou me esquecer de você. Aliás, toma aqui. #speaker:Hugo #portrait:hugo_criança #layout:right
+Eu nunca vou me esquecer de você. Aliás, toma essa foto. #speaker:Hugo #portrait:hugo_criança #layout:right
 
 Nunca esquece de quem você é também. #speaker:Hugo #portrait:hugo_criança #layout:right
 

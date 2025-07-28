@@ -8,7 +8,7 @@ Oi moço… Quem é você? Eu nunca te vi aqui antes. #speaker:Menina misteriosa
     …Eu me chamo Lúgubre, agora me deixe em paz. #speaker:Lúgubre #portrait:helio_adulto_1 #layout:left
     Lúgubre? E isso é nome? #speaker:Menina misteriosa #portrait:elisa #layout:right
     …É. #speaker:Lúgubre #portrait:helio_adulto_1 #layout:left
-    Se você diz. Meu nome é Elisa, aliás! #speaker:Eliza #portrait:elisa #layout:right
+    Se você diz. Meu nome é Eliza, aliás! #speaker:Eliza #portrait:elisa #layout:right
     Que roupa é essa? Você não sente calor, não? Mal dá pra ver você. #speaker:Eliza #portrait:elisa #layout:right
     … #speaker:Lúgubre #portrait:helio_adulto_1 #layout:left
     Você parece meio triste. Lágrimas não combinam com esta cidade, sabia? #speaker:Eliza #portrait:elisa #layout:right

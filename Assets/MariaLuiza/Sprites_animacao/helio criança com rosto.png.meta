@@ -264,6 +264,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1534,7 +1547,64 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "helio crian\xE7a com rosto_0": -2864383418693995382
+      "helio crian\xE7a com rosto_1": 4991300009613251509
+      "helio crian\xE7a com rosto_10": -3521895533524539466
+      "helio crian\xE7a com rosto_11": -6033680917535995904
+      "helio crian\xE7a com rosto_12": 812378456710308068
+      "helio crian\xE7a com rosto_13": 6879332550984508178
+      "helio crian\xE7a com rosto_14": -8751160871894159141
+      "helio crian\xE7a com rosto_15": -9117610008120275982
+      "helio crian\xE7a com rosto_16": -2765215393267516815
+      "helio crian\xE7a com rosto_17": -7129117442357116027
+      "helio crian\xE7a com rosto_18": 5902853351759391442
+      "helio crian\xE7a com rosto_19": -9136467900126790793
+      "helio crian\xE7a com rosto_2": -605344473633341761
+      "helio crian\xE7a com rosto_20": 6527499893005620500
+      "helio crian\xE7a com rosto_21": -8530310674319079576
+      "helio crian\xE7a com rosto_22": 6192590480360098596
+      "helio crian\xE7a com rosto_23": 6375123942349011966
+      "helio crian\xE7a com rosto_24": -6949683525494681570
+      "helio crian\xE7a com rosto_25": 7585855647600212414
+      "helio crian\xE7a com rosto_26": 5204495629629100545
+      "helio crian\xE7a com rosto_27": 5611221939590574262
+      "helio crian\xE7a com rosto_28": -8528536178822247309
+      "helio crian\xE7a com rosto_29": -5440801755745854409
+      "helio crian\xE7a com rosto_3": 4842412476309959046
+      "helio crian\xE7a com rosto_30": -3510972025314348582
+      "helio crian\xE7a com rosto_31": 6033065881856284610
+      "helio crian\xE7a com rosto_32": -641632799320153552
+      "helio crian\xE7a com rosto_33": 332844391318626208
+      "helio crian\xE7a com rosto_34": 7911609840019583487
+      "helio crian\xE7a com rosto_35": 7973057521842518544
+      "helio crian\xE7a com rosto_36": -9020487178254942042
+      "helio crian\xE7a com rosto_37": 4337142931535422545
+      "helio crian\xE7a com rosto_38": -1913506022219926013
+      "helio crian\xE7a com rosto_39": -2860443807321835491
+      "helio crian\xE7a com rosto_4": 5867525093991959108
+      "helio crian\xE7a com rosto_40": 7142583234904117955
+      "helio crian\xE7a com rosto_41": 7247960511823151453
+      "helio crian\xE7a com rosto_42": 7059567890111536634
+      "helio crian\xE7a com rosto_43": 4971131848121520059
+      "helio crian\xE7a com rosto_44": 9145012507605907591
+      "helio crian\xE7a com rosto_45": 8597377085803851637
+      "helio crian\xE7a com rosto_46": -8773045377730863333
+      "helio crian\xE7a com rosto_47": -1300762215190845784
+      "helio crian\xE7a com rosto_48": 6614412832889750345
+      "helio crian\xE7a com rosto_49": -991016646112605148
+      "helio crian\xE7a com rosto_5": 6992782536793841833
+      "helio crian\xE7a com rosto_50": 1212773219838634114
+      "helio crian\xE7a com rosto_51": 4548368989599445617
+      "helio crian\xE7a com rosto_52": -3916408439308245590
+      "helio crian\xE7a com rosto_53": -1552008159666676776
+      "helio crian\xE7a com rosto_54": -4010272308351637123
+      "helio crian\xE7a com rosto_55": -5559378304654567439
+      "helio crian\xE7a com rosto_56": 1364087972005841584
+      "helio crian\xE7a com rosto_6": -2794937679947837174
+      "helio crian\xE7a com rosto_7": -7639471922325733134
+      "helio crian\xE7a com rosto_8": 3748591585666600698
+      "helio crian\xE7a com rosto_9": 3396532813579573635
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

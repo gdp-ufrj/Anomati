@@ -11,7 +11,7 @@ Está tudo bem agora. Ele foi embora. #speaker:Evandro #portrait:avo #layout:rig
 
 Eu… eu tô com medo… #speaker:Kurumi #portrait:helio_criança #layout:left
 
-Evandro: Do quê, meu menino? #speaker:Evandro #portrait:avo #layout:right
+Do quê, meu menino? #speaker:Evandro #portrait:avo #layout:right
 
 De um dia ficar que nem ele, meu pai. #speaker:Kurumi #portrait:helio_criança #layout:left
 
