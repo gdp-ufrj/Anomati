@@ -5,7 +5,7 @@
 			<value>tv estática (casa de átila)</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{754a7501-30f0-4fb0-8a50-9c95cb00ed77}</destination>
@@ -30,6 +30,9 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{6a4cec18-f65b-450d-b00f-1536282ad7c9}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{00e23cc0-0e3f-41d5-9e61-7f57fb9fb235}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{9dd80cc3-a490-47aa-92ff-756ff482a936}">
@@ -66,6 +69,9 @@
 	<object class="Timeline" id="{6a4cec18-f65b-450d-b00f-1536282ad7c9}">
 		<relationship name="modules">
 			<destination>{6ce68189-3837-419d-acc6-b421425ae10d}</destination>
+		</relationship>
+		<relationship name="markers">
+			<destination>{22675316-bb53-446a-a85b-601cd820a1e5}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{ef16b11c-7cc7-49aa-b807-7db7e89d1a5b}">
@@ -107,9 +113,24 @@
 			<destination>{ef16b11c-7cc7-49aa-b807-7db7e89d1a5b}</destination>
 		</relationship>
 	</object>
+	<object class="LoopRegion" id="{22675316-bb53-446a-a85b-601cd820a1e5}">
+		<property name="position">
+			<value>1.9225547810804671</value>
+		</property>
+		<property name="length">
+			<value>28.077445218919578</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{6a4cec18-f65b-450d-b00f-1536282ad7c9}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{432c1db5-027d-48e9-9509-a8080e956051}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{1ca2f788-a70e-4b1c-849c-6531c5f12ae0}">
 		<relationship name="effects">
 			<destination>{cab49b69-78f8-4d79-b924-0e77eb4ed167}</destination>
+			<destination>{aed34849-7c02-4636-9dc7-c4b075c45482}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{1a9a124f-8165-4995-9fcf-63510d4e1959}" />
@@ -121,5 +142,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{af5afe8c-8061-4c01-9a36-9043dab5af0a}" />
 	<object class="MixerBusFader" id="{cab49b69-78f8-4d79-b924-0e77eb4ed167}" />
+	<object class="SpatialiserEffect" id="{aed34849-7c02-4636-9dc7-c4b075c45482}" />
 	<object class="MixerBusFader" id="{201961f0-e775-4b08-a30d-62f179074a09}" />
 </objects>

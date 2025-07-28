@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{dc53be3a-1b55-4717-acdc-74541283a042}">
+		<property name="name">
+			<value>BeijoFim</value>
+		</property>
+		<relationship name="folder">
+			<destination>{d05cbdad-c978-4f0b-9db2-0b6808ac405a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{dfb38023-e18a-41f4-b9be-19bd36f55caa}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{dfb38023-e18a-41f4-b9be-19bd36f55caa}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

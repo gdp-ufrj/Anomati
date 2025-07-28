@@ -22,11 +22,11 @@ MonoBehaviour:
   - {fileID: -5405450495698368311}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 28935
+  Length: 27705
 --- !u!114 &-8707387312796293677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,11 +67,12 @@ MonoBehaviour:
   - {fileID: -5405450495698368311}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
-  Parameters: []
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -972835601864699246}
   MinDistance: 1
   MaxDistance: 20
-  Length: 43000
+  Length: 42309
 --- !u!114 &-8258743144725295880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,7 +153,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
+  Length: 1797
 --- !u!114 &-5625357658972547410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +223,7 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638893097418021277
+  lastModified: 638893151410245768
   FileSizes: []
   Exists: 1
 --- !u!114 &-4434795335537239106
@@ -327,8 +328,8 @@ MonoBehaviour:
   Banks:
   - {fileID: -5405450495698368311}
   IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
+  Is3D: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -454,7 +455,7 @@ MonoBehaviour:
   - {fileID: -5405450495698368311}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -531,6 +532,54 @@ MonoBehaviour:
   StudioPath: bank:/Bank B
   lastModified: 638893097410555612
   FileSizes: []
+  Exists: 1
+--- !u!114 &-972835601864699246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: "parameter:/persegui\xE7\xE3o/Fim"
+  m_EditorClassIdentifier: 
+  Name: Fim
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1799030810
+    data2: 3015240123
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-870398474229767716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/cena do beijo/BeijoFim
+  m_EditorClassIdentifier: 
+  Name: BeijoFim
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3525510644
+    data2: 761598336
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &-707515331981817198
 MonoBehaviour:
@@ -643,7 +692,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 8985956451467242848}
   cacheVersion: 131847
-  cacheTime: 638893097489670159
+  cacheTime: 638893151410945727
   SerializableEventsDict:
   - key: event:/testes/musica 2
     index: 0
@@ -659,6 +708,52 @@ MonoBehaviour:
     index: 5
   - key: event:/testes/Rua
     index: 6
+  - key: event:/ui/selecionar
+    index: 7
+  - key: event:/ui/salvar jogo
+    index: 8
+  - key: "event:/vozes/hugo crian\xE7a"
+    index: 9
+  - key: "event:/ui/tv est\xE1tica (casa de \xE1tila)"
+    index: 10
+  - key: event:/ui/brilho de corpo
+    index: 11
+  - key: event:/ui/porta abrindo
+    index: 12
+  - key: "event:/ui/canto de p\xE1ssaros"
+    index: 13
+  - key: event:/ui/flashback
+    index: 14
+  - key: "event:/m\xFAsicas/menu"
+    index: 15
+  - key: event:/vozes/elisa
+    index: 16
+  - key: "event:/m\xFAsicas/persegui\xE7\xE3o"
+    index: 17
+  - key: "event:/ui/cl\xEDmax"
+    index: 18
+  - key: event:/ui/troca de roupa
+    index: 19
+  - key: event:/vozes/hugo adulto
+    index: 20
+  - key: "event:/ui/dissolu\xE7\xE3o em luz"
+    index: 21
+  - key: event:/ui/ventania (atelie)
+    index: 22
+  - key: "event:/vozes/\xE1tila"
+    index: 23
+  - key: event:/vozes/evandro
+    index: 24
+  - key: "event:/m\xFAsicas/cena do beijo"
+    index: 25
+  - key: "event:/m\xFAsicas/atelie do avo"
+    index: 26
+  - key: "event:/vozes/l\xFAgubre-helio"
+    index: 27
+  - key: event:/vozes/kurumi
+    index: 28
+  - key: event:/ui/navegar
+    index: 29
 --- !u!114 &1155424127437231667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -739,7 +834,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1021
+  Length: 290
 --- !u!114 &2437762895498438174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -870,7 +965,7 @@ MonoBehaviour:
   - {fileID: -5405450495698368311}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -919,7 +1014,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
+  Length: 1820
 --- !u!114 &8511793552184647911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,7 +1054,7 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Master.assets.bank
   Name: Master.assets
   StudioPath: bank:/Master.assets
-  lastModified: 638893097489654954
+  lastModified: 638893151410935732
   FileSizes: []
   Exists: 1
 --- !u!114 &8872817408014725195
@@ -1004,10 +1099,10 @@ MonoBehaviour:
   Path: Assets/FmodBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638893097489670159
+  lastModified: 638893151410945727
   FileSizes:
   - Name: 
-    Value: 2434
+    Value: 2520
   Exists: 1
 --- !u!114 &9050608346461763572
 MonoBehaviour:
@@ -1031,8 +1126,9 @@ MonoBehaviour:
   - {fileID: -5405450495698368311}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
-  Parameters: []
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -870398474229767716}
   MinDistance: 1
   MaxDistance: 20
-  Length: 61559
+  Length: 71443

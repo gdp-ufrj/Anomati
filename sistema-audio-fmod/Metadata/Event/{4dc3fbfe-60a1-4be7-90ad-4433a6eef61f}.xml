@@ -31,6 +31,9 @@
 		<relationship name="timeline">
 			<destination>{8935c4c1-f14c-47ee-a48f-5319a5f386b2}</destination>
 		</relationship>
+		<relationship name="banks">
+			<destination>{00e23cc0-0e3f-41d5-9e61-7f57fb9fb235}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixer" id="{39542d44-1b17-4895-a960-d0c35449a5ac}">
 		<relationship name="masterBus">
@@ -57,7 +60,7 @@
 	<object class="MarkerTrack" id="{81f31ed0-ba3b-4cd6-bd7a-d00eac7ae148}" />
 	<object class="GroupTrack" id="{5cee9eda-b682-4755-96f5-6c463e163d1b}">
 		<relationship name="modules">
-			<destination>{2876dced-a94a-4dd0-b90a-5a81a467145c}</destination>
+			<destination>{435d9b1b-143d-4684-b9c4-35e18e957960}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{ddc3186f-0ac5-4c18-91ae-55eae9b888dd}</destination>
@@ -65,7 +68,7 @@
 	</object>
 	<object class="Timeline" id="{8935c4c1-f14c-47ee-a48f-5319a5f386b2}">
 		<relationship name="modules">
-			<destination>{2876dced-a94a-4dd0-b90a-5a81a467145c}</destination>
+			<destination>{435d9b1b-143d-4684-b9c4-35e18e957960}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{88f293b2-7dc7-4738-9c0b-a139ff8b4be9}">
@@ -85,15 +88,21 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{e41394f0-896f-44b8-9dcb-0efe188ad77e}" />
-	<object class="SingleSound" id="{2876dced-a94a-4dd0-b90a-5a81a467145c}">
+	<object class="SingleSound" id="{435d9b1b-143d-4684-b9c4-35e18e957960}">
 		<property name="length">
-			<value>2</value>
+			<value>1.8206075533661741</value>
+		</property>
+		<property name="timelockedOffset">
+			<value>0.17939244663382592</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{1beff326-888e-4973-b25d-9ab7989b2888}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{ddc3186f-0ac5-4c18-91ae-55eae9b888dd}">
+		<property name="volume">
+			<value>2.5</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
