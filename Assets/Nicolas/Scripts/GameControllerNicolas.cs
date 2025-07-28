@@ -226,7 +226,7 @@ public class GameControllerNicolas : MonoBehaviour
 
     public void BetweenDoorInteraction(string origin, string destination, bool isDoor, bool isFlashback)    //Será chamado durante a transição de porta (durante o fade)
     {
-        SetIdleDirectionPlayer();  //Define a direção de idle do jogador
+        //SetIdleDirectionPlayer();  //Define a direção de idle do jogador
         ResetDadPosition();        //Reseta a posição do pai
 
         if (isDoor)     //Se a interação tiver sido realmente com uma porta
@@ -262,6 +262,8 @@ public class GameControllerNicolas : MonoBehaviour
                     SetDadDefault();
                 }
             }
+            Debug.Log("aaaa");
+            player.GetComponent<PlayerController>().SetIdleDirection(3);
         }
         else    //Se a interação com a porta tiver sido ativada de forma manual após algum evento
         {

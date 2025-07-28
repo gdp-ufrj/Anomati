@@ -68,6 +68,7 @@ GameObject:
   - component: {fileID: 844573541153360077}
   - component: {fileID: 587595299048417341}
   - component: {fileID: 6968813775289772623}
+  - component: {fileID: 2537006089551928027}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -220,6 +221,59 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.0073928833, y: -0.35881042}
   m_Radius: 0.20652771
+--- !u!114 &2537006089551928027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5194414445040198427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_Priority: 0
+  m_ComponentVersion: 5
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_AlphaCutoff: 0.1
+  m_ApplyToSortingLayers: 739734e0856c280900000000cd29035283e28cd5c7aeba950ffd552e
+  m_ShapePath:
+  - {x: -0.44166666, y: -0.5333333, z: 0}
+  - {x: -0.44166666, y: 0.5333333, z: 0}
+  - {x: 0.44166663, y: 0.5333333, z: 0}
+  - {x: 0.44166663, y: -0.5333333, z: 0}
+  m_ShapePathHash: 0
+  m_InstanceId: 0
+  m_ShadowShape2DComponent: {fileID: 2450863753517025145}
+  m_ShadowShape2DProvider:
+    rid: 6568463299312091289
+  m_ShadowCastingSource: 2
+  m_ShadowMesh:
+    m_Mesh: {fileID: 0}
+    m_LocalBounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.40167236, y: 0.4933319, z: 0}
+    m_EdgeProcessing: 1
+    m_TrimEdge: 0.04
+    m_FlipX: 0
+    m_FlipY: 0
+    m_InitialTrim: 0.04
+  m_CastingOption: 1
+  m_PreviousTrimEdge: 0
+  m_PreviousEdgeProcessing: -1
+  m_PreviousShadowCastingSource: -1
+  m_PreviousShadowShape2DSource: {fileID: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: 6568463299312091289
+      type: {class: ShadowShape2DProvider_SpriteRenderer, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data: 
 --- !u!1 &9157302240597846542
 GameObject:
   m_ObjectHideFlags: 0
