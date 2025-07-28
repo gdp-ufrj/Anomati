@@ -2,19 +2,19 @@
 
 Precisa mesmo ir? #speaker:Hugo #portrait:hugo_criança #layout:right
 
-Você sabe que não foi uma escolha minha, foi dele. #speaker:Kurumi #portrait:helio_criança #layout:left
+Você sabe que não foi uma escolha minha, foi dele. #speaker:Kurumi #portrait:helio_criança_com_rosto #layout:left
 
 Pois é. Mas vai ser difícil, muito difícil. #speaker:Hugo #portrait:hugo_criança #layout:right
 
-Promete não me esquecer? #speaker:Kurumi #portrait:helio_criança #layout:left
+Promete não me esquecer? #speaker:Kurumi #portrait:helio_criança_com_rosto #layout:left
 
 Eu nunca vou me esquecer de você. Aliás, toma aqui. #speaker:Hugo #portrait:hugo_criança #layout:right
 
 Nunca esquece de quem você é também. #speaker:Hugo #portrait:hugo_criança #layout:right
 
-E se eu esquecer? #speaker:Kurumi #portrait:helio_criança #layout:left
+E se eu esquecer? #speaker:Kurumi #portrait:helio_criança_com_rosto #layout:left
 
-Adeus, Hugo. #speaker:Kurumi #portrait:helio_criança #layout:left
+Adeus, Hugo. #speaker:Kurumi #portrait:helio_criança_com_rosto #layout:left
 
 Até logo, Hélio. #speaker:Hugo #portrait:hugo_criança #layout:right
 

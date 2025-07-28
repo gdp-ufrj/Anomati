@@ -15,7 +15,7 @@ Evandro: Do quê, meu menino? #speaker:Evandro #portrait:avo #layout:right
 
 De um dia ficar que nem ele, meu pai. #speaker:Kurumi #portrait:helio_criança #layout:left
 
-Sabe, quando a gente nasce, somos um reflexo dos nossos pais. Não tem muito como escapar disso. #speaker:npc #layout:right
+Sabe, quando a gente nasce, somos um reflexo dos nossos pais. Não tem muito como escapar disso. #speaker:Evandro #portrait:avo #layout:right
 
 Mas no fim da vida sabe com o que nos parecemos? #speaker:Evandro #portrait:avo #layout:right
 

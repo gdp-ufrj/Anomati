@@ -1,0 +1,1599 @@
+fileFormatVersion: 2
+guid: 6bac1aa748543eb4b83807b1803f863d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3896916681297482194
+    second: "helio crian\xE7a com rosto (1)_0"
+  - first:
+      213: 7717542523863899645
+    second: "helio crian\xE7a com rosto (1)_1"
+  - first:
+      213: -1619485988258371190
+    second: "helio crian\xE7a com rosto (1)_2"
+  - first:
+      213: -3066671490504631385
+    second: "helio crian\xE7a com rosto (1)_3"
+  - first:
+      213: -4543379772569310683
+    second: "helio crian\xE7a com rosto (1)_4"
+  - first:
+      213: 535324433158300842
+    second: "helio crian\xE7a com rosto (1)_5"
+  - first:
+      213: -6808854788671536845
+    second: "helio crian\xE7a com rosto (1)_6"
+  - first:
+      213: -1642581607561801175
+    second: "helio crian\xE7a com rosto (1)_7"
+  - first:
+      213: 3814787074046221574
+    second: "helio crian\xE7a com rosto (1)_8"
+  - first:
+      213: -1479353736008753764
+    second: "helio crian\xE7a com rosto (1)_9"
+  - first:
+      213: -5132437751434716949
+    second: "helio crian\xE7a com rosto (1)_10"
+  - first:
+      213: 3957274930311757182
+    second: "helio crian\xE7a com rosto (1)_11"
+  - first:
+      213: -1071950305585578643
+    second: "helio crian\xE7a com rosto (1)_12"
+  - first:
+      213: -8353070443700533334
+    second: "helio crian\xE7a com rosto (1)_13"
+  - first:
+      213: 8785322371834327028
+    second: "helio crian\xE7a com rosto (1)_14"
+  - first:
+      213: 8422602143410948223
+    second: "helio crian\xE7a com rosto (1)_15"
+  - first:
+      213: -8252857544154397898
+    second: "helio crian\xE7a com rosto (1)_16"
+  - first:
+      213: -2220808388316030575
+    second: "helio crian\xE7a com rosto (1)_17"
+  - first:
+      213: 6034224098654467062
+    second: "helio crian\xE7a com rosto (1)_18"
+  - first:
+      213: 1278852996489967241
+    second: "helio crian\xE7a com rosto (1)_19"
+  - first:
+      213: -1818746800794182054
+    second: "helio crian\xE7a com rosto (1)_20"
+  - first:
+      213: 3812431336737866058
+    second: "helio crian\xE7a com rosto (1)_21"
+  - first:
+      213: -690000719750214438
+    second: "helio crian\xE7a com rosto (1)_22"
+  - first:
+      213: -6816276953920791497
+    second: "helio crian\xE7a com rosto (1)_23"
+  - first:
+      213: -8347030074675097715
+    second: "helio crian\xE7a com rosto (1)_24"
+  - first:
+      213: -7877328024155237224
+    second: "helio crian\xE7a com rosto (1)_25"
+  - first:
+      213: -2903944786364756831
+    second: "helio crian\xE7a com rosto (1)_26"
+  - first:
+      213: -4848976737459147033
+    second: "helio crian\xE7a com rosto (1)_27"
+  - first:
+      213: -8707691395557654732
+    second: "helio crian\xE7a com rosto (1)_28"
+  - first:
+      213: 4477167267531479899
+    second: "helio crian\xE7a com rosto (1)_29"
+  - first:
+      213: 9090656645849155063
+    second: "helio crian\xE7a com rosto (1)_30"
+  - first:
+      213: -3965624029383631080
+    second: "helio crian\xE7a com rosto (1)_31"
+  - first:
+      213: 6370871308325315523
+    second: "helio crian\xE7a com rosto (1)_32"
+  - first:
+      213: 4858692349229507981
+    second: "helio crian\xE7a com rosto (1)_33"
+  - first:
+      213: -7599380304236342442
+    second: "helio crian\xE7a com rosto (1)_34"
+  - first:
+      213: -783552949574053645
+    second: "helio crian\xE7a com rosto (1)_35"
+  - first:
+      213: 1666249384733506811
+    second: "helio crian\xE7a com rosto (1)_36"
+  - first:
+      213: -3131134292218080542
+    second: "helio crian\xE7a com rosto (1)_37"
+  - first:
+      213: -5464581073974954349
+    second: "helio crian\xE7a com rosto (1)_38"
+  - first:
+      213: -2409639172571753907
+    second: "helio crian\xE7a com rosto (1)_39"
+  - first:
+      213: -1184257377530641590
+    second: "helio crian\xE7a com rosto (1)_40"
+  - first:
+      213: 3958573292574874900
+    second: "helio crian\xE7a com rosto (1)_41"
+  - first:
+      213: -5919767713894512583
+    second: "helio crian\xE7a com rosto (1)_42"
+  - first:
+      213: 3893795362287939608
+    second: "helio crian\xE7a com rosto (1)_43"
+  - first:
+      213: 8749728816671796086
+    second: "helio crian\xE7a com rosto (1)_44"
+  - first:
+      213: 6727322803067293669
+    second: "helio crian\xE7a com rosto (1)_45"
+  - first:
+      213: -8096756502717017851
+    second: "helio crian\xE7a com rosto (1)_46"
+  - first:
+      213: 8137422771128238092
+    second: "helio crian\xE7a com rosto (1)_47"
+  - first:
+      213: -2062086845149037506
+    second: "helio crian\xE7a com rosto (1)_48"
+  - first:
+      213: -7676682918583971134
+    second: "helio crian\xE7a com rosto (1)_49"
+  - first:
+      213: 4374625867947029574
+    second: "helio crian\xE7a com rosto (1)_50"
+  - first:
+      213: 7932313706896164435
+    second: "helio crian\xE7a com rosto (1)_51"
+  - first:
+      213: -8184037084003866563
+    second: "helio crian\xE7a com rosto (1)_52"
+  - first:
+      213: 999533171571925412
+    second: "helio crian\xE7a com rosto (1)_53"
+  - first:
+      213: 8604035814015358178
+    second: "helio crian\xE7a com rosto (1)_54"
+  - first:
+      213: 3996257703895170879
+    second: "helio crian\xE7a com rosto (1)_55"
+  - first:
+      213: -5282515078785707474
+    second: "helio crian\xE7a com rosto (1)_56"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_0"
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1479
+        width: 1212
+        height: 1914
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2e28f3dcee5be9c0800000000000000
+      internalID: -3896916681297482194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_1"
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 2341
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfd11e149083a1b60800000000000000
+      internalID: 7717542523863899645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_2"
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 2304
+        width: 11
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a892327f21e6689e0800000000000000
+      internalID: -1619485988258371190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_3"
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 2275
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ab57adf68ef075d0800000000000000
+      internalID: -3066671490504631385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_4"
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 2029
+        width: 34
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52aaf403b2ca2f0c0800000000000000
+      internalID: -4543379772569310683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_5"
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 1834
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa4ecf55cbadd6700800000000000000
+      internalID: 535324433158300842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_6"
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 1795
+        width: 24
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 331040205a61281a0800000000000000
+      internalID: -6808854788671536845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_7"
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 1826
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92250be0bb06439e0800000000000000
+      internalID: -1642581607561801175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_8"
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1603
+        width: 55
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60dd64ad1a8d0f430800000000000000
+      internalID: 3814787074046221574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_9"
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 1769
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d1d047d97487be0800000000000000
+      internalID: -1479353736008753764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_10"
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 1792
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be8dde1de0be5c8b0800000000000000
+      internalID: -5132437751434716949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_11"
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1772
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7d7ac325901be630800000000000000
+      internalID: 3957274930311757182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_12"
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1768
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6d33b260eaaf11f0800000000000000
+      internalID: -1071950305585578643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_13"
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1510
+        width: 16
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa74a6b10bee31c80800000000000000
+      internalID: -8353070443700533334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_14"
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 1549
+        width: 19
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ff2a7a862cbbe970800000000000000
+      internalID: 8785322371834327028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_15"
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 1487
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f78047a460813e470800000000000000
+      internalID: 8422602143410948223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_16"
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 1496
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63346c20ac5f77d80800000000000000
+      internalID: -8252857544154397898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_17"
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1505
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1991734898a1e21e0800000000000000
+      internalID: -2220808388316030575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_18"
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1502
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f3b667d8deddb350800000000000000
+      internalID: 6034224098654467062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_19"
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1475
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9867abf46066fb110800000000000000
+      internalID: 1278852996489967241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_20"
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1473
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5ed84abb6382c6e0800000000000000
+      internalID: -1818746800794182054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_21"
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 1484
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4104d40a1a78e430800000000000000
+      internalID: 3812431336737866058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_22"
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1461
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adc468c4000ac66f0800000000000000
+      internalID: -690000719750214438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_23"
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 1464
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c9ede7938b761a0800000000000000
+      internalID: -6816276953920791497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_24"
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 1454
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f0d7d1f54692c80800000000000000
+      internalID: -8347030074675097715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_25"
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1454
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8945ffcd5eb1ea290800000000000000
+      internalID: -7877328024155237224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_26"
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 1427
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac81614a9d13b7d0800000000000000
+      internalID: -2903944786364756831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_27"
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1449
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee6d972959f4bcb0800000000000000
+      internalID: -4848976737459147033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_28"
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 1415
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43f7f02afc0182780800000000000000
+      internalID: -8707691395557654732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_29"
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 1426
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b5835a8e7122e30800000000000000
+      internalID: 4477167267531479899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_30"
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1412
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f502e61e00882e70800000000000000
+      internalID: 9090656645849155063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_31"
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 1399
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81fd5dfb4f547f8c0800000000000000
+      internalID: -3965624029383631080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_32"
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1398
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c3657a53b1e96850800000000000000
+      internalID: 6370871308325315523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_33"
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1403
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d85abbcf2fa8d6340800000000000000
+      internalID: 4858692349229507981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_34"
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 1389
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65394e460e3998690800000000000000
+      internalID: -7599380304236342442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_35"
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1401
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f0dde96eb24025f0800000000000000
+      internalID: -783552949574053645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_36"
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1394
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfcf04cbcf4bf1710800000000000000
+      internalID: 1666249384733506811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_37"
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 1383
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e21c4063f9fb84d0800000000000000
+      internalID: -3131134292218080542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_38"
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 1376
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 396766f3778e924b0800000000000000
+      internalID: -5464581073974954349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_39"
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 1354
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d429ef970fd3f8ed0800000000000000
+      internalID: -2409639172571753907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_40"
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 1347
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4386a9803ca09fe0800000000000000
+      internalID: -1184257377530641590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_41"
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1344
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41d1649af6dafe630800000000000000
+      internalID: 3958573292574874900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_42"
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 1339
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 938cd74e0a2c8dda0800000000000000
+      internalID: -5919767713894512583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_43"
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1313
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8107c35704a890630800000000000000
+      internalID: 3893795362287939608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_44"
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 1331
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67ba8be20084d6970800000000000000
+      internalID: 8749728816671796086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_45"
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 1319
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ef063e42704c5d50800000000000000
+      internalID: 6727322803067293669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_46"
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 1310
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501d7b6fbda82af80800000000000000
+      internalID: -8096756502717017851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_47"
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1310
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c00064c75eeede070800000000000000
+      internalID: 8137422771128238092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_48"
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1299
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3cb2e290fef163e0800000000000000
+      internalID: -2062086845149037506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_49"
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 1309
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c25e70fe81f67590800000000000000
+      internalID: -7676682918583971134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_50"
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 1297
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 644b7349c0bc5bc30800000000000000
+      internalID: 4374625867947029574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_51"
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1303
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 356028a0a4d351e60800000000000000
+      internalID: 7932313706896164435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_52"
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1297
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d38635b02a57c6e80800000000000000
+      internalID: -8184037084003866563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_53"
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1292
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a1a3c0bf1e0fdd00800000000000000
+      internalID: 999533171571925412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_54"
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 1284
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e4df199cfca76770800000000000000
+      internalID: 8604035814015358178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_55"
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 1291
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3ff697653f857730800000000000000
+      internalID: 3996257703895170879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "helio crian\xE7a com rosto (1)_56"
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1282
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e225558168cb0b6b0800000000000000
+      internalID: -5282515078785707474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: faf4c286fa25a7747abb4acd7a8ee5d5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "helio crian\xE7a com rosto (1)_0": -3896916681297482194
+      "helio crian\xE7a com rosto (1)_1": 7717542523863899645
+      "helio crian\xE7a com rosto (1)_10": -5132437751434716949
+      "helio crian\xE7a com rosto (1)_11": 3957274930311757182
+      "helio crian\xE7a com rosto (1)_12": -1071950305585578643
+      "helio crian\xE7a com rosto (1)_13": -8353070443700533334
+      "helio crian\xE7a com rosto (1)_14": 8785322371834327028
+      "helio crian\xE7a com rosto (1)_15": 8422602143410948223
+      "helio crian\xE7a com rosto (1)_16": -8252857544154397898
+      "helio crian\xE7a com rosto (1)_17": -2220808388316030575
+      "helio crian\xE7a com rosto (1)_18": 6034224098654467062
+      "helio crian\xE7a com rosto (1)_19": 1278852996489967241
+      "helio crian\xE7a com rosto (1)_2": -1619485988258371190
+      "helio crian\xE7a com rosto (1)_20": -1818746800794182054
+      "helio crian\xE7a com rosto (1)_21": 3812431336737866058
+      "helio crian\xE7a com rosto (1)_22": -690000719750214438
+      "helio crian\xE7a com rosto (1)_23": -6816276953920791497
+      "helio crian\xE7a com rosto (1)_24": -8347030074675097715
+      "helio crian\xE7a com rosto (1)_25": -7877328024155237224
+      "helio crian\xE7a com rosto (1)_26": -2903944786364756831
+      "helio crian\xE7a com rosto (1)_27": -4848976737459147033
+      "helio crian\xE7a com rosto (1)_28": -8707691395557654732
+      "helio crian\xE7a com rosto (1)_29": 4477167267531479899
+      "helio crian\xE7a com rosto (1)_3": -3066671490504631385
+      "helio crian\xE7a com rosto (1)_30": 9090656645849155063
+      "helio crian\xE7a com rosto (1)_31": -3965624029383631080
+      "helio crian\xE7a com rosto (1)_32": 6370871308325315523
+      "helio crian\xE7a com rosto (1)_33": 4858692349229507981
+      "helio crian\xE7a com rosto (1)_34": -7599380304236342442
+      "helio crian\xE7a com rosto (1)_35": -783552949574053645
+      "helio crian\xE7a com rosto (1)_36": 1666249384733506811
+      "helio crian\xE7a com rosto (1)_37": -3131134292218080542
+      "helio crian\xE7a com rosto (1)_38": -5464581073974954349
+      "helio crian\xE7a com rosto (1)_39": -2409639172571753907
+      "helio crian\xE7a com rosto (1)_4": -4543379772569310683
+      "helio crian\xE7a com rosto (1)_40": -1184257377530641590
+      "helio crian\xE7a com rosto (1)_41": 3958573292574874900
+      "helio crian\xE7a com rosto (1)_42": -5919767713894512583
+      "helio crian\xE7a com rosto (1)_43": 3893795362287939608
+      "helio crian\xE7a com rosto (1)_44": 8749728816671796086
+      "helio crian\xE7a com rosto (1)_45": 6727322803067293669
+      "helio crian\xE7a com rosto (1)_46": -8096756502717017851
+      "helio crian\xE7a com rosto (1)_47": 8137422771128238092
+      "helio crian\xE7a com rosto (1)_48": -2062086845149037506
+      "helio crian\xE7a com rosto (1)_49": -7676682918583971134
+      "helio crian\xE7a com rosto (1)_5": 535324433158300842
+      "helio crian\xE7a com rosto (1)_50": 4374625867947029574
+      "helio crian\xE7a com rosto (1)_51": 7932313706896164435
+      "helio crian\xE7a com rosto (1)_52": -8184037084003866563
+      "helio crian\xE7a com rosto (1)_53": 999533171571925412
+      "helio crian\xE7a com rosto (1)_54": 8604035814015358178
+      "helio crian\xE7a com rosto (1)_55": 3996257703895170879
+      "helio crian\xE7a com rosto (1)_56": -5282515078785707474
+      "helio crian\xE7a com rosto (1)_6": -6808854788671536845
+      "helio crian\xE7a com rosto (1)_7": -1642581607561801175
+      "helio crian\xE7a com rosto (1)_8": 3814787074046221574
+      "helio crian\xE7a com rosto (1)_9": -1479353736008753764
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

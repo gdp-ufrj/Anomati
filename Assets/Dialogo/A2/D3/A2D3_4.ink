@@ -1,5 +1,5 @@
 //[Ao interagir com o caixote]
-Essas roupas são suas, não é, vovô? #speaker:Lúgubre #portrait:helio_adulto_1 #layout:left
+Essas roupas são suas, não é, vovô? #speaker:Lúgubre #portrait:helio_adulto_2 #layout:left
 
 Você vai vestir essas roupas empoeiradas?  #speaker:Eliza #portrait:elisa #layout:right
 
