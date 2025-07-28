@@ -4,6 +4,11 @@ public class Beijo : MonoBehaviour
 {
     public GameObject timelineSaiBeijo, triggerTimelineDialogoAtelie2025;
 
+    void Start()
+    {
+        Globals.vestiuRoupaAvo = true;
+    }
+
     void Update()
     {
         //Quando qualquer tecla for pressionada:

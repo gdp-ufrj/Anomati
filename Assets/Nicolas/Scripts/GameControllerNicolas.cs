@@ -192,7 +192,7 @@ public class GameControllerNicolas : MonoBehaviour
                     {
                         if (!nomeObjeto.Contains("atelie"))    //Se estiver tentando ir para o ateliê
                         {
-                            return "Preciso ir ao Ateliê.";
+                            return "Preciso ir ao ateliê.";
                         }
                     }
                     else    //Se terminou o ato 2
@@ -200,12 +200,12 @@ public class GameControllerNicolas : MonoBehaviour
                         if (!Globals.dialogoPai2025)   //Se ainda não falou com o pai
                         {
                             if (!nomeObjeto.Contains("pai"))
-                                return "Preciso ir à casa do meu pai.";
+                                return "Devo ver meu pai.";
                         }
                         else
                         {
                             if (!nomeObjeto.Contains("hugo"))
-                                return "Preciso ir até a casa do Hugo.";
+                                return "Sem distrações.";
                         }
                     }
                 }
@@ -217,7 +217,7 @@ public class GameControllerNicolas : MonoBehaviour
                     return "Não quero sair.";
             }
 
-            return "Abrir";    //Texto padrão para portas
+            return "Interagir";    //Texto padrão para portas
         }
 
         return "Interagir";
@@ -226,7 +226,7 @@ public class GameControllerNicolas : MonoBehaviour
 
     public void BetweenDoorInteraction(string origin, string destination, bool isDoor, bool isFlashback)    //Será chamado durante a transição de porta (durante o fade)
     {
-        //SetIdleDirectionPlayer();  //Define a direção de idle do jogador
+        SetIdleDirectionPlayer();  //Define a direção de idle do jogador
         ResetDadPosition();        //Reseta a posição do pai
 
         if (isDoor)     //Se a interação tiver sido realmente com uma porta
@@ -263,7 +263,7 @@ public class GameControllerNicolas : MonoBehaviour
                 }
             }
             Debug.Log("aaaa");
-            player.GetComponent<PlayerController>().SetIdleDirection(3);
+            //player.GetComponent<PlayerController>().SetIdleDirection(3);
         }
         else    //Se a interação com a porta tiver sido ativada de forma manual após algum evento
         {

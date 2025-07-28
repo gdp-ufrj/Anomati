@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: d8970bc1d7b8bc74a8b5b88de12733bb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5112997659083702550
+    second: lugubre_roupa_avo_0
+  - first:
+      213: 9218103357969805244
+    second: lugubre_roupa_avo_1
+  - first:
+      213: -4597616960993195729
+    second: lugubre_roupa_avo_2
+  - first:
+      213: 4996767184543163083
+    second: lugubre_roupa_avo_3
+  - first:
+      213: -3966753809292371580
+    second: lugubre_roupa_avo_4
+  - first:
+      213: 2167719823980459334
+    second: lugubre_roupa_avo_5
+  - first:
+      213: 4806761606740120016
+    second: lugubre_roupa_avo_6
+  - first:
+      213: -1100890685073401392
+    second: lugubre_roupa_avo_7
+  - first:
+      213: 317834496248417822
+    second: lugubre_roupa_avo_8
+  - first:
+      213: -5591831248779177243
+    second: lugubre_roupa_avo_9
+  - first:
+      213: 5517114512256805838
+    second: lugubre_roupa_avo_10
+  - first:
+      213: -1080577738897186852
+    second: lugubre_roupa_avo_11
+  - first:
+      213: -5670872868779822540
+    second: lugubre_roupa_avo_12
+  - first:
+      213: -4584210165285710334
+    second: lugubre_roupa_avo_13
+  - first:
+      213: 4302117812854420944
+    second: lugubre_roupa_avo_14
+  - first:
+      213: -2559301368438803617
+    second: lugubre_roupa_avo_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 120
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lugubre_roupa_avo_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1
+        width: 114
+        height: 143
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aee79e808bbfa09b0800000000000000
+      internalID: -5112997659083702550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_roupa_avo_1
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1
+        width: 114
+        height: 143
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbf20aa1a284def70800000000000000
+      internalID: 9218103357969805244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_roupa_avo_2
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1
+        width: 114
+        height: 143
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2980b2bbbbf130c0800000000000000
+      internalID: -4597616960993195729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_roupa_avo_3
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 1
+        width: 114
+        height: 143
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc22604c745185540800000000000000
+      internalID: 4996767184543163083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_roupa_avo_4
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 1
+        width: 114
+        height: 143
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48953bd5d6243f8c0800000000000000
+      internalID: -3966753809292371580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_roupa_avo_5
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 1
+        width: 114
+        height: 143
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6457de0e1b9451e10800000000000000
+      internalID: 2167719823980459334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_roupa_avo_6
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 1
+        width: 114
+        height: 143
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d11bb9c63c05b240800000000000000
+      internalID: 4806761606740120016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_roupa_avo_7
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1
+        width: 114
+        height: 143
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d9d9a331c9d8b0f0800000000000000
+      internalID: -1100890685073401392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_roupa_avo_8
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 1
+        width: 114
+        height: 141
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1e80465acc296400800000000000000
+      internalID: 317834496248417822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_roupa_avo_9
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 1
+        width: 114
+        height: 141
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e296942b13d562b0800000000000000
+      internalID: -5591831248779177243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_roupa_avo_10
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1
+        width: 114
+        height: 141
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecb28300b6ab09c40800000000000000
+      internalID: 5517114512256805838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_roupa_avo_11
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 1
+        width: 96
+        height: 141
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdf96d885440101f0800000000000000
+      internalID: -1080577738897186852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_roupa_avo_12
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 1
+        width: 131
+        height: 141
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4327af1eb230d41b0800000000000000
+      internalID: -5670872868779822540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_roupa_avo_13
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 1
+        width: 115
+        height: 141
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2061962942d9160c0800000000000000
+      internalID: -4584210165285710334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_roupa_avo_14
+      rect:
+        serializedVersion: 2
+        x: 2073
+        y: 1
+        width: 115
+        height: 141
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d571117b5134bb30800000000000000
+      internalID: 4302117812854420944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lugubre_roupa_avo_15
+      rect:
+        serializedVersion: 2
+        x: 2221
+        y: 1
+        width: 115
+        height: 141
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f53b80517f88b7cd0800000000000000
+      internalID: -2559301368438803617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9658bfc067b704c44af1527a97f60788
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      lugubre_roupa_avo_0: -5112997659083702550
+      lugubre_roupa_avo_1: 9218103357969805244
+      lugubre_roupa_avo_10: 5517114512256805838
+      lugubre_roupa_avo_11: -1080577738897186852
+      lugubre_roupa_avo_12: -5670872868779822540
+      lugubre_roupa_avo_13: -4584210165285710334
+      lugubre_roupa_avo_14: 4302117812854420944
+      lugubre_roupa_avo_15: -2559301368438803617
+      lugubre_roupa_avo_2: -4597616960993195729
+      lugubre_roupa_avo_3: 4996767184543163083
+      lugubre_roupa_avo_4: -3966753809292371580
+      lugubre_roupa_avo_5: 2167719823980459334
+      lugubre_roupa_avo_6: 4806761606740120016
+      lugubre_roupa_avo_7: -1100890685073401392
+      lugubre_roupa_avo_8: 317834496248417822
+      lugubre_roupa_avo_9: -5591831248779177243
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

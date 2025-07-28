@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 3f, sprintSpeed = 5f;
     [SerializeField] private GameObject faceEffect, lights;
-    [SerializeField] private RuntimeAnimatorController controllerPresente, controllerPassado; //Referências para os controladores de animação do jogador no presente e passado
+    [SerializeField] private RuntimeAnimatorController controllerPresente, controllerPassado, controllerRoupaAvo; //Referências para os controladores de animação do jogador no presente e passado
     private PlayerInputActions playerInputActions;
     private Rigidbody2D rb;
     private Animator animator;
@@ -227,13 +227,26 @@ public class PlayerController : MonoBehaviour
         if (time == "Past")
         {
             animator.runtimeAnimatorController = controllerPassado;  //Muda o controlador de animação do jogador para o passado
-            faceEffect.GetComponent<Animator>().SetBool("Present", false);
+
+            if (!Globals.vestiuRoupaAvo)
+                faceEffect.GetComponent<Animator>().SetBool("Present", false);
+            else
+                faceEffect.SetActive(false);
+
             lights.SetActive(false); // Desativa as luzes no passado
         }
         else if (time == "Present")
         {
-            animator.runtimeAnimatorController = controllerPresente;  //Muda o controlador de animação do jogador para o presente
-            faceEffect.GetComponent<Animator>().SetBool("Present", true);
+            if (!Globals.vestiuRoupaAvo)
+            {
+                animator.runtimeAnimatorController = controllerPresente;
+                faceEffect.GetComponent<Animator>().SetBool("Present", true);
+            }
+            else
+            {
+                animator.runtimeAnimatorController = controllerRoupaAvo;  //Muda o controlador de animação do jogador para o presente
+                faceEffect.SetActive(false);
+            }
             lights.SetActive(true); // Ativa as luzes no presente
         }
     }

@@ -450,11 +450,11 @@ MonoBehaviour:
     m_FlipX: 0
     m_FlipY: 0
     m_InitialTrim: 0.02
-  m_CastingOption: 1
+  m_CastingOption: 0
   m_PreviousTrimEdge: 0.02
   m_PreviousEdgeProcessing: 1
   m_PreviousShadowCastingSource: 2
-  m_PreviousShadowShape2DSource: {fileID: 0}
+  m_PreviousShadowShape2DSource: {fileID: 5939180079174674039}
   references:
     version: 2
     RefIds:
