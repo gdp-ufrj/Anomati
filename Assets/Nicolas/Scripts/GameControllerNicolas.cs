@@ -151,14 +151,9 @@ public class GameControllerNicolas : MonoBehaviour
                     {
                         if (nomeObjeto.Contains("pai"))    //Se estiver tentando ir para a casa do pai
                         {
-                            if (!Globals.dialogoCasaPai2025) return false;
+                            if (!Globals.dialogoCasaPai2025 || Globals.dialogoPai2025) return false;
                             return true;
                         }
-                        //else if (nomeObjeto.Contains("hugo"))   //Se estiver tentando ir para a casa do Hugo
-                        //{
-                        //    if (!Globals.dialogoPai2025) return false;
-                        //    return true;
-                        //}
                         else return false;
                     }
                 }

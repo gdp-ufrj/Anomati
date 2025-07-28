@@ -6,7 +6,7 @@ public class LightControl : MonoBehaviour
     public Light2D lightGlobal;
     public float lightIntensity;
 
-    void OnEnable()
+    void Start()
     {
         lightGlobal.intensity = lightIntensity;
     }

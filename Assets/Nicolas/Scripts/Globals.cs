@@ -31,6 +31,7 @@ public class Globals : MonoBehaviour
         finishDialogoElizaAteliePresent = false;  //Reseta o trigger de finalização do diálogo com Eliza no Ateliê no presente
         dialogoCasaPai2025 = false;  //Reseta o trigger do diálogo na casa do pai em 2025
         dialogoPai2025 = false;
+        vestiuRoupaAvo = false;  //Reseta a variável que indica se o jogador vestiu a roupa do avô
     }
 
 
