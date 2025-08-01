@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementVector;
     private Vector3 lastPosition;
     private bool wantsToSprint = false, canInteractAgain = true;
-    public bool canMove = false, canRecoverStamina, isHiding=false;
+    public bool canMove = false, canRecoverStamina, isHiding = false;
     [HideInInspector] public bool canSprint = false, isSprinting = false, canTimeTravel = true;    //Flags de controle
 
     public LayerMask interacao; // Camada de interação
@@ -75,12 +75,16 @@ public class PlayerController : MonoBehaviour
                     transform.gameObject.GetComponent<CircleCollider2D>().enabled = false;
                     transform.position = newPosition;  //Move o jogador para dentro do objeto interagido
                 }
+                else
+                {
+                    canMove = false;
+                }
 
                 //canMove = false;
                 canInteractAgain = false;
                 txtInteracao.SetActive(false); // Desativa o texto de interação
 
-                if (!isObjCasaPai)
+                if (objetoInteracao.CompareTag("door"))
                     objetoInteracao.SendMessage("interacao", new object[] { true, true }, SendMessageOptions.DontRequireReceiver);   //Envia a mensagem de interação para o objeto atingido pelo raycast
             }
         }
@@ -100,17 +104,6 @@ public class PlayerController : MonoBehaviour
             objetoInteracao = null;
         }
     }
-/*
-    private void TimeTravel()
-    {
-        if (canMove)
-        {
-            //Debug.Log("Time Travel");
-            canMove = false; // Desabilita o movimento do jogador
-            GameControllerNicolas.GetInstance().TimeTravel(); //Chama o método de viagem no tempo do controlador de jogo
-        }
-    }
-*/
 
     private void OnEnable()
     {
@@ -146,7 +139,7 @@ public class PlayerController : MonoBehaviour
         {
             //Debug.Log("Objeto interagível detectado: " + hit.collider.gameObject.name);
             objetoInteracao = hit.collider.gameObject;
-            if (objetoInteracao.CompareTag("door"))
+            if (objetoInteracao.CompareTag("door") || objetoInteracao.CompareTag("item") || objetoInteracao.CompareTag("NPC"))
             {
                 if (canInteractAgain)
                 {
@@ -250,7 +243,7 @@ public class PlayerController : MonoBehaviour
             lights.SetActive(true); // Ativa as luzes no presente
         }
     }
-    
+
     public void SetIdleDirection(int direction)
     {
         animator.SetBool("isWalking", false);
@@ -277,5 +270,21 @@ public class PlayerController : MonoBehaviour
         }
         animator.SetFloat("LastInputX", animator.GetFloat("InputX"));
         animator.SetFloat("LastInputY", animator.GetFloat("InputY"));
+    }
+
+    public void ShowFaceEffect()
+    {
+        if (faceEffect != null)
+        {
+            faceEffect.SetActive(true); //Ativa o efeito facial do jogador
+            faceEffect.GetComponent<Animator>().SetBool("Present", animator.runtimeAnimatorController == controllerPresente);
+        }
+    }
+    public void HideFaceEffect()
+    {
+        if (faceEffect != null)
+        {
+            faceEffect.SetActive(false); //Esconde o efeito facial do jogador
+        }
     }
 }

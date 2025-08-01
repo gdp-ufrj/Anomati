@@ -16,6 +16,7 @@ public class Beijo : MonoBehaviour
         {
             timelineSaiBeijo.SetActive(true);
             triggerTimelineDialogoAtelie2025.SetActive(true); //Ativa o trigger do diálogo no Ateliê 2025
+            GameControllerNicolas.GetInstance().HidePlayerFaceEffect(); //Esconde o efeito facial do jogador
             //Destrói este objeto para que o script não seja executado novamente
             Destroy(gameObject);
         }

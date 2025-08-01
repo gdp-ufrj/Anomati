@@ -1,5 +1,4 @@
 using System.Collections;
-using System.IO;
 using UnityEngine;
 
 public class doorController : MonoBehaviour
@@ -8,6 +7,7 @@ public class doorController : MonoBehaviour
 
     public Transform tPlayer; // Transform do player
     public Transform destino; // Ponto de destino para onde a porta levará o jogador
+    public int playerIdleDirection = 3;
     [SerializeField] private Collider2D destinationBounds; //Referência ao objeto que define os limites de destino
 
 
@@ -57,6 +57,6 @@ public class doorController : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.5f); // Espera um pouco para dar tempo para o jogador se estabilizar na nova posição
-        GameControllerNicolas.GetInstance().FinishDoorInteraction(origin, destination, isDoor, isFlashback);    //Finaliza a interação com a porta no controlador do jogo (ativa cenas, triggers, etc...)
+        GameControllerNicolas.GetInstance().FinishDoorInteraction(origin, destination, isDoor, isFlashback, playerIdleDirection);    //Finaliza a interação com a porta no controlador do jogo (ativa cenas, triggers, etc...)
     }
 }

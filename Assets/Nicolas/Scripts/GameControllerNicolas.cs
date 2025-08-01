@@ -55,18 +55,6 @@ public class GameControllerNicolas : MonoBehaviour
     {
         //Debug.Log("Player can move: " + player.GetComponent<PlayerController>().canMove);
     }
-/*
-    public void TimeTravel()
-    {
-        Globals.lastPlayerPosition = player.transform.position; //Armazena a posição atual do jogador
-        Globals.lastCameraBounds = CameraController.GetInstance().GetCurrentBoundsName();
-
-        if (SceneManager.GetActiveScene().name.Contains("Past"))
-            SceneTransitionController.GetInstance().LoadScene("Present");  //Carrega a cena do presente
-        else if (SceneManager.GetActiveScene().name.Contains("Present"))
-            SceneTransitionController.GetInstance().LoadScene("Past");  //Carrega a cena do passado
-    }
-*/
 
     public void FadeOut()    //Controla o fade-out da cena com ou sem a animação do relógio
     {
@@ -221,7 +209,7 @@ public class GameControllerNicolas : MonoBehaviour
 
     public void BetweenDoorInteraction(string origin, string destination, bool isDoor, bool isFlashback)    //Será chamado durante a transição de porta (durante o fade)
     {
-        SetIdleDirectionPlayer();  //Define a direção de idle do jogador
+        //SetIdleDirectionPlayer();  //Define a direção de idle do jogador
         ResetDadPosition();        //Reseta a posição do pai
 
         if (isDoor)     //Se a interação tiver sido realmente com uma porta
@@ -243,7 +231,7 @@ public class GameControllerNicolas : MonoBehaviour
         }
     }
 
-    public void FinishDoorInteraction(string origin, string destination, bool isDoor, bool isFlashback)    //Aqui acontecerá checagens de triggers após a transição de porta, como ativar cenas, diálogos, etc...
+    public void FinishDoorInteraction(string origin, string destination, bool isDoor, bool isFlashback, int playerIdleDirection)    //Aqui acontecerá checagens de triggers após a transição de porta, como ativar cenas, diálogos, etc...
     {
         Debug.Log("FinishDoorInteraction called. From: " + origin + " To: " + destination);
         if (isDoor)     //Se a interação tiver sido realmente com uma porta
@@ -257,8 +245,8 @@ public class GameControllerNicolas : MonoBehaviour
                     SetDadDefault();
                 }
             }
-            Debug.Log("aaaa");
-            //player.GetComponent<PlayerController>().SetIdleDirection(3);
+            //Debug.Log("aaaa");
+            player.GetComponent<PlayerController>().SetIdleDirection(playerIdleDirection);
         }
         else    //Se a interação com a porta tiver sido ativada de forma manual após algum evento
         {
@@ -419,9 +407,7 @@ public class GameControllerNicolas : MonoBehaviour
             foreach (GameObject sprite in playerSprites)
             {
                 if (sprite.GetComponent<SpriteRenderer>() != null)
-                {
                     sprite.GetComponent<SpriteRenderer>().enabled = false;
-                }
                 else
                     sprite.SetActive(false);  //Desativa todos os sprites do jogador
             }
@@ -439,9 +425,7 @@ public class GameControllerNicolas : MonoBehaviour
         foreach (GameObject sprite in playerSprites)
         {
             if (sprite.GetComponent<SpriteRenderer>() != null)
-            {
                 sprite.GetComponent<SpriteRenderer>().enabled = true;
-            }
             else
             {
                 if (sprite.name == "Luzes" && isPresent)    //Só liga as luzes se estiver no presente
@@ -449,7 +433,7 @@ public class GameControllerNicolas : MonoBehaviour
             }
         }
     }
-    
+
     public void MovePlayerToPosition(Transform newPosition, int idleDirection)
     {
         if (player != null)
@@ -457,6 +441,14 @@ public class GameControllerNicolas : MonoBehaviour
             if (newPosition != null)
                 player.transform.position = newPosition.position;  //Move o jogador para a nova posição
             player.GetComponent<PlayerController>().SetIdleDirection(idleDirection);  //Define a direção de idle do jogador
+        }
+    }
+    
+    public void HidePlayerFaceEffect()
+    {
+        if (player != null)
+        {
+            player.GetComponent<PlayerController>().HideFaceEffect();  //Esconde o efeito facial do jogador
         }
     }
 }
