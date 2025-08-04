@@ -9,18 +9,24 @@ public class Stamina : MonoBehaviour
 
     [Header("Status")]
     private bool isExhausted = false;
-    private float currentStamina;
+    private float currentStamina, maxWidthStaminaBar;
     private PlayerController playerController;
-    public Image staminaFillImage;    //Referência para a UI de Stamina
+    public GameObject staminaBarFill;
+    private Image staminaFillImage;    //Referência para a UI de Stamina
+    private RectTransform staminaBarFillRect; //Referência para o RectTransform da barra de Stamina
 
     void Start()
     {
         currentStamina = maxStamina;
         playerController = GetComponent<PlayerController>();
+        staminaFillImage = staminaBarFill.GetComponent<Image>();
+        staminaBarFillRect = staminaBarFill.GetComponent<RectTransform>();
+        maxWidthStaminaBar = staminaBarFillRect.rect.width; //Armazena a largura máxima da barra de stamina
     }
 
     void Update()
     {
+        //Debug.Log("Tamanho máximo da barra de stamina: " + staminaBarFillRect.rect.width);
         if (!playerController.canRecoverStamina)
             return;
         HandleStamina(playerController.isSprinting);
@@ -51,11 +57,14 @@ public class Stamina : MonoBehaviour
         if (staminaFillImage != null)
         {
             float percent = GetStaminaPercent();
-            staminaFillImage.fillAmount = percent;    //Atualizando a barra de stamina
+            //staminaFillImage.fillAmount = percent;    //Atualizando a barra de stamina
+            //staminaBarFillRect.sizeDelta = new Vector2(maxWidthStaminaBar * percent, staminaBarFillRect.sizeDelta.y);
+            float normalized = Mathf.Clamp01(currentStamina / maxStamina);
+            staminaBarFillRect.sizeDelta = new Vector2(maxWidthStaminaBar * normalized, staminaBarFillRect.sizeDelta.y);
 
-            Color corMin = Color.red;
-            Color corMax = Color.yellow;
-            staminaFillImage.color = Color.Lerp(corMin, corMax, percent);
+            //Color corMin = Color.red;
+            //Color corMax = Color.yellow;
+            //staminaFillImage.color = Color.Lerp(corMin, corMax, percent);
         }
     }
 
@@ -75,8 +84,9 @@ public class Stamina : MonoBehaviour
         isExhausted = false;
         if (staminaFillImage != null)
         {
-            staminaFillImage.fillAmount = 1f;    //Reseta a barra de stamina
-            staminaFillImage.color = Color.yellow;   //Reseta a cor da barra de stamina
+            staminaBarFillRect.sizeDelta = new Vector2(maxWidthStaminaBar, staminaBarFillRect.sizeDelta.y);
+            //staminaFillImage.fillAmount = 1f;    //Reseta a barra de stamina
+            //staminaFillImage.color = Color.yellow;   //Reseta a cor da barra de stamina
         }
     }
 }

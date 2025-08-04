@@ -41,7 +41,6 @@ public class PlayerController : MonoBehaviour
 
     private void Interact()
     {    //Método para a interação
-        bool isObjCasaPai = false;
         if (hit.collider != null)
         {
             if (canMove)
@@ -64,7 +63,6 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (objetoInteracao.CompareTag("mesa") || objetoInteracao.CompareTag("armario"))
                 {
-                    isObjCasaPai = true;
                     canMove = false;
                     isHiding = true;
                     GameControllerNicolas.GetInstance().HidePlayer(); //Chama o método de esconder o jogador
