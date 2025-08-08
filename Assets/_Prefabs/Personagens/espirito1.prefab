@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2375401683233544154}
   - component: {fileID: 2921886638342482464}
   - component: {fileID: 8681618976597483518}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trigger
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -449,7 +449,7 @@ MonoBehaviour:
     m_TrimEdge: 0.02
     m_FlipX: 0
     m_FlipY: 0
-    m_InitialTrim: 0.02
+    m_InitialTrim: 0
   m_CastingOption: 0
   m_PreviousTrimEdge: 0.02
   m_PreviousEdgeProcessing: 1
